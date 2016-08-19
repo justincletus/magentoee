@@ -1,0 +1,28 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var \Magento\GiftCardAccount\Block\Account\Redeem $block
+ * @see \Magento\GiftCardAccount\Block\Account\Redeem
+ */
+?>
+<?php if ($block->canRedeem()): ?>
+    <div class="block block-balance-giftcard">
+        <div class="block-title">
+            <strong><?php echo $block->escapeHtml(__('Redeem Gift Card')); ?></strong>
+        </div>
+        <div class="block-content">
+          <p>
+              <?php echo $block->escapeHtml(__('Have a gift card? ')); ?>
+              <a href="<?php echo $block->escapeUrl($block->getUrl('magento_giftcardaccount/customer'));?>">
+                  <?php echo $block->escapeHtml(__('Click here')); ?>
+              </a>
+              <?php echo $block->escapeHtml(__(' to redeem it.'));?>
+        </div>
+    </div>
+<?php endif; ?>

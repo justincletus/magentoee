@@ -1,0 +1,19 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php $successUrl = $block->getUrl('checkout/onepage/success'); ?>
+
+<html>
+<meta http-equiv="refresh" content="0; URL=<?php echo $block->escapeXssInUrl($successUrl)?>">
+<body>
+<p><?php echo $block->escapeHtml(__('Your payment has been successfully processed by our shop system.')) ?></p>
+<p>
+    <?php echo $block->escapeHtml(__('Please click ')) ?>
+    <a href="<?php echo $block->escapeXssInUrl($successUrl)?>"><?php echo $block->escapeHtml(__('here')) ?></a>
+    <?php echo $block->escapeHtml(__(' if you are not redirected automatically.')) ?>
+</p>
+</body>
+</html>

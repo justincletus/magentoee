@@ -1,0 +1,50 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+
+<h2 class="subtitle">
+    <?php echo $block->getLayout()->getMessagesBlock()->getGroupedHtml() ?>
+</h2>
+
+<form action="<?php /* @escapeNotVerified */ echo $block->getAddActionUrl(); ?>"
+      method="post"
+      id="form-validate"
+      class="form validation form-giftregistry-create"
+      data-hasrequired="<?php /* @escapeNotVerified */ echo __('* Required Fields') ?>"
+      data-mage-init='{"validation":{}}'>
+    <fieldset class="fieldset">
+        <?php echo $block->getBlockHtml('formkey')?>
+        <legend class="legend"><span><?php /* @escapeNotVerified */ echo __('General Information') ?></span></legend>
+
+        <div class="field type required">
+            <label for="type_id" class="label"><span><?php /* @escapeNotVerified */ echo __('Gift Registry Type') ?></span></label>
+            <div class="control">
+                <select data-validate="{required:true}" name="type_id" id="type_id">
+                    <option value=""><?php /* @escapeNotVerified */ echo __('Please select a gift registry type.') ?></option>
+                    <?php foreach ($block->getTypeList() as $type):?>
+                        <option value="<?php /* @escapeNotVerified */ echo $type['value']?>"><?php /* @escapeNotVerified */ echo $type['label'] ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+        </div>
+    </fieldset>
+
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" id="submit.next" title="<?php /* @escapeNotVerified */ echo __('Next') ?>" class="action primary next">
+                <span><?php /* @escapeNotVerified */ echo __('Next') ?></span>
+            </button>
+        </div>
+        <div class="secondary">
+            <a href="<?php echo $block->escapeUrl($block->getBackUrl()) ?>" class="action back">
+                <span><?php /* @escapeNotVerified */ echo __('Back') ?></span>
+            </a>
+        </div>
+    </div>
+</form>

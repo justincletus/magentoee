@@ -1,0 +1,72 @@
+ID,ID
+Action,Action
+Edit,Edit
+[GLOBAL],[GLOBAL]
+[WEBSITE],[WEBSITE]
+"[STORE VIEW]","[STORE VIEW]"
+Status,Status
+"Sort Order","Sort Order"
+"Save and Continue Edit","Save and Continue Edit"
+Previous,Previous
+Next,Next
+Catalog,Catalog
+"Select Category","Select Category"
+"Use Default Value","Use Default Value"
+"Default Values","Default Values"
+Category,Category
+"Edit Event...","Edit Event..."
+"Add Event...","Add Event..."
+Events,Events
+"Add Catalog Event","Add Catalog Event"
+"Back to Category","Back to Category"
+"Edit Catalog Event","Edit Catalog Event"
+"Catalog Event Information","Catalog Event Information"
+"Start Date","Start Date"
+"End Date","End Date"
+Image,Image
+Upcoming,Upcoming
+Open,Open
+Closed,Closed
+"Display Countdown Ticker On","Display Countdown Ticker On"
+"Category Page","Category Page"
+"Product Page","Product Page"
+"Coming Soon","Coming Soon"
+"Sale Ends In","Sale Ends In"
+"New Event","New Event"
+"Something went wrong while saving this event.","Something went wrong while saving this event."
+"We did not upload your image.","We did not upload your image."
+"You saved the event.","You saved the event."
+"You deleted the event.","You deleted the event."
+"%1 is required.","%1 is required."
+"Please make sure the end date follows the start date.","Please make sure the end date follows the start date."
+"The sale for this product is closed.","The sale for this product is closed."
+"Some of these products can no longer be sold.","Some of these products can no longer be sold."
+"Event for selected category","Event for selected category"
+"Lister Block","Lister Block"
+Days,Days
+Hrs,Hrs
+Mins,Mins
+Sec,Sec
+"Preview Sale","Preview Sale"
+"Go To Sale","Go To Sale"
+"View Sale","View Sale"
+"Catalog Events","Catalog Events"
+"Enable Catalog Events Functionality","Enable Catalog Events Functionality"
+"Enable Catalog Event Widget on the Frontend","Enable Catalog Event Widget on the Frontend"
+"Number of Events to be Displayed in Event Slider Widget","Number of Events to be Displayed in Event Slider Widget"
+"You can override this default value in CMS using the limit=""x"" variable. Leave empty for no limitation.","You can override this default value in CMS using the limit=""x"" variable. Leave empty for no limitation."
+"Events to Scroll per Click in Event Slider Widget","Events to Scroll per Click in Event Slider Widget"
+"You can override this default value in CMS using the limit=""x"" variable.","You can override this default value in CMS using the limit=""x"" variable."
+"Catalog Events Carousel","Catalog Events Carousel"
+"List all open Catalog Events as a Paginated Carousel","List all open Catalog Events as a Paginated Carousel"
+"Frame Size","Frame Size"
+"Number of Items to display at once","Number of Items to display at once"
+Scroll,Scroll
+"Number of Items to scroll per click","Number of Items to scroll per click"
+"Block Custom Width","Block Custom Width"
+"The width in pixels will be set automatically if this value is empty.","The width in pixels will be set automatically if this value is empty."
+"Catalog Events Carousel Default Template","Catalog Events Carousel Default Template"
+"Category ID","Category ID"
+"Start On","Start On"
+"End On","End On"
+"Countdown Ticker","Countdown Ticker"

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/queue.xsd">
+    <topic publisher="default" name="inventory.counter.updated" schema="Magento\ScalableInventory\Api\Counter\ItemsInterface" />
+    <consumer name="inventoryQtyCounter" queue="inventory_qty_counter_queue" connection="amqp" class="Magento\ScalableInventory\Model\ResourceModel\QtyCounterConsumer" method="processMessage" executor="Magento\Framework\MessageQueue\BatchConsumer" />
+    <bind queue="inventory_qty_counter_queue" exchange="magento" topic="inventory.counter.updated" />
+</config>

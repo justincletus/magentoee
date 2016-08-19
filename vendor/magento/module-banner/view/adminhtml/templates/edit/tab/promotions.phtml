@@ -1,0 +1,30 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+?>
+<?php
+/**
+ * @var \Magento\Banner\Block\Adminhtml\Banner\Edit\Tab\Promotions
+ */
+?>
+<div class="entry-edit">
+    <fieldset class="fieldset">
+        <legend class="legend"><span><?php /* @escapeNotVerified */ echo __('Related Cart Price Rules')?></span></legend>
+        <br />
+        <?php echo $block->getChildHtml('banner_salesrule_grid'); ?>
+        <?php echo $block->getChildHtml('salesrule_grid_serializer'); ?>
+    </fieldset>
+</div>
+
+<div class="entry-edit">
+    <fieldset class="fieldset">
+        <legend class="legend"><span><?php /* @escapeNotVerified */ echo __('Related Catalog Price Rules')?></span></legend>
+        <br />
+        <?php echo $block->getChildHtml('banner_catalogrule_grid'); ?>
+         <?php echo $block->getChildHtml('catalogrule_grid_serializer'); ?>
+    </fieldset>
+</div>

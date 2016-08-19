@@ -1,0 +1,34 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+    $item = $block->getItem();
+    $wishlists = $block->getWishlists();
+?>
+<?php if ($block->isMultipleEnabled() && (count($wishlists) || $block->canCreateWishlists($wishlists))): ?>
+    <div class="split button" data-wishlist-copy='{"copySelectedUrl":"<?php /* @escapeNotVerified */ echo $block->getCopySelectedUrl();?>", "copyItemUrl":"<?php /* @escapeNotVerified */ echo $block->getCopyItemUrl();?>"}'>
+        <div class="wishlist-dropdown addto-wishlist">
+            <span class="action toggle change" data-mage-init='{"dropdown":{}}' data-toggle="dropdown">
+                <span><?php /* @escapeNotVerified */ echo __('Add to:') ?></span>
+            </span>
+            <ul class="items dropdown" data-target="dropdown">
+                <?php foreach ($wishlists as $wishlist): ?>
+                    <li class="item"><span data-wishlist-copy-item='{"itemId":"<?php /* @escapeNotVerified */ echo $item->getId();?>", "wishlistId":"<?php /* @escapeNotVerified */ echo $wishlist->getId();?>"}' title="<?php echo $block->escapeHtml($wishlist->getName());?>"><?php echo $block->escapeHtml($wishlist->getName());?></span></li>
+                <?php endforeach;?>
+                <?php if ($block->canCreateWishlists($wishlists)): ?>
+                    <li class="item"><span class="action new" data-wishlist-copy-item='{"itemId":"<?php /* @escapeNotVerified */ echo $item->getId();?>", "new":true}' title="<?php /* @escapeNotVerified */ echo __('Create New Wish List')?>"><span><?php /* @escapeNotVerified */ echo __('Create New Wish List')?></span></span></li>
+                <?php endif;?>
+            </ul>
+        </div>
+    </div>
+<?php else: ?>
+    <a href="#" onclick="Event.stop(event); Enterprise.Wishlist.copyItemTo(<?php /* @escapeNotVerified */ echo $item->getId();?>, $(this).up('tr').down('input.qty').value)" class="action towishlist">
+        <span><?php /* @escapeNotVerified */ echo __('Wishlist');?></span>
+    </a>
+<?php endif; ?>

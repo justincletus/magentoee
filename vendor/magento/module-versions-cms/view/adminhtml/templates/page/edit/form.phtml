@@ -1,0 +1,39 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+
+<?php
+/* @var $block \Magento\Cms\Block\Adminhtml\Page\Edit\Form */
+?>
+
+<div class="entry-edit">
+    <?php echo $block->getFormHtml() ?>
+<?php /*if( $form->getUseContainer() === true ): ?>
+<form id="<?php echo $form->getFormId() ?>" method="<?php echo ( $form->getFormMethod() ) ? $form->getFormMethod() : 'post' ; ?>" action="<?php echo $form->getFormAction() ?>" <?php echo ( $form->getFormEnctype() ) ? 'enctype="' . $block->getForm()->getFormEnctype() . '"' : '' ?> >
+<?php endif; ?>
+    <?php foreach ($form->getElements() as $_element): ?>
+    <?php echo $block->drawElement($_element) ?>
+    <?php endforeach; ?>
+<?php if( $form->getUseContainer() === true ): ?>
+</form>
+<?php endif;*/ ?>
+</div>
+<script>
+require(['jquery'], function(jQuery){
+//<![CDATA[
+<?php if ($block->getSelectedTabId()): ?>
+    jQuery(function() {
+        if (jQuery('#<?php /* @escapeNotVerified */ echo $block->getSelectedTabId() ?>').length) {
+            jQuery('#<?php /* @escapeNotVerified */ echo $block->getSelectedTabId() ?>').trigger('click');
+        }
+    });
+<?php endif; ?>
+
+});
+</script>

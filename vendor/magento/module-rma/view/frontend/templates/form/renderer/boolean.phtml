@@ -1,0 +1,29 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/* @var $block \Magento\CustomAttributeManagement\Block\Form\Renderer\Boolean */
+?>
+<?php
+$fieldCssClass = 'field field-' . $block->getHtmlId();
+$fieldCssClass .= $block->isRequired() ? ' required' : '';
+?>
+<div class="<?php /* @escapeNotVerified */ echo $fieldCssClass; ?>">
+    <label class="label" for="<?php echo $block->getHtmlId()?>"><span><?php /* @escapeNotVerified */ echo $block->getLabel() ?></span></label>
+    <div class="control">
+        <select id="items:<?php echo $block->getHtmlId()?><%- data._index_ %>" name="items[<%- data._index_ %>][<?php /* @escapeNotVerified */ echo $block->getFieldName()?>]"<?php if ($block->getHtmlClass()):?> class="select <?php echo $block->getHtmlClass();?>"<?php endif;?>>
+            <?php foreach ($block->getOptions() as $option):?>
+                <option value="<?php /* @escapeNotVerified */ echo $option['value']?>"<?php if ($option['value'] == $block->getValue()):?> selected="selected"<?php endif;?>><?php echo $block->escapeHtml($option['label'])?></option>
+            <?php endforeach;?>
+        </select>
+        <?php if ($_message = $block->getAdditionalDescription()) : ?>
+            <div class="note"><?php /* @escapeNotVerified */ echo $_message; ?></div>
+        <?php endif; ?>
+    </div>
+</div>

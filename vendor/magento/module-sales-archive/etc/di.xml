@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\SalesArchive\Model\Observer">
+        <arguments>
+            <argument name="config" xsi:type="object">Magento\SalesArchive\Model\Config\Proxy</argument>
+            <argument name="backendData" xsi:type="object">Magento\Backend\Helper\Data\Proxy</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\Module\Setup\Migration">
+        <arguments>
+            <argument name="compositeModules" xsi:type="array">
+                <item name="magento_salesarchive" xsi:type="string">Magento_SalesArchive</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\SalesArchive\Model\ResourceModel\Order\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">magento_sales_order_grid_archive</argument>
+            <argument name="resourceModel" xsi:type="string">Magento\Sales\Model\ResourceModel\Order</argument>
+        </arguments>
+    </type>
+    <virtualType name="Magento\SalesArchive\Model\ResourceModel\Order\Invoice\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">magento_sales_invoice_grid_archive</argument>
+            <argument name="resourceModel" xsi:type="string">Magento\Sales\Model\ResourceModel\Order\Invoice</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Magento\SalesArchive\Model\ResourceModel\Order\Shipment\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">magento_sales_shipment_grid_archive</argument>
+            <argument name="resourceModel" xsi:type="string">Magento\Sales\Model\ResourceModel\Order\Shipment</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Magento\SalesArchive\Model\ResourceModel\Order\Creditmemo\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">magento_sales_creditmemo_grid_archive</argument>
+            <argument name="resourceModel" xsi:type="string">Magento\Sales\Model\ResourceModel\Order\Creditmemo</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="sales_archive_order_grid_data_source" xsi:type="string">Magento\SalesArchive\Model\ResourceModel\Order\Collection</item>
+                <item name="sales_archive_order_invoice_grid_data_source" xsi:type="string">Magento\SalesArchive\Model\ResourceModel\Order\Invoice\Collection</item>
+                <item name="sales_archive_order_shipment_grid_data_source" xsi:type="string">Magento\SalesArchive\Model\ResourceModel\Order\Shipment\Collection</item>
+                <item name="sales_archive_order_creditmemo_grid_data_source" xsi:type="string">Magento\SalesArchive\Model\ResourceModel\Order\Creditmemo\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <!--<type name="Magento\Sales\Model\ResourceModel\Grid">-->
+        <!--<plugin name="sales-archive-move-to-active" type="Magento\SalesArchive\Model\ResourceModel\Plugin\Grid"/>-->
+    <!--</type>-->
+</config>

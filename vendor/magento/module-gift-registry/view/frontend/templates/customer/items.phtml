@@ -1,0 +1,57 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php if (count($block->getItems()) > 0): ?>
+<form action="<?php /* @escapeNotVerified */ echo $block->getActionUpdateUrl() ?>"
+      method="post"
+      id="gift-registry-items-form"
+      class="form giftregistry items"
+      data-mage-init='{"validation":{}}'>
+    <fieldset class="fieldset">
+        <?php echo $block->getBlockHtml('formkey')?>
+        <div class="table-wrapper giftregistry">
+            <table id="shopping-cart-table" class="data table table-giftregistry-items">
+                <caption class="table-caption"><?php /* @escapeNotVerified */ echo __('Gift Registry') ?></caption>
+                <thead>
+                    <tr>
+                        <th scope="col" class="col product"><?php /* @escapeNotVerified */ echo __('Product') ?></th>
+                        <th scope="col" class="col note"><?php /* @escapeNotVerified */ echo __('Note') ?></th>
+                        <th scope="col" class="col date"><?php /* @escapeNotVerified */ echo __('Added On') ?></th>
+                        <th scope="col" class="col qty"><?php /* @escapeNotVerified */ echo __('Qty') ?></th>
+                        <th scope="col" class="col fulfilled"><?php /* @escapeNotVerified */ echo __('Qty Fulfilled') ?></th>
+                        <th scope="col" class="col actions"><?php /* @escapeNotVerified */ echo __('Delete') ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($block->getItems() as $_item): ?>
+                    <?php echo $block->getItemHtml($_item) ?>
+                <?php endforeach ?>
+                </tbody>
+            </table>
+        </div>
+        <div class="actions-toolbar">
+            <div class="primary">
+                <button type="submit" class="action primary update">
+                    <span><?php /* @escapeNotVerified */ echo __('Update Gift Registry') ?></span>
+                </button>
+            </div>
+            <div class="secondary">
+                <a href="<?php echo $block->escapeUrl($block->getBackUrl()) ?>" class="action back"><span><?php /* @escapeNotVerified */ echo __('Back') ?></span></a>
+            </div>
+        </div>
+    </fieldset>
+</form>
+<?php else: ?>
+    <div class="message info empty"><span><?php /* @escapeNotVerified */ echo __('This gift registry has no items.') ?></span></div>
+    <div class="actions-toolbar">
+        <div class="secondary">
+            <a href="<?php echo $block->escapeUrl($block->getBackUrl()) ?>" class="action back"><span><?php /* @escapeNotVerified */ echo __('Back') ?></span></a>
+        </div>
+    </div>
+<?php endif ?>

@@ -1,0 +1,30 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * Create account form template
+ *
+ * @var $block \Magento\CustomAttributeManagement\Block\Form\Renderer\File
+ */
+?>
+<?php
+$fieldCssClass = 'field  field-' . $block->getHtmlId();
+$fieldCssClass .= $block->isRequired() ? ' required' : '';
+?>
+<div class="<?php /* @escapeNotVerified */ echo $fieldCssClass; ?>">
+    <label class="label" for="<?php echo $block->getHtmlId()?>"><span><?php /* @escapeNotVerified */ echo $block->getLabel() ?></span></label>
+    <div class="control">
+        <input type="file" id="<?php echo $block->getHtmlId()?>" name="<?php /* @escapeNotVerified */ echo $block->getFieldName()?>" value="" class="input-file">
+        <input type="hidden" id="<?php echo $block->getHtmlId()?>_value" name="<?php /* @escapeNotVerified */ echo $block->getFieldName()?>_value" value="<?php /* @escapeNotVerified */ echo $block->getEscapedValue()?>" <?php if ($block->isRequired()): ?>data-validate="{required:true}" <?php endif;?>/>
+        <?php if ($_message = $block->getAdditionalDescription()) : ?>
+        <div class="note"><?php /* @escapeNotVerified */ echo $_message; ?></div>
+        <?php endif; ?>
+    </div>
+</div>

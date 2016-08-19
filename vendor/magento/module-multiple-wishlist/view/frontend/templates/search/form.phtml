@@ -1,0 +1,62 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+
+<div class="block block-wishlist-search-form">
+    <div class="block-title">
+        <strong><?php /* @escapeNotVerified */ echo __('Search Options') ?></strong>
+    </div>
+    <div class="block-content">
+        <form action="<?php /* @escapeNotVerified */ echo $block->getActionUrl() ?>"
+              method="get"
+              id="wishlist-search-form"
+              class="form form-wishlist-search"
+              data-mage-init='{"validation":{}}'>
+            <fieldset class="fieldset" data-hasrequired="* <?php /* @escapeNotVerified */ echo __('Required Fields') ?>">
+                <legend class="legend">
+                    <span><?php /* @escapeNotVerified */ echo __('Search Options') ?></span>
+                </legend><br>
+                <div class="field firstname required">
+                    <label for="params_firstname" class="label"><span><?php /* @escapeNotVerified */ echo __('First Name') ?></span></label>
+                    <div class="control">
+                        <input name="params[firstname]" id="params_firstname" type="text" value="<?php /* @escapeNotVerified */ echo $block->getFormData('firstname') ?>" class="input-text required-entry">
+                    </div>
+                </div>
+                <div class="field lastname required">
+                    <label for="params_lastname" class="label"><span><?php /* @escapeNotVerified */ echo __('Last Name') ?></span></label>
+                    <div class="control">
+                        <input name="params[lastname]" id="params_lastname" type="text" value="<?php /* @escapeNotVerified */ echo $block->getFormData('lastname') ?>" class="input-text required-entry">
+                    </div>
+                </div>
+                <div class="actions-toolbar">
+                    <input type="hidden" name="params[search]" value="type">
+                    <button type="submit" class="action search" title="<?php echo $block->escapeHtml(__('Search')) ?>"><span><?php /* @escapeNotVerified */ echo __('Search') ?></span></button>
+                </div>
+            </fieldset>
+        </form>
+        <form action="<?php /* @escapeNotVerified */ echo $block->getActionUrl() ?>"
+              method="get"
+              id="wishlist-search-email-form"
+              class="form form-wishlist-search"
+              data-mage-init='{"validation":{}}'>
+            <fieldset class="fieldset" data-hasrequired="* <?php /* @escapeNotVerified */ echo __('Required Fields') ?>">
+                <div class="field email required">
+                    <label for="params_email" class="label"><span><?php /* @escapeNotVerified */ echo __('Owner Email') ?></span></label>
+                    <div class="control">
+                        <input name="params[email]" id="params_email" type="text" value="<?php /* @escapeNotVerified */ echo $block->getFormData('email') ?>" class="input-text required-entry validate-email">
+                    </div>
+                </div>
+                <div class="actions-toolbar">
+                    <input type="hidden" name="params[search]" value="email">
+                    <button type="submit" class="action search" title="<?php echo $block->escapeHtml(__('Search')) ?>"><span><?php /* @escapeNotVerified */ echo __('Search') ?></span></button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

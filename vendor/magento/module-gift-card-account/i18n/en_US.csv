@@ -1,0 +1,129 @@
+Remove,Remove
+ID,ID
+No,No
+Action,Action
+"Expiration Date","Expiration Date"
+Delete,Delete
+Save,Save
+Yes,Yes
+Code,Code
+Status,Status
+Website,Website
+"Please wait, loading...","Please wait, loading..."
+"End on","End on"
+Active,Active
+Created,Created
+Date,Date
+Alphanumeric,Alphanumeric
+Sent,Sent
+"Balance Change","Balance Change"
+Balance,Balance
+"By admin: %1.","By admin: %1."
+Updated,Updated
+Used,Used
+"Gift Card","Gift Card"
+"Gift Card Accounts","Gift Card Accounts"
+"Recipient Name","Recipient Name"
+"Recipient Email","Recipient Email"
+"Add Gift Card Account","Add Gift Card Account"
+"Save & Send Email","Save & Send Email"
+"Edit Gift Card Account: %1","Edit Gift Card Account: %1"
+"New Gift Card Account","New Gift Card Account"
+"More Information","More Information"
+Information,Information
+"Gift Card Code","Gift Card Code"
+Redeemable,Redeemable
+"Send Gift Card","Send Gift Card"
+"Send Email from the Following Store View","Send Email from the Following Store View"
+"-- First Please Select a Website --","-- First Please Select a Website --"
+"Gift Card Account","Gift Card Account"
+History,History
+"Code Pool used: <b>%1%</b> (free <b>%2</b> of <b>%3</b> total). Generate new code pool <a href=""%4"">here</a>.","Code Pool used: <b>%1%</b> (free <b>%2</b> of <b>%3</b> total). Generate new code pool <a href=""%4"">here</a>."
+"This gift card account has been deleted.","This gift card account has been deleted."
+"New Account","New Account"
+"Edit Gift Card Account","Edit Gift Card Account"
+"You saved the gift card account.","You saved the gift card account."
+"You saved the gift card account, but an email was not sent.","You saved the gift card account, but an email was not sent."
+"An email was not sent because the gift card account is not active.","An email was not sent because the gift card account is not active."
+"We couldn't find a gift card account to delete.","We couldn't find a gift card account to delete."
+"New code pool was generated.","New code pool was generated."
+"We were unable to generate a new code pool.","We were unable to generate a new code pool."
+"Please select a gift card account(s)","Please select a gift card account(s)"
+"You deleted a total of %1 records.","You deleted a total of %1 records."
+"We will refund the gift card amount to your customer’s store credit","We will refund the gift card amount to your customer’s store credit"
+"Please enable Store Credit to refund the gift card amount to your customer","Please enable Store Credit to refund the gift card amount to your customer"
+"Please correct the gift card code.","Please correct the gift card code."
+"Gift Card ""%1"" was added.","Gift Card ""%1"" was added."
+"We cannot apply this gift card.","We cannot apply this gift card."
+"Gift Card ""%1"" was removed.","Gift Card ""%1"" was removed."
+"We cannot remove this gift card.","We cannot remove this gift card."
+"You can't redeem a gift card now.","You can't redeem a gift card now."
+"Gift Card ""%1"" was redeemed.","Gift Card ""%1"" was redeemed."
+"We cannot redeem this gift card.","We cannot redeem this gift card."
+"An expiration date must be in the future.","An expiration date must be in the future."
+"The balance cannot be less than zero.","The balance cannot be less than zero."
+"This gift card account is already in the quote.","This gift card account is already in the quote."
+"Please correct the gift card account code: ""%1"".","Please correct the gift card account code: ""%1""."
+"This gift card account wasn't found in the quote.","This gift card account wasn't found in the quote."
+"Please correct the gift card account ID. Requested code: ""%1""","Please correct the gift card account ID. Requested code: ""%1"""
+"Please correct the gift card account website: %1.","Please correct the gift card account website: %1."
+"Gift card account %1 is not enabled.","Gift card account %1 is not enabled."
+"Gift card account %1 is expired.","Gift card account %1 is expired."
+"Gift card account %1 has a zero balance.","Gift card account %1 has a zero balance."
+"Gift card account %1 balance is lower than the charged amount.","Gift card account %1 balance is lower than the charged amount."
+Available,Available
+Redeemed,Redeemed
+Expired,Expired
+"You supplied an invalid customer ID.","You supplied an invalid customer ID."
+"Gift Card Redeemed: %1. For customer #%2.","Gift Card Redeemed: %1. For customer #%2."
+"Order #%1.","Order #%1."
+"Recipient: %1.","Recipient: %1."
+"Customer #%1.","Customer #%1."
+"Please assign a gift card account.","Please assign a gift card account."
+"Unknown history action.","Unknown history action."
+"We were unable to create full code pool size. Please check settings and try again.","We were unable to create full code pool size. Please check settings and try again."
+"No codes left in the pool.","No codes left in the pool."
+Alphabetical,Alphabetical
+Numeric,Numeric
+"Maximum generated code length is 255. Please correct your settings.","Maximum generated code length is 255. Please correct your settings."
+"Gift Cards","Gift Cards"
+Generate,Generate
+"Code Pool used: ","Code Pool used: "
+" (fee "," (fee "
+" of "," of "
+" total)."," total)."
+"Are you sure you want to continue without saving your changes?","Are you sure you want to continue without saving your changes?"
+"Refund Gift Cards to Store Credit","Refund Gift Cards to Store Credit"
+"Add Gift Card","Add Gift Card"
+"Gift Card (%1)","Gift Card (%1)"
+"Enter gift card code","Enter gift card code"
+"Redeem Gift Card","Redeem Gift Card"
+"Check status and balance","Check status and balance"
+"Have a gift card? ","Have a gift card? "
+"Click here","Click here"
+" to redeem it."," to redeem it."
+"Enter the gift card code","Enter the gift card code"
+"Check Gift Card status and balance","Check Gift Card status and balance"
+"Gift Card: ","Gift Card: "
+"Current Balance: ","Current Balance: "
+"Expires: ","Expires: "
+"Please correct the wrong or expired Gift Card Code.","Please correct the wrong or expired Gift Card Code."
+"To add or remove gift cards, <a href=""%1"">click here</a>.","To add or remove gift cards, <a href=""%1"">click here</a>."
+"Gift Card amount applied to order: %1","Gift Card amount applied to order: %1"
+CSV,CSV
+"Excel XML","Excel XML"
+"Code Length","Code Length"
+"Excluding prefix, suffix and separators.","Excluding prefix, suffix and separators."
+"Code Format","Code Format"
+"Code Prefix","Code Prefix"
+"Code Suffix","Code Suffix"
+"Dash Every X Characters","Dash Every X Characters"
+"Email Sent from Gift Card Account Management","Email Sent from Gift Card Account Management"
+"Gift Card Email Sender","Gift Card Email Sender"
+"Gift Card Template","Gift Card Template"
+"Gift Card Account General Settings","Gift Card Account General Settings"
+"if empty no separation","if empty no separation"
+"New Pool Size","New Pool Size"
+"Low Code Pool Threshold","Low Code Pool Threshold"
+"IMPORTANT: Be sure to save your configuration before running generation process.","IMPORTANT: Be sure to save your configuration before running generation process."
+"Are you sure you want to delete these gift card accounts?","Are you sure you want to delete these gift card accounts?"

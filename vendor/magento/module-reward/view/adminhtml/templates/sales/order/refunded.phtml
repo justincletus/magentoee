@@ -1,0 +1,15 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php if ((float) $block->getSource()->getRewardPointsBalanceRefund()): ?>
+    <tr>
+        <td class="label"><strong><?php /* @escapeNotVerified */ echo __('Reward Points refunded to customer') ?></strong></td>
+        <td><strong><?php /* @escapeNotVerified */ echo $block->getSource()->getRewardPointsBalanceRefund(); ?></strong></td>
+    </tr>
+<?php endif; ?>

@@ -1,0 +1,130 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<span id="gr-please-wait" class="please-wait load indicator" style="display: none;" daat-text="<?php /* @escapeNotVerified */ echo __('This won\'t take long . . .') ?>">
+    <span><?php /* @escapeNotVerified */ echo __('This won\'t take long . . .') ?></span>
+</span>
+
+<form action="<?php /* @escapeNotVerified */ echo $block->getActionUrl() ?>" method="post" id="gr-search-form" class="form form-giftregistry-search" data-hasrequired="* <?php /* @escapeNotVerified */ echo __('Required Fields') ?>">
+    <fieldset class="fieldset">
+        <?php echo $block->getBlockHtml('formkey')?>
+        <legend class="legend"><span><?php /* @escapeNotVerified */ echo __('Search Options') ?></span></legend><br>
+        <div class="field type">
+            <label for="params-type-id" class="label"><span><?php /* @escapeNotVerified */ echo __('Gift Registry Type') ?></span></label>
+            <div class="control">
+                <?php echo $block->getTypeSelectHtml() ?>
+                <div class="note"><?php /* @escapeNotVerified */ echo __('For better search results, first choose a gift registry type. By default, we search all registry types.') ?></div>
+            </div>
+        </div>
+        <div class="field name required">
+            <label for="params_firstname" class="label"><span><?php /* @escapeNotVerified */ echo __('First Name') ?></span></label>
+             <div class="control">
+                <input name="params[firstname]" id="params_firstname" type="text" value="<?php /* @escapeNotVerified */ echo $block->getFormData('firstname') ?>" class="input-text required-entry" />
+            </div>
+        </div>
+        <div class="field lastname required">
+            <label for="params_lastname" class="label"><span><?php /* @escapeNotVerified */ echo __('Last Name') ?></span></label>
+            <div class="control">
+                <input name="params[lastname]" id="params_lastname" type="text" value="<?php /* @escapeNotVerified */ echo $block->getFormData('lastname') ?>" class="input-text required-entry" />
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset class="fieldset" id="gr-type-specific-fieldset" style="display: none;">
+        <legend class="legend"><span><?php /* @escapeNotVerified */ echo __('Type Specific Options') ?></span></legend><br>
+        <div class="fields fields-specific-options" id="gr-type-specific-options"></div>
+    </fieldset>
+
+    <div class="actions-toolbar">
+        <input type="hidden" name="params[search]" value="type" />
+        <button type="submit" class="action search" title="<?php echo $block->escapeHtml(__('Search')) ?>"><span><?php /* @escapeNotVerified */ echo __('Search') ?></span></button>
+    </div>
+</form>
+
+<form action="<?php /* @escapeNotVerified */ echo $block->getActionUrl() ?>" method="post" id="gr-search-email-form" class="form form-giftregistry-search" data-hasrequired="* <?php /* @escapeNotVerified */ echo __('Required Fields') ?>">
+    <fieldset class="fieldset">
+        <div class="field email required">
+             <label for="params_email" class="label"><span><?php /* @escapeNotVerified */ echo __('Registrant Email') ?></span></label>
+             <div class="control">
+                 <input name="params[email]" id="params_email" type="text" value="<?php /* @escapeNotVerified */ echo $block->getFormData('email') ?>" class="input-text required-entry validate-email" />
+             </div>
+        </div>
+    </fieldset>
+    <div class="actions-toolbar">
+        <input type="hidden" name="params[search]" value="email" />
+        <button type="submit" class="action search" title="<?php echo $block->escapeHtml(__('Search')) ?>"><span><?php /* @escapeNotVerified */ echo __('Search') ?></span></button>
+    </div>
+</form>
+
+<form action="<?php /* @escapeNotVerified */ echo $block->getActionUrl() ?>" method="post" id="gr-search-id-form" class="form form-giftregistry-search" data-hasrequired="* <?php /* @escapeNotVerified */ echo __('Required Fields') ?>">
+    <fieldset class="fieldset">
+        <div class="field id required">
+             <label for="params_id" class="label"><span><?php /* @escapeNotVerified */ echo __('Gift Registry ID') ?></span></label>
+             <div class="control">
+                 <input name="params[id]" id="params_id" type="text" value="<?php /* @escapeNotVerified */ echo $block->getFormData('id') ?>" class="input-text required-entry" />
+             </div>
+        </div>
+    </fieldset>
+    <div class="actions-toolbar">
+        <input type="hidden" name="params[search]" value="id" />
+        <button type="submit" class="action search" title="<?php echo $block->escapeHtml(__('Search')) ?>"><span><?php /* @escapeNotVerified */ echo __('Search') ?></span></button>
+    </div>
+</form>
+
+<?php if ($block->getSearchResults() && $block->getSearchResults()->getSize()): ?>
+<div class="block block-giftregistry-results">
+    <div class="block-title"><strong><?php /* @escapeNotVerified */ echo __('Search Results') ?></strong></div>
+    <div class="block-content">
+        <div class="table-wrapper">
+            <table class="data table" id="giftregistry-search-results">
+                <caption class="table-caption"><?php /* @escapeNotVerified */ echo __('Search Results') ?></caption>
+                <thead>
+                <tr>
+                    <th class="col name" scope="col"><?php /* @escapeNotVerified */ echo __('Name') ?></th>
+                    <th class="col location" scope="col"><?php /* @escapeNotVerified */ echo __('Location') ?></th>
+                    <th class="col event" scope="col"><?php /* @escapeNotVerified */ echo __('Event') ?></th>
+                    <th class="col type" scope="col"><?php /* @escapeNotVerified */ echo __('Type') ?></th>
+                    <th class="col date" scope="col"><?php /* @escapeNotVerified */ echo __('Event Date') ?></th>
+                    <th class="col actions" scope="col"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($block->getSearchResults() as $item): ?>
+                    <tr>
+                        <td class="col name" data-th="<?php echo $block->escapeHtml(__('Name')); ?>"><?php echo $block->escapeHtml($item->getRegistrant()) ?></td>
+                        <td class="col location" data-th="<?php echo $block->escapeHtml(__('Location')); ?>"><?php echo $block->escapeHtml($item->getEventLocation()) ?></td>
+                        <td class="col event" data-th="<?php echo $block->escapeHtml(__('Event')); ?>"><?php echo $block->escapeHtml($item->getTitle()) ?></td>
+                        <td class="col type" data-th="<?php echo $block->escapeHtml(__('Type')); ?>"><?php echo $block->escapeHtml($item->getType()) ?></td>
+                        <td class="col date" data-th="<?php echo $block->escapeHtml(__('Event Date')); ?>"><?php /* @escapeNotVerified */ echo $block->getFormattedDate($item) ?></td>
+                        <td class="col actions" data-th="<?php echo $block->escapeHtml(__('Actions')); ?>"><a href="<?php /* @escapeNotVerified */ echo $block->getRegistryLink($item) ?>" class="action view"><span><?php /* @escapeNotVerified */ echo __('View') ?></span></a></td>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+        <div class="toolbar toolbar-giftregistry-results bottom"><?php echo $block->getChildHtml('pager') ?></div>
+    </div>
+</div>
+<?php elseif ($block->getSearchResults()): ?>
+    <div class="message error"><div><?php /* @escapeNotVerified */ echo __('Your search returned no results.') ?></div></div>
+<?php endif; ?>
+
+<script type="text/x-magento-init">
+    {
+        "form[id^=\"gr-search\"]": {
+            "validation": {}
+        },
+        "#params-type-id": {
+            "advancedSearch": {
+                "url": "<?php /* @escapeNotVerified */ echo $block->getAdvancedUrl() ?>",
+                "selectedOption": "<?php /* @escapeNotVerified */ echo($block->getFormData('type_id') ? $block->getFormData('type_id') : null); ?>"
+            }
+        }
+    }
+</script>

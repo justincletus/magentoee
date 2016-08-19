@@ -1,0 +1,21 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+/* @var $block \Magento\VisualMerchandiser\Block\Adminhtml\Widget\Checkbox */
+
+// @codingStandardsIgnoreFile
+
+?>
+<div class="smart-category-toggle">
+    <label class="admin__field-label"><span><?php /* @escapeNotVerified */ echo __('Match products by rule') ?></span></label>
+    <div class="actions-switch">
+        <input id="<?php /* @escapeNotVerified */ echo $block->getId() ?>"<?php if ($block->smartCategoryEnabled()): ?> checked="checked"<?php endif; ?> name="general[is_smart_category]" value="1" class="actions-switch-checkbox" type="checkbox" />
+        <label class="actions-switch-label" for="<?php /* @escapeNotVerified */ echo $block->getId() ?>">
+            <span class="actions-switch-inner"></span>
+            <span class="actions-switch-indicator"></span>
+            <span class="actions-switch-text" data-label-yes="<?php /* @escapeNotVerified */ echo __('Yes') ?>" data-label-no="<?php /* @escapeNotVerified */ echo __('No') ?>"></span>
+        </label>
+    </div>
+</div>

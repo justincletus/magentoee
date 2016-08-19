@@ -1,0 +1,33 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * @see \Magento\Reward\Block\Tooltip
+ */
+?>
+<div class="message info reward <?php /* @escapeNotVerified */ echo $block->getWrapperClass()?>">
+    <?php if ($block->hasRewardMessage()):?>
+        <span><?php /* @escapeNotVerified */ echo __($block->getRewardMessage(), $this->helper('Magento\Reward\Helper\Data')->formatReward($block->getRewardPoints(), $block->getRewardAmount(), null, '<strong>%s</strong>'))?></span>
+    <?php endif;?>
+    <?php if ($block->hasPointsBalance() && !$block->hasHideBalance()):?>
+    <span class="reward-balance">
+        <?php /* @escapeNotVerified */ echo __('Your balance is %1.', $this->helper('Magento\Reward\Helper\Data')->formatReward($block->getPointsBalance(), null, null, '<strong>%s</strong>'))?>
+    </span>
+    <?php endif;?>
+    <?php if (!$block->hasHideLink()):?>
+        <span><?php /* @escapeNotVerified */ echo $block->renderLearnMoreLink()?></span>
+    <?php endif;?>
+    <?php if ($block->hasQtyLimit() && $block->hasRewardQtyLimitationMessage()):?>
+        <span class="reward-limit"><?php /* @escapeNotVerified */ echo __($block->getRewardQtyLimitationMessage(), "<strong>{$block->getQtyLimit()}</strong>")?></span>
+    <?php endif;?>
+    <?php if ($block->hasGuestNote()):?>
+        <span class="reward-limit"><?php /* @escapeNotVerified */ echo __($block->getGuestNote())?></span>
+    <?php endif;?>
+</div>

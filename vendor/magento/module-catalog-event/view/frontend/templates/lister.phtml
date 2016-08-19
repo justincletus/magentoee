@@ -1,0 +1,88 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * Catalog Event category page
+ *
+ * @see \Magento\CatalogEvent\Block\Event\Lister
+ */
+?>
+<div id="<?php echo $block->getHtmlId(); ?>" data-mage-init='{"carousel":{"pageSize": <?php /* @escapeNotVerified */ echo $block->getPageSize(); ?>,scrollSize: <?php /* @escapeNotVerified */ echo $block->getScrollSize() ?> }}'
+     class="events-slider"<?php if ($block->hasWidth()): ?> style="width:<?php echo (int)$block->getWidth()?>px !important;" <?php endif;?>>
+    <div data-slide-button="slide-button" class="slide-button backward">&laquo;</div>
+    <div data-slider-panel="slider-panel"
+         class="slider-panel"<?php if ($block->hasWidth()): ?> style="width:<?php echo (int)$block->getWidth()?>px !important;" <?php endif;?>>
+        <ul data-slider="slider" class="slider">
+            <?php foreach ($block->getEvents() as $_event): ?>
+                <?php $_category = $_event->getCategory(); ?>
+                <li data-slider-item="slider-item" class="slider-item">
+                    <div class="event <?php /* @escapeNotVerified */ echo $_event->getStatus()?>">
+                        <strong class="status">
+                            <?php /* @escapeNotVerified */ echo $block->getStatusText($_event); ?>
+                        </strong>
+                        <?php switch ($_event->getStatus()):
+                            case 'upcoming': ?>
+                                <div class="event-dates">
+                                    <p class="start">
+                                        <strong class="date-part"><?php /* @escapeNotVerified */ echo $block->getEventDate('start', $_event); ?></strong>
+                                        <span class="time-part"><?php /* @escapeNotVerified */ echo $block->getEventTime('start', $_event, 'hh a zzz'); ?></span>
+                                    </p>
+                                    <p class="end">
+                                        <span class="delimiter-part">-</span>
+                                        <strong class="date-part"><?php /* @escapeNotVerified */ echo $block->getEventDate('end', $_event); ?></strong>
+                                        <span class="time-part"><?php /* @escapeNotVerified */ echo $block->getEventTime('end', $_event, 'hh a zzz'); ?></span>
+                                    </p>
+                                </div>
+                                <a class="event-button button" href="<?php /* @escapeNotVerified */ echo $block->getCategoryUrl($_category); ?>"><span><?php /* @escapeNotVerified */ echo __('Preview Sale') ?></span></a>
+
+
+                                <?php break;
+                            case 'open': ?>
+                                <div class="event-ticker" id="<?php echo $block->getHtmlId(); ?>-event-ticker-<?php /* @escapeNotVerified */ echo $_event->getId()?>" data-mage-init='{"ticker":{"secondsToClose": <?php /* @escapeNotVerified */ echo $block->getSecondsToClose($_event); ?>}}'>
+                                    <div class="container">
+                                        <span data-container="days" class="days">00</span><span data-container="delimiter" class="delimiter">:</span><span data-container="hour" class="hour">00</span><span data-container="delimiter" class="delimiter">:</span><span data-container="minute" class="minute">00</span><span data-container="delimiter" class="delimiter">:</span><span data-container="second" class="second">00</span>
+                                    </div>
+                                </div>
+                                <a class="event-button button" href="<?php /* @escapeNotVerified */ echo $block->getCategoryUrl($_category); ?>"><span><?php /* @escapeNotVerified */ echo __('Go To Sale') ?></span></a>
+
+
+                                <?php break;
+                            case 'closed': ?>
+                                <div class="event-dates">
+                                    <p class="start">
+                                        <strong class="date-part"><?php /* @escapeNotVerified */ echo $block->getEventDate('start', $_event); ?></strong>
+                                        <span class="time-part"><?php /* @escapeNotVerified */ echo $block->getEventTime('start', $_event, 'hh a zzz'); ?></span>
+                                    </p>
+                                    <p class="end">
+                                        <span class="delimiter-part">-</span>
+                                        <strong class="date-part"><?php /* @escapeNotVerified */ echo $block->getEventDate('end', $_event); ?></strong>
+                                        <span class="time-part"><?php /* @escapeNotVerified */ echo $block->getEventTime('end', $_event, 'hh a zzz'); ?></span>
+                                    </p>
+                                </div>
+                                <a class="event-button" href="<?php /* @escapeNotVerified */ echo $block->getCategoryUrl($_category); ?>"><span><?php /* @escapeNotVerified */ echo __('View Sale') ?></span></a>
+
+
+                                <?php break; ?>
+                            <?php endswitch; ?>
+                        <div class="event-bottom"></div>
+                    </div>
+                    <div class="category-info">
+                        <a class="category-show" href="<?php /* @escapeNotVerified */ echo $block->getCategoryUrl($_category); ?>" title="<?php echo $block->escapeHtml($_category->getName()) ?>">
+                            <?php if ($block->getEventImageUrl($_event)): ?>
+                                <img src="<?php /* @escapeNotVerified */ echo $block->getEventImageUrl($_event); ?>" title="<?php echo $block->escapeHtml($_category->getName()) ?>" alt="<?php echo $block->escapeHtml($_category->getName()) ?>" />
+                            <?php else: ?>
+                                <span class="category-name"><?php echo $block->escapeHtml($_category->getName()) ?></span>
+                            <?php endif; ?>
+                        </a>
+                    </div>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+    <div data-slide-button="slide-button" class="slide-button inactive forward">&raquo;</div>
+</div>

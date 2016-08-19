@@ -1,0 +1,87 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/* @var $block \Magento\CatalogPermissions\Block\Adminhtml\Catalog\Category\Tab\Permissions\Row */
+?>
+<?php
+/**
+ * Permissions tab row template
+ *
+ * @see \Magento\CatalogPermissions\Block\Adminhtml\Catalog\Category\Tab\Permissions\Row
+ */
+?>
+<?php if ($block->isReadonly()):?>
+<?php $_readonly = ' disabled="disabled"'; ?>
+<?php else: ?>
+<?php $_readonly = ''; ?>
+<?php endif;?>
+
+<div class="option-box permission-box" id="<%- data.html_id %>">
+    <?php if (!$block->canEditWebsites()): ?>
+    <input type="hidden" value="<?php /* @escapeNotVerified */ echo $block->getDefaultWebsiteId(); ?>" class="<?php /* @escapeNotVerified */ echo $block->getFieldClassName('website'); ?>" name="general[permissions][<%- data.index %>][website_id]"/>
+    <?php endif; ?>
+    <input type="hidden" value="" class="<?php /* @escapeNotVerified */ echo $block->getFieldClassName('id'); ?>" name="general[permissions][<%- data.index %>][id]"/>
+    <input type="hidden" value="" class="<?php /* @escapeNotVerified */ echo $block->getFieldClassName('_deleted'); ?>" name="general[permissions][<%- data.index %>][_deleted]"/>
+    <div class="admin__control-table-wrapper">
+        <table class="admin__control-table">
+            <thead>
+                <tr>
+                    <?php if ($block->canEditWebsites()): ?>
+                        <th class="col-website required"><?php /* @escapeNotVerified */ echo __('Website');?></th>
+                    <?php endif; ?>
+                    <th class="col-group required"><?php /* @escapeNotVerified */ echo __('Customer Group');?></th>
+                    <?php foreach ($block->getGrants() as $_label): ?>
+                        <th class="col-grants"><?php /* @escapeNotVerified */ echo $_label ?></th>
+                    <?php endforeach; ?>
+                    <th class="col-action"><?php /* @escapeNotVerified */ echo __('Action');?></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <?php if ($block->canEditWebsites()): ?>
+                        <td class="col-website"><select <?php /* @escapeNotVerified */ echo $_readonly;?> class="<?php /* @escapeNotVerified */ echo $block->getFieldClassName('website_id'); ?> select is-unique required-entry" name="general[permissions][<%- data.index %>][website_id]">
+                                <option value=""><?php /* @escapeNotVerified */ echo __('-- Please Select --');?></option>
+                                <option value="<?php /* @escapeNotVerified */ echo $block->getOptionForSelectAll(); ?>"><?php /* @escapeNotVerified */ echo __('All Websites');?></option>
+                                <?php foreach ($block->getWebsiteCollection() as $_website): ?>
+                                    <option value="<?php /* @escapeNotVerified */ echo $_website->getId() ?>"><?php echo $block->escapeHtml($_website->getName()) ?></option>
+                                <?php endforeach; ?>
+                            </select></td>
+                    <?php endif; ?>
+                    <td class="col-group">
+                        <select <?php /* @escapeNotVerified */ echo $_readonly;?> class="<?php /* @escapeNotVerified */ echo $block->getFieldClassName('customer_group_id'); ?> select is-unique required-entry" name="general[permissions][<%- data.index %>][customer_group_id]">
+                            <option value=""><?php /* @escapeNotVerified */ echo __('-- Please Select --');?></option>
+                            <option value="<?php /* @escapeNotVerified */ echo $block->getOptionForSelectAll(); ?>"><?php /* @escapeNotVerified */ echo __('All Customer Groups');?></option>
+                            <?php foreach ($block->getCustomerGroupCollection() as $_customerGroup): ?>
+                                <option value="<?php /* @escapeNotVerified */ echo $_customerGroup->getId() ?>"><?php echo $block->escapeHtml($_customerGroup->getCode()) ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </td>
+                    <?php foreach ($block->getGrants() as $_fieldId => $_label): ?>
+                        <td class="col-grants">
+                            <input <?php /* @escapeNotVerified */ echo $_readonly;?> type="radio" class="<?php /* @escapeNotVerified */ echo $block->getFieldClassName($_fieldId) ?>" name="general[permissions][<%- data.index %>][<?php /* @escapeNotVerified */ echo $_fieldId ?>]" id="category_permissions_<%- data.index %>_<?php /* @escapeNotVerified */ echo $_fieldId ?>_allow" value="-1" <%- data["<?php /* @escapeNotVerified */ echo $_fieldId ?>_-1"] %> <%- data.<?php /* @escapeNotVerified */ echo $_fieldId ?>_disabled %>/><label for="category_permissions_<%- data.index %>_<?php /* @escapeNotVerified */ echo $_fieldId ?>_allow">
+                                <span><?php /* @escapeNotVerified */ echo __('Allow') ?></span>
+                            </label><br />
+                            <input <?php /* @escapeNotVerified */ echo $_readonly;?> type="radio" class="<?php /* @escapeNotVerified */ echo $block->getFieldClassName($_fieldId) ?>" name="general[permissions][<%- data.index %>][<?php /* @escapeNotVerified */ echo $_fieldId ?>]" id="category_permissions_<%- data.index %>_<?php /* @escapeNotVerified */ echo $_fieldId ?>_deny" value="-2" <%- data["<?php /* @escapeNotVerified */ echo $_fieldId ?>_-2"] %> <%- data.<?php /* @escapeNotVerified */ echo $_fieldId ?>_disabled %>/><label for="category_permissions_<%- data.index %>_<?php /* @escapeNotVerified */ echo $_fieldId ?>_deny">
+                                <span><?php /* @escapeNotVerified */ echo __('Deny') ?></span>
+                            </label><br />
+                            <input <?php /* @escapeNotVerified */ echo $_readonly;?> type="radio" class="<?php /* @escapeNotVerified */ echo $block->getFieldClassName($_fieldId) ?>" name="general[permissions][<%- data.index %>][<?php /* @escapeNotVerified */ echo $_fieldId ?>]" id="category_permissions_<%- data.index %>_<?php /* @escapeNotVerified */ echo $_fieldId ?>_default" value="0" <%- data["<?php /* @escapeNotVerified */ echo $_fieldId ?>_0"] %> <%- data.<?php /* @escapeNotVerified */ echo $_fieldId ?>_disabled %>/><label for="category_permissions_<%- data.index %>_<?php /* @escapeNotVerified */ echo $_fieldId ?>_default">
+                            <span>
+                                <?php /* @escapeNotVerified */ echo __('Use parent') ?>
+                                <span class="permissions-use-parent <?php /* @escapeNotVerified */ echo $_fieldId?>"></span>
+                            </span>
+                            </label>
+                        </td>
+                    <?php endforeach; ?>
+                    <td class="col-action"><?php echo $block->getDeleteButtonHtml(); ?></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <input type="hidden" value="" class="permission-duplicate" id="category_permissions_<%- data.index %>_duplicate"/>
+</div>

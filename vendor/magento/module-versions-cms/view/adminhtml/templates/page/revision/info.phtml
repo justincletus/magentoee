@@ -1,0 +1,42 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+
+<?php
+/**
+ * @var $block \Magento\VersionsCms\Block\Adminhtml\Cms\Page\Revision\Edit\Info
+ */
+?>
+<div class="cms-revision-info">
+    <div class="fieldset-wrapper">
+        <div class="fieldset-wrapper-title">
+            <span class="title">
+                <?php if ($block->getRevisionNumber()): ?>
+                    <?php /* @escapeNotVerified */ echo __('Revision #') ?> <?php /* @escapeNotVerified */ echo $block->getRevisionNumber() ?>
+                <?php else: ?>
+                    <?php /* @escapeNotVerified */ echo __('New Revision') ?>
+                <?php endif; ?>
+            </span>
+        </div>
+        <table class="data-table">
+            <tr>
+                <th><?php /* @escapeNotVerified */ echo __('Author:') ?></th>
+                <td><?php /* @escapeNotVerified */ echo $block->getAuthor() ?></td>
+            </tr>
+            <tr>
+                <th><?php /* @escapeNotVerified */ echo __('Created:') ?></th>
+                <td><?php /* @escapeNotVerified */ echo $block->getCreatedAt() ?></td>
+            </tr>
+            <tr>
+                <th><?php /* @escapeNotVerified */ echo __('Version:') ?></th>
+                <td><?php echo $block->escapeHtml($block->getVersionLabel()) ?></td>
+            </tr>
+        </table>
+    </div>
+</div>

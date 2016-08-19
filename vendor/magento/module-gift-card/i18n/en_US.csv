@@ -1,0 +1,68 @@
+Quantity,Quantity
+No,No
+Action,Action
+Delete,Delete
+Yes,Yes
+From,From
+Website,Website
+"All Websites","All Websites"
+N/A,N/A
+Ordered,Ordered
+Invoiced,Invoiced
+"In stock","In stock"
+"Out of stock","Out of stock"
+Availability:,Availability:
+"Use Config Settings","Use Config Settings"
+Minimum,Minimum
+Maximum,Maximum
+"Gift Card Information","Gift Card Information"
+Virtual,Virtual
+Physical,Physical
+Combined,Combined
+"Add Amount","Add Amount"
+"Gift Card Type","Gift Card Type"
+"Gift Card Sender","Gift Card Sender"
+"Gift Card Recipient","Gift Card Recipient"
+"Gift Card Message","Gift Card Message"
+"Gift Card Lifetime","Gift Card Lifetime"
+"Gift Card Is Redeemable","Gift Card Is Redeemable"
+"We cannot create this gift card.","We cannot create this gift card."
+"Gift Card Accounts","Gift Card Accounts"
+"Duplicate amount found.","Duplicate amount found."
+"Something went wrong  preparing the gift card.","Something went wrong  preparing the gift card."
+"Please specify a gift card amount.","Please specify a gift card amount."
+"Please specify all the required information.","Please specify all the required information."
+"Gift Card max amount is %1","Gift Card max amount is %1"
+"Gift Card min amount is %1","Gift Card min amount is %1"
+"Please specify a recipient name.","Please specify a recipient name."
+"Please specify a sender name.","Please specify a sender name."
+"Please specify a recipient email.","Please specify a recipient email."
+"Please specify a sender email.","Please specify a sender email."
+"Some gift card accounts were not created properly. You can create gift card accounts manually <a href=""%1"">here</a>.","Some gift card accounts were not created properly. You can create gift card accounts manually <a href=""%1"">here</a>."
+Amount,Amount
+"Choose an Amount...","Choose an Amount..."
+"Other Amount...","Other Amount..."
+"Amount in %1","Amount in %1"
+"Sender Name","Sender Name"
+"Sender Email","Sender Email"
+"Recipient Name","Recipient Name"
+"Recipient Email","Recipient Email"
+Message,Message
+"Maximum length of the message is %1 characters.","Maximum length of the message is %1 characters."
+"Messaging and Lifetime","Messaging and Lifetime"
+"Treat Balance as Store Credit","Treat Balance as Store Credit"
+"Lifetime (days)","Lifetime (days)"
+"Allow Message","Allow Message"
+"Email Template","Email Template"
+"Delete Amount","Delete Amount"
+"Minimum: %1","Minimum: %1"
+"Maximum: %1","Maximum: %1"
+Redeemable,Redeemable
+"Gift Card Email Settings","Gift Card Email Settings"
+"Gift Card Notification Email Sender","Gift Card Notification Email Sender"
+"Gift Card Notification Email Template","Gift Card Notification Email Template"
+"Gift Card General Settings","Gift Card General Settings"
+"If empty no expiration.","If empty no expiration."
+"Allow Gift Message","Allow Gift Message"
+"Gift Message Maximum Length","Gift Message Maximum Length"
+"Generate Gift Card Account when Order Item is","Generate Gift Card Account when Order Item is"

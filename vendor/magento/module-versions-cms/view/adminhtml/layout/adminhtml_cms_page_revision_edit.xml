@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="jquery/fileUploader/css/jquery.fileupload-ui.css"/>
+        <link src="Magento_VersionsCms::extender.js"/>
+        <link src="Magento_VersionsCms::cms.js"/>
+    </head>
+    <update handle="editor"/>
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\VersionsCms\Block\Adminhtml\Cms\Page\Revision\Edit" name="cms_page_revision_edit">
+                <block class="Magento\VersionsCms\Block\Adminhtml\Cms\Page\Revision\Edit\Info" name="revision_info" template="page/revision/info.phtml"/>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Magento\VersionsCms\Block\Adminhtml\Cms\Page\Revision\Edit\Tabs" name="cms_page_revision_edit_tabs">
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">content_section</argument>
+                    <argument name="block" xsi:type="string">Magento\VersionsCms\Block\Adminhtml\Cms\Page\Revision\Edit\Tab\Content</argument>
+                </action>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">design_section</argument>
+                    <argument name="block" xsi:type="string">Magento\VersionsCms\Block\Adminhtml\Cms\Page\Revision\Edit\Tab\Design</argument>
+                </action>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">meta_section</argument>
+                    <argument name="block" xsi:type="string">Magento\VersionsCms\Block\Adminhtml\Cms\Page\Revision\Edit\Tab\Meta</argument>
+                </action>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

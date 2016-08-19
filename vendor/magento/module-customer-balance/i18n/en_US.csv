@@ -1,0 +1,56 @@
+Remove,Remove
+No,No
+Action,Action
+Website,Website
+"Order #%1","Order #%1"
+Refunded,Refunded
+Created,Created
+Comment,Comment
+Date,Date
+"Store Credit","Store Credit"
+"Delete Orphan Balances","Delete Orphan Balances"
+"Balance Change","Balance Change"
+Balance,Balance
+"Customer notified","Customer notified"
+Notified,Notified
+"More information","More information"
+"Update Balance","Update Balance"
+"An amount on which to change the balance","An amount on which to change the balance"
+"Notify Customer by Email","Notify Customer by Email"
+"Send Email Notification From the Following Store View","Send Email Notification From the Following Store View"
+"Failed to initialize customer","Failed to initialize customer"
+"The store credit payment has been removed from shopping cart.","The store credit payment has been removed from shopping cart."
+"You are not using store credit in your shopping cart.","You are not using store credit in your shopping cart."
+"A website ID must be set.","A website ID must be set."
+"By admin: %1.","By admin: %1."
+"By admin: %1. (%2)","By admin: %1. (%2)"
+"Please also set the Store ID.","Please also set the Store ID."
+"The Store ID must be set to send email notifications.","The Store ID must be set to send email notifications."
+"A customer ID must be specified.","A customer ID must be specified."
+"This customer is not set or does not exist.","This customer is not set or does not exist."
+Updated,Updated
+Used,Used
+Reverted,Reverted
+"You need a balance to save your balance history.","You need a balance to save your balance history."
+"There is no credit memo set to balance model.","There is no credit memo set to balance model."
+"Order #%1, creditmemo #%2","Order #%1, creditmemo #%2"
+"Unknown balance history action code","Unknown balance history action code"
+"There is no order set to balance model.","There is no order set to balance model."
+"You do not have enough store credit to complete this order.","You do not have enough store credit to complete this order."
+"The store credit used cannot exceed order amount.","The store credit used cannot exceed order amount."
+"Store Credit Balance","Store Credit Balance"
+"Balance History","Balance History"
+"Refund Store Credit to Store Credit","Refund Store Credit to Store Credit"
+"Refund Money to Store Credit","Refund Money to Store Credit"
+"Refund to Store Credit","Refund to Store Credit"
+"Use Store Credit (%1 available)","Use Store Credit (%1 available)"
+"Your current balance is:","Your current balance is:"
+"Use Store Credit","Use Store Credit"
+available,available
+"Refunded to Store Credit","Refunded to Store Credit"
+"Store Credit Options","Store Credit Options"
+"Enable Store Credit Functionality","Enable Store Credit Functionality"
+"Show Store Credit History to Customers","Show Store Credit History to Customers"
+"Refund Store Credit Automatically","Refund Store Credit Automatically"
+"Store Credit Update Email Sender","Store Credit Update Email Sender"
+"Store Credit Update Email Template","Store Credit Update Email Template"

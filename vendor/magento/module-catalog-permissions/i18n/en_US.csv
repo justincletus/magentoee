@@ -1,0 +1,41 @@
+"Yes, for Specified Customer Groups","Yes, for Specified Customer Groups"
+"Yes, for Everyone","Yes, for Everyone"
+No,No
+Action,Action
+"Add to Cart","Add to Cart"
+Enable,Enable
+"-- Please Select --","-- Please Select --"
+Website,Website
+"All Websites","All Websites"
+"Customer Group","Customer Group"
+"New Permission","New Permission"
+"You already have a permission with this scope.","You already have a permission with this scope."
+(Allow),(Allow)
+(Deny),(Deny)
+"Category Permissions","Category Permissions"
+"Browsing Category","Browsing Category"
+"Display Product Prices","Display Product Prices"
+"No, Redirect to Landing Page","No, Redirect to Landing Page"
+"You may need more permissions to access this category.","You may need more permissions to access this category."
+"You cannot add ""%1"" to the cart.","You cannot add ""%1"" to the cart."
+"You may need more permissions to access this product.","You may need more permissions to access this product."
+"Permission with the same scope","Permission with the same scope"
+"Permissions do not depend on store views.","Permissions do not depend on store views."
+"All Customer Groups","All Customer Groups"
+Allow,Allow
+Deny,Deny
+"Use parent","Use parent"
+"Customer Groups","Customer Groups"
+"
+                        <strong style=""color:red"">Warning!</strong> By default this feature restricts all categories.
+                    ","
+                        <strong style=""color:red"">Warning!</strong> By default this feature restricts all categories.
+                    "
+"Allow Browsing Category","Allow Browsing Category"
+"Allow Adding to Cart","Allow Adding to Cart"
+"Landing Page","Landing Page"
+"Disallow Catalog Search By","Disallow Catalog Search By"
+"Catalog Category Permissions","Catalog Category Permissions"
+"Indexed permissions for categories","Indexed permissions for categories"
+"Catalog Product Permissions","Catalog Product Permissions"
+"Indexed permissions for products","Indexed permissions for products"

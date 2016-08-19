@@ -1,0 +1,133 @@
+Remove,Remove
+Cancel,Cancel
+"Manage Shopping Cart","Manage Shopping Cart"
+"Create Order","Create Order"
+Back,Back
+"Add Products","Add Products"
+"Update Items and Qty's","Update Items and Qty's"
+"Are you sure you want to clear your shopping cart?","Are you sure you want to clear your shopping cart?"
+"Clear the shopping cart.","Clear the shopping cart."
+"Add Selected Product(s) to Shopping Cart","Add Selected Product(s) to Shopping Cart"
+"Shopping Cart for %1 in %2","Shopping Cart for %1 in %2"
+"Choose  products to add to shopping cart.","Choose  products to add to shopping cart."
+Product,Product
+Price,Price
+Quantity,Quantity
+"Products in the Comparison List (%1)","Products in the Comparison List (%1)"
+"Last ordered items (%1)","Last ordered items (%1)"
+Products,Products
+ID,ID
+SKU,SKU
+"Recently Compared Products (%1)","Recently Compared Products (%1)"
+"Recently Viewed Products (%1)","Recently Viewed Products (%1)"
+"Add to Shopping Cart by SKU","Add to Shopping Cart by SKU"
+"Add to Shopping Cart","Add to Shopping Cart"
+"Wish List (%1)","Wish List (%1)"
+Apply,Apply
+Configure,Configure
+"Add to Order by SKU","Add to Order by SKU"
+"Add to Order","Add to Order"
+"Add Products to Order","Add Products to Order"
+"<span id=""sku-attention-num"">%1</span> product(s) require attention.","<span id=""sku-attention-num"">%1</span> product(s) require attention."
+"Remove All","Remove All"
+"Only %1%2%3 left in stock","Only %1%2%3 left in stock"
+"The maximum quantity allowed for purchase is %1.","The maximum quantity allowed for purchase is %1."
+"The minimum quantity allowed for purchase is %1.","The minimum quantity allowed for purchase is %1."
+"Specify the product's options","Specify the product's options"
+"Receive notice when item is restocked.","Receive notice when item is restocked."
+"Customer not found","Customer not found"
+"Shopping cart management disabled for this customer.","Shopping cart management disabled for this customer."
+"Shopping cart management is disabled for this customer.","Shopping cart management is disabled for this customer."
+"We could not find this store.","We could not find this store."
+Customers,Customers
+"Shopping Cart","Shopping Cart"
+"An error has occurred. See error log for details.","An error has occurred. See error log for details."
+"You do not have access to this.","You do not have access to this."
+"The wish list item id is not received.","The wish list item id is not received."
+"The wish list item is not loaded.","The wish list item is not loaded."
+"Ordered item id is not received.","Ordered item id is not received."
+"Ordered item is not loaded.","Ordered item is not loaded."
+"Quote item id is not received.","Quote item id is not received."
+"Quote item is not loaded.","Quote item is not loaded."
+"You removed the item.","You removed the item."
+"You removed the items.","You removed the items."
+"You cannot configure a product.","You cannot configure a product."
+"You added %1 to your shopping cart.","You added %1 to your shopping cart."
+"You cannot add a product.","You cannot add a product."
+"Order by SKU","Order by SKU"
+"SKU not found in catalog.","SKU not found in catalog."
+"Availability: Out of stock.","Availability: Out of stock."
+"The requested quantity is not available.","The requested quantity is not available."
+"The product cannot be added to cart in requested quantity.","The product cannot be added to cart in requested quantity."
+"Please specify the product's options.","Please specify the product's options."
+"The product cannot be added to cart.","The product cannot be added to cart."
+"Please enter a valid number in the ""Qty"" field.","Please enter a valid number in the ""Qty"" field."
+"The product is assigned to another website.","The product is assigned to another website."
+"You can add only enabled products.","You can add only enabled products."
+"You cannot upload this file.","You cannot upload this file."
+"The file is empty.","The file is empty."
+"You have not entered a product SKU. Please <a href=""%1"">click here</a> to add product(s) by SKU.","You have not entered a product SKU. Please <a href=""%1"">click here</a> to add product(s) by SKU."
+"You have not entered a product SKU.","You have not entered a product SKU."
+"Failed to add a product to cart by id ""%1"".","Failed to add a product to cart by id ""%1""."
+"Something went wrong reordering this product.","Something went wrong reordering this product."
+"We couldn't find this wish list.","We couldn't find this wish list."
+"You added %1 product to your shopping cart.","You added %1 product to your shopping cart."
+"You added %1 products to your shopping cart.","You added %1 products to your shopping cart."
+"%1 product requires your attention.","%1 product requires your attention."
+"%1 products require your attention.","%1 products require your attention."
+"Yes, for Specified Customer Groups","Yes, for Specified Customer Groups"
+"Yes, for Everyone","Yes, for Everyone"
+No,No
+"The file is corrupt.","The file is corrupt."
+"This file needs to be in .csv format.","This file needs to be in .csv format."
+"%1 item(s) need your attention.","%1 item(s) need your attention."
+"Apply Coupon Code","Apply Coupon Code"
+"Remove Coupon Code","Remove Coupon Code"
+"The coupon code ""%1"" is not valid.","The coupon code ""%1"" is not valid."
+"Shopping Cart Items","Shopping Cart Items"
+Qty,Qty
+Subtotal,Subtotal
+Discount,Discount
+"Row Subtotal","Row Subtotal"
+Action,Action
+"No ordered items","No ordered items"
+"Total %1 product(s)","Total %1 product(s)"
+Subtotal:,Subtotal:
+"Excl. Tax","Excl. Tax"
+Total,Total
+"Incl. Tax","Incl. Tax"
+"Total incl. tax","Total incl. tax"
+"Move to Wishlist","Move to Wishlist"
+"No item specified.","No item specified."
+"Are you sure that you want to remove this item?","Are you sure that you want to remove this item?"
+SKU's,SKU's
+File,File
+"Your csv file must include ""sku"" and ""qty"" columns.","Your csv file must include ""sku"" and ""qty"" columns."
+Reset,Reset
+"SKU: ","SKU: "
+"Only <span id=""%1_max_allowed"">%2</span> in stock","Only <span id=""%1_max_allowed"">%2</span> in stock"
+"Edit item parameters","Edit item parameters"
+Edit,Edit
+"Remove item","Remove item"
+"Products Requiring Attention","Products Requiring Attention"
+Item,Item
+"Unit Price","Unit Price"
+"Add to Cart","Add to Cart"
+Sku,Sku
+"File extensions allowed: .csv","File extensions allowed: .csv"
+"File must contain two columns, with ""sku"" and ""qty"" in the header row.","File must contain two columns, with ""sku"" and ""qty"" in the header row."
+"Add Row","Add Row"
+"Remove Row","Remove Row"
+"Customer Groups","Customer Groups"
+"Apply Coupon","Apply Coupon"
+"Add Products By SKU","Add Products By SKU"
+"Order by SKU Settings","Order by SKU Settings"
+"Enable Order by SKU on My Account in Frontend","Enable Order by SKU on My Account in Frontend"
+"Shopping Cart Management","Shopping Cart Management"
+"Order by SKU Description","Order by SKU Description"
+"Display a Link to Loading a Spreadsheet","Display a Link to Loading a Spreadsheet"
+"Defines whether a link to My Account &gt; Order by SKU page will be displayed on the widget","Defines whether a link to My Account &gt; Order by SKU page will be displayed on the widget"
+"Link Text","Link Text"
+"The text of the link to the My Account &gt; Order by SKU page","The text of the link to the My Account &gt; Order by SKU page"
+"Load a list of SKUs","Load a list of SKUs"
+"Order by SKU Template","Order by SKU Template"

@@ -1,0 +1,26 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+/** @var \Magento\GoogleTagManager\Block\ListJson $block */
+$product = $block->getCurrentProduct();
+?>
+
+<script>
+    dataLayer.push({
+        'event' : 'productDetail',
+        'ecommerce': {
+            'detail': {
+                'products': [{
+                    'id': "<?php /* @escapeNotVerified */ echo $block->escapeJsQuote($product->getSku()); ?>",
+                    'name': "<?php /* @escapeNotVerified */ echo $block->escapeJsQuote($product->getName()); ?>",
+                    'category': "<?php echo$block->escapeJsQuote($block->getCurrentCategoryName()); ?>"
+                }]
+            },
+            'impressions' : []
+        }
+    });
+</script>

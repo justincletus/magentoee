@@ -1,0 +1,23 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php foreach ($block->getValues() as $label => $value):?>
+<tr class="<?php /* @escapeNotVerified */ echo $block->getTotal()->getCode(); ?>">
+    <td style="<?php /* @escapeNotVerified */ echo $block->getTotal()->getStyle() ?>" class="admin__total-mark" colspan="<?php /* @escapeNotVerified */ echo $block->getColspan(); ?>">
+        <?php if ($block->getRenderingArea() == $block->getTotal()->getArea()): ?><strong><?php endif; ?>
+        <?php /* @escapeNotVerified */ echo __($label) ?>
+        <?php if ($block->getRenderingArea() == $block->getTotal()->getArea()): ?></strong><?php endif; ?>
+    </td>
+    <td style="<?php /* @escapeNotVerified */ echo $block->getTotal()->getStyle() ?>" class="admin__total-amount">
+        <?php if ($block->getRenderingArea() == $block->getTotal()->getArea()): ?><strong><?php endif; ?>
+            <?php /* @escapeNotVerified */ echo $block->formatPrice($value) ?>
+        <?php if ($block->getRenderingArea() == $block->getTotal()->getArea()): ?></strong><?php endif; ?>
+    </td>
+</tr>
+<?php endforeach; ?>

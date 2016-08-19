@@ -1,0 +1,64 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var \Magento\GiftCardAccount\Block\Adminhtml\System\Config\Generate $block
+ */
+
+$htmlId = $block->getHtmlId() ? $block->getHtmlId() : '_' . uniqid();
+$usage = $block->getUsage();
+?>
+<button style="" onclick="" class="scalable" type="button" id="generateBtn<?php /* @noEscape */ echo $htmlId; ?>">
+    <span><span><span><?php echo $block->escapeHtml(__('Generate')); ?></span></span></span>
+</button>
+<br />
+<p class="nm"><small>
+    <?php echo $block->escapeHtml(__('Code Pool used: ')); ?>
+        <b><?php echo $block->escapeHtml($usage->getPercent()); ?></b>
+    <?php echo $block->escapeHtml(__(' (free ')); ?>
+        <b><?php echo $block->escapeHtml($usage->getFree()); ?></b>
+        <?php echo $block->escapeHtml(__(' of '));?>
+        <?php echo $block->escapeHtml($usage->getTotal()); ?>
+    <?php echo $block->escapeHtml(__(' total).'));?>
+</small></p>
+<br />
+
+<script>
+require(['prototype'], function(){
+
+//<![CDATA[
+redirectToGeneration = function()
+{
+    var url = '<?php echo $block->escapeUrl($block->getUrl('*/giftcardaccount/generate')); ?>';
+    if (confirm('<?php echo $block->escapeHtml(__('Are you sure you want to continue without saving your changes?')); ?>')) {
+        if (Prototype.Browser.IE) {
+            var generateLink = new Element('a', {href: url});
+            $$('body')[0].insert(generateLink);
+            generateLink.click();
+        } else {
+            window.location.href = url;
+        }
+    }
+}
+
+disableGenerateButton = function()
+{
+    var elem = $('generateBtn<?php /* @noEscape */ echo $htmlId; ?>');
+    elem.disabled = true;
+    elem.addClassName('disabled');
+}
+
+Event.observe('generateBtn<?php /* @noEscape */ echo $htmlId; ?>', 'click', redirectToGeneration)
+
+$('giftcard_giftcardaccount_general').select('input', 'select').each(function(elem) {
+    Event.observe($(elem.id), 'change', disableGenerateButton);
+});
+//]]>
+
+});
+</script>

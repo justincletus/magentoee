@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Cms\Model\Page">
+        <plugin name="versionscms_cms_page_plugin" type="Magento\VersionsCms\Model\Plugin\CmsPage"/>
+    </type>
+    <type name="Magento\VersionsCms\Observer\Backend\PrepareFormObserver">
+        <arguments>
+            <argument name="authorization" xsi:type="object">Magento\Framework\Authorization\Proxy</argument>
+        </arguments>
+    </type>
+    <type name="Magento\VersionsCms\Controller\Adminhtml\Cms\Page\Revision\Delete">
+        <plugin name="designLoader" type="Magento\VersionsCms\App\Action\Plugin\Design" />
+    </type>
+    <type name="Magento\VersionsCms\Controller\Adminhtml\Cms\Page\Revision\Edit">
+        <plugin name="designLoader" type="Magento\VersionsCms\App\Action\Plugin\Design" />
+    </type>
+    <type name="Magento\VersionsCms\Controller\Adminhtml\Cms\Page\Revision\MassDeleteVersions">
+        <plugin name="designLoader" type="Magento\VersionsCms\App\Action\Plugin\Design" />
+    </type>
+    <type name="Magento\VersionsCms\Controller\Adminhtml\Cms\Page\Revision\NewAction">
+        <plugin name="designLoader" type="Magento\VersionsCms\App\Action\Plugin\Design" />
+    </type>
+    <type name="Magento\VersionsCms\Controller\Adminhtml\Cms\Page\Revision\Preview">
+        <plugin name="designLoader" type="Magento\VersionsCms\App\Action\Plugin\Design" />
+    </type>
+    <type name="Magento\VersionsCms\Controller\Adminhtml\Cms\Page\Revision\Publish">
+        <plugin name="designLoader" type="Magento\VersionsCms\App\Action\Plugin\Design" />
+    </type>
+    <type name="Magento\VersionsCms\Controller\Adminhtml\Cms\Page\Revision\Save">
+        <plugin name="designLoader" type="Magento\VersionsCms\App\Action\Plugin\Design" />
+    </type>
+    <type name="Magento\VersionsCms\Controller\Adminhtml\Cms\Page\Revision\Versions">
+        <plugin name="designLoader" type="Magento\VersionsCms\App\Action\Plugin\Design" />
+    </type>
+    <type name="Magento\Cms\Ui\Component\Listing\Column\PageActions">
+        <arguments>
+            <argument name="editUrl" xsi:type="string">adminhtml/cms_page/edit</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Cms\Controller\Adminhtml\Page\InlineEdit">
+        <plugin name="versionscms_cms_page_inline_edit_plugin" type="Magento\VersionsCms\Controller\Adminhtml\Cms\Page\InlineEdit\Plugin" sortOrder="10" />
+    </type>
+</config>

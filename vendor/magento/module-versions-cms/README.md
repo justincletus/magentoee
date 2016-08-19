@@ -1,0 +1,1 @@
+The Versions CMS module allows CMS module to use page version control.

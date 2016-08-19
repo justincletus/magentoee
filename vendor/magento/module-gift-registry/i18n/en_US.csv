@@ -1,0 +1,279 @@
+None,None
+Back,Back
+"Update Items and Qty's","Update Items and Qty's"
+Product,Product
+Price,Price
+Quantity,Quantity
+ID,ID
+SKU,SKU
+Customers,Customers
+No,No
+"Shopping Cart Items","Shopping Cart Items"
+Qty,Qty
+Action,Action
+Total,Total
+Edit,Edit
+"Unit Price","Unit Price"
+"Add to Cart","Add to Cart"
+"First Name","First Name"
+"Last Name","Last Name"
+[GLOBAL],[GLOBAL]
+[WEBSITE],[WEBSITE]
+"[STORE VIEW]","[STORE VIEW]"
+Delete,Delete
+Save,Save
+Yes,Yes
+Name,Name
+Code,Code
+Status,Status
+"Sort Order","Sort Order"
+"Save and Continue Edit","Save and Continue Edit"
+Type,Type
+Search,Search
+From,From
+To,To
+"Add New","Add New"
+Website,Website
+Next,Next
+"Please wait, loading...","Please wait, loading..."
+View,View
+Actions,Actions
+Active,Active
+"Delete Option","Delete Option"
+"Use Default Value","Use Default Value"
+"We cannot add this item to your shopping cart.","We cannot add this item to your shopping cart."
+Qty:,Qty:
+"Input Type","Input Type"
+"* Required Fields","* Required Fields"
+Message:,Message:
+"General Information","General Information"
+label,label
+"Delete Attribute","Delete Attribute"
+Text,Text
+"Add Attribute","Add Attribute"
+Attributes,Attributes
+"Add New Option","Add New Option"
+"-- Please select --","-- Please select --"
+"Is Default","Is Default"
+Role,Role
+"Product Name","Product Name"
+Inactive,Inactive
+"New Address","New Address"
+Country,Country
+State/Province,State/Province
+City,City
+"Zip/Postal Code","Zip/Postal Code"
+"Email Address","Email Address"
+Company,Company
+Address,Address
+"Street Address","Street Address"
+"Street Address %1","Street Address %1"
+Telephone,Telephone
+Fax,Fax
+"Shipping Address","Shipping Address"
+"Select a shipping address from your address book or enter a new address.","Select a shipping address from your address book or enter a new address."
+Label,Label
+Select,Select
+%1,%1
+Date,Date
+"Send From","Send From"
+"Please enter the first name.","Please enter the first name."
+"Please enter the last name.","Please enter the last name."
+"Recipient Email","Recipient Email"
+Message,Message
+"Email Template","Email Template"
+"Are you sure you want to delete this gift registry?","Are you sure you want to delete this gift registry?"
+"Delete Registry","Delete Registry"
+"Gift Registry Entity","Gift Registry Entity"
+"Product ID","Product ID"
+"Add to Gift Registry","Add to Gift Registry"
+"Are you sure you want to add these products?","Are you sure you want to add these products?"
+Requested,Requested
+Fulfilled,Fulfilled
+Note,Note
+"Update Quantity","Update Quantity"
+"Remove Item","Remove Item"
+"Sharing Information","Sharing Information"
+Emails,Emails
+"Share Gift Registry","Share Gift Registry"
+"Gift Registry","Gift Registry"
+Event,Event
+Recipients,Recipients
+"Event Date","Event Date"
+"Total Items","Total Items"
+Remaining,Remaining
+Public,Public
+"Gift Registry Types","Gift Registry Types"
+"Add Gift Registry Type","Add Gift Registry Type"
+"If you delete this gift registry type, you also delete customer registries that use this type. Do you want to continue?","If you delete this gift registry type, you also delete customer registries that use this type. Do you want to continue?"
+"Edit '%1' Gift Registry Type","Edit '%1' Gift Registry Type"
+"New Gift Registry Type","New Gift Registry Type"
+Short,Short
+Medium,Medium
+Long,Long
+Full,Full
+"Is Listed","Is Listed"
+"Edit Gift Registry","Edit Gift Registry"
+"Create Gift Registry","Create Gift Registry"
+"Please select a region, state or province","Please select a region, state or province"
+"Please Select","Please Select"
+"View Gift Registry %1","View Gift Registry %1"
+"Share '%1' Gift Registry","Share '%1' Gift Registry"
+"Gift Registry Search","Gift Registry Search"
+"Select Search Type","Select Search Type"
+Recipient,Recipient
+"Registry owner","Registry owner"
+"Please correct the  gift registry ID.","Please correct the  gift registry ID."
+"New Type","New Type"
+"Edit Type","Edit Type"
+"You saved the gift registry type.","You saved the gift registry type."
+"We couldn't save this gift registry type.","We couldn't save this gift registry type."
+"You deleted the gift registry type.","You deleted the gift registry type."
+"We couldn't delete this gift registry type.","We couldn't delete this gift registry type."
+"Please correct the gift registry entity.","Please correct the gift registry entity."
+"Edit '%1' Gift Registry","Edit '%1' Gift Registry"
+"Something went wrong while editing the gift registry.","Something went wrong while editing the gift registry."
+"Shopping cart items have been added to gift registry.","Shopping cart items have been added to gift registry."
+"Virtual, Downloadable, and virtual Gift Card products cannot be added to gift registries.","Virtual, Downloadable, and virtual Gift Card products cannot be added to gift registries."
+"Failed to add shopping cart items to gift registry.","Failed to add shopping cart items to gift registry."
+"You updated this gift registry.","You updated this gift registry."
+"We couldn't update these gift registry items.","We couldn't update these gift registry items."
+"Please enter at least one email address.","Please enter at least one email address."
+"%1 email(s) were sent.","%1 email(s) were sent."
+"We couldn't send '%1 of %2 emails.","We couldn't send '%1 of %2 emails."
+"You deleted this gift registry entity.","You deleted this gift registry entity."
+"We couldn't delete this gift registry entity.","We couldn't delete this gift registry entity."
+"%1 item(s) have been added to the gift registry.","%1 item(s) have been added to the gift registry."
+"We have nothing to add to this gift registry.","We have nothing to add to this gift registry."
+"You can't add virtual products, digital products or gift cards to gift registries.","You can't add virtual products, digital products or gift cards to gift registries."
+"The wish list item has been added to this gift registry.","The wish list item has been added to this gift registry."
+"We couldn’t add your wish list items to your gift registry.","We couldn’t add your wish list items to your gift registry."
+"You deleted this gift registry.","You deleted this gift registry."
+"Something went wrong while deleting the gift registry.","Something went wrong while deleting the gift registry."
+"Something went wrong while sharing the gift registry.","Something went wrong while sharing the gift registry."
+"Gift Registry Items","Gift Registry Items"
+"You updated the gift registry items.","You updated the gift registry items."
+"We couldn't update the gift registry.","We couldn't update the gift registry."
+"Something went wrong while sending email(s).","Something went wrong while sending email(s)."
+"Please correct the gift registry.","Please correct the gift registry."
+"Incorrect Type","Incorrect Type"
+"Please correct the recipient data.","Please correct the recipient data."
+"Address is empty.","Address is empty."
+"Please select an address.","Please select an address."
+"Please correct the address.","Please correct the address."
+"You saved this gift registry.","You saved this gift registry."
+"We couldn't save this gift registry.","We couldn't save this gift registry."
+"Please correct the gift registry ID.","Please correct the gift registry ID."
+"Please enter correct search options.","Please enter correct search options."
+"Please enter at least 2 letters of the first name.","Please enter at least 2 letters of the first name."
+"Please enter at least 2 letters of the last name.","Please enter at least 2 letters of the last name."
+"Please enter a valid email address.","Please enter a valid email address."
+"Please enter a gift registry ID.","Please enter a gift registry ID."
+"Gift Registry Info","Gift Registry Info"
+"Please enter the quantity of items to add to cart.","Please enter the quantity of items to add to cart."
+"Please enter the ""%1"".","Please enter the ""%1""."
+"Please enter the correct ""%1"".","Please enter the correct ""%1""."
+"Custom Types","Custom Types"
+"Static Types","Static Types"
+"You need to enter sender data.","You need to enter sender data."
+"Please enter a valid sender email address.","Please enter a valid sender email address."
+"Please enter a valid recipient email address.","Please enter a valid recipient email address."
+"Please enter a recipient name.","Please enter a recipient name."
+"You shared the gift registry for %1 emails.","You shared the gift registry for %1 emails."
+"We couldn't share the registry.","We couldn't share the registry."
+Private,Private
+"Please enter the title.","Please enter the title."
+"Please enter the message.","Please enter the message."
+"Please enter correct the Privacy setting.","Please enter correct the Privacy setting."
+"We cannot specify the product.","We cannot specify the product."
+"Please correct the  gift registry item quantity.","Please correct the  gift registry item quantity."
+"Please correct the gift registry item ID.","Please correct the gift registry item ID."
+"The quantity of ""%1"" product added to cart exceeds the quantity desired by the Gift Registry owner. The quantity added has been adjusted to meet remaining quantity %2.","The quantity of ""%1"" product added to cart exceeds the quantity desired by the Gift Registry owner. The quantity added has been adjusted to meet remaining quantity %2."
+"Existing quantity of ""%1"" product in the cart has been replaced with quantity %2 just requested.","Existing quantity of ""%1"" product in the cart has been replaced with quantity %2 just requested."
+"This product(s) is out of stock.","This product(s) is out of stock."
+"Please correct the product for adding the item to the quote.","Please correct the product for adding the item to the quote."
+"Please correct the item option format.","Please correct the item option format."
+"An item option with code %1 already exists.","An item option with code %1 already exists."
+"Ship to the recipient's address.","Ship to the recipient's address."
+"Please enter a valid email address(for example, daniel@x.com).","Please enter a valid email address(for example, daniel@x.com)."
+"-- All --","-- All --"
+"All Forms","All Forms"
+"Recipient Name Search","Recipient Name Search"
+"Recipient Email Search","Recipient Email Search"
+"Gift Registry ID Search","Gift Registry ID Search"
+New,New
+Owner,Owner
+"Created on","Created on"
+"Attribute Group","Attribute Group"
+"Is Required","Is Required"
+"Is Searcheable","Is Searcheable"
+"We found an attribute with this static input type already in the gift registry type. Please select a different input type.","We found an attribute with this static input type already in the gift registry type. Please select a different input type."
+"Show Region","Show Region"
+"Date Format","Date Format"
+"Please select a region, state or province.","Please select a region, state or province."
+"Add All To Gift Registry ","Add All To Gift Registry "
+"Ship to recipient's address","Ship to recipient's address"
+"Use the gift registry shipping address","Use the gift registry shipping address"
+"Added On","Added On"
+"Qty Fulfilled","Qty Fulfilled"
+"Update Gift Registry","Update Gift Registry"
+"This gift registry has no items.","This gift registry has no items."
+"Created On","Created On"
+"Manage Items","Manage Items"
+Share,Share
+"No gift registries have been created.","No gift registries have been created."
+"Remove Recipient","Remove Recipient"
+"First Name:","First Name:"
+Name:,Name:
+"Email Address:","Email Address:"
+Sender:,Sender:
+Email:,Email:
+Recipient:,Recipient:
+"Maximum %1 email addresses.","Maximum %1 email addresses."
+"Add Recipient","Add Recipient"
+"Gift Registry Type","Gift Registry Type"
+"Please select a gift registry type.","Please select a gift registry type."
+"Remove recipients","Remove recipients"
+"Last Name:","Last Name:"
+"Recipients Information","Recipients Information"
+"Maximum %1 recipients.","Maximum %1 recipients."
+"Gift Registry Type:","Gift Registry Type:"
+"Privacy Settings","Privacy Settings"
+"Gift Registry Items Updated","Gift Registry Items Updated"
+"Requested Quantity","Requested Quantity"
+"Fulfilled Quantity","Fulfilled Quantity"
+"Total Fulfilled Quantity","Total Fulfilled Quantity"
+"Remaining Quantity","Remaining Quantity"
+"Customize and Add to Gift Registry","Customize and Add to Gift Registry"
+"Required Fields","Required Fields"
+"Search Options","Search Options"
+"For better search results, first choose a gift registry type. By default, we search all registry types.","For better search results, first choose a gift registry type. By default, we search all registry types."
+"Type Specific Options","Type Specific Options"
+"Gift Registry ID","Gift Registry ID"
+"Search Results","Search Results"
+Location,Location
+"Your search returned no results.","Your search returned no results."
+"Please enter at least two letters of the name.","Please enter at least two letters of the name."
+Go,Go
+"Search By","Search By"
+"Please enter at least two letters.","Please enter at least two letters."
+"Use gift registry shipping address","Use gift registry shipping address"
+"You can change the number of gift registry items on the Gift Registry Info page or directly in your cart, but not while in checkout.","You can change the number of gift registry items on the Gift Registry Info page or directly in your cart, but not while in checkout."
+"Email Sender","Email Sender"
+"General Options","General Options"
+"Enable Gift Registry","Enable Gift Registry"
+"Maximum Recipients","Maximum Recipients"
+"Owner Notification","Owner Notification"
+"Gift Registry Sharing","Gift Registry Sharing"
+"Maximum Sent Emails Threshold","Maximum Sent Emails Threshold"
+"Gift Registry Update","Gift Registry Update"
+"Event Information","Event Information"
+"Gift Registry Details","Gift Registry Details"
+"Event Country","Event Country"
+"Event Region Id","Event Region Id"
+"Event Region Text","Event Region Text"
+"Event Location","Event Location"
+"Gift Registry Quick Search Form","Gift Registry Quick Search Form"
+"Quick Search Form Types","Quick Search Form Types"
+"Default Template","Default Template"
+Listed,Listed

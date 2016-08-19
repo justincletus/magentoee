@@ -1,0 +1,76 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+?>
+
+<section class="admin__page-section customer-information">
+    <div class="admin__page-section-title">
+        <span class="title"><?php /* @escapeNotVerified */ echo __('General Information') ?></span>
+    </div>
+    <div class="admin__page-section-content">
+        <table class="admin__page-section-item admin__table-secondary gift-registry-info">
+            <tbody>
+                <tr>
+                    <td><strong><?php /* @escapeNotVerified */ echo __('Type') ?>:</strong></td>
+                    <td><?php /* @escapeNotVerified */ echo $block->getTypeName() ?></td>
+                </tr>
+                <tr>
+                    <td><strong><?php /* @escapeNotVerified */ echo __('Event') ?>:</strong></td>
+                    <td><?php /* @escapeNotVerified */ echo $block->getEntityTitle() ?></td>
+                </tr>
+                <tr>
+                    <td><strong><?php /* @escapeNotVerified */ echo __('Message') ?>:</strong></td>
+                    <td><?php /* @escapeNotVerified */ echo $block->getEntityMessage() ?></td>
+                </tr>
+                <tr>
+                    <td><strong><?php /* @escapeNotVerified */ echo __('Website') ?>:</strong></td>
+                    <td><?php /* @escapeNotVerified */ echo $block->getWebsiteName() ?></td>
+                </tr>
+                <tr>
+                    <td><strong><?php /* @escapeNotVerified */ echo __('Owner') ?>:</strong></td>
+                    <td><a href="<?php /* @escapeNotVerified */ echo $block->getOwnerUrl() ?>"><?php /* @escapeNotVerified */ echo $block->getOwnerName() ?></a></td>
+                </tr>
+                <tr>
+                    <td><strong><?php /* @escapeNotVerified */ echo __('Created on') ?>:</strong></td>
+                    <td><?php /* @escapeNotVerified */ echo $block->getCreatedAt() ?></td>
+                </tr>
+                <tr>
+                    <td><strong><?php /* @escapeNotVerified */ echo __('Registrants') ?>:</strong></td>
+                    <td><?php /* @escapeNotVerified */ echo $block->getRegistrants() ?></td>
+                </tr>
+            </tbody>
+        </table>
+        <address class="admin__page-section-item gift-registry-address">
+            <div class="admin__page-section-item-title">
+                <span class="title"><?php /* @escapeNotVerified */ echo __('Shipping Address') ?></span>
+            </div>
+            <?php echo $block->getShippingAddressHtml() ?>
+        </address>
+    </div>
+</section>
+
+<div class="admin__fieldset">
+    <?php echo $block->getChildHtml('sharing_form'); ?>
+</div>
+
+<section class="admin__page-section">
+    <div class="admin__page-section-title">
+        <span class="title"><?php /* @escapeNotVerified */ echo __('Gift Registry Items') ?></span>
+    </div>
+    <form id="update_form" method="post" action="<?php /* @escapeNotVerified */ echo $block->getActionUrl() ?>">
+        <?php echo $block->getBlockHtml('formkey')?>
+        <?php echo $block->getChildHtml('entity_items'); ?>
+        <div class="grid-actions"><?php echo $block->getChildHtml('update_button'); ?></div>
+    </form>
+</section>
+
+<section class="admin__page-section">
+    <div class="admin__page-section-title">
+        <span class="title"><?php /* @escapeNotVerified */ echo __('Shopping Cart Items') ?></span>
+    </div>
+    <?php echo $block->getChildHtml('cart_items'); ?>
+</section>

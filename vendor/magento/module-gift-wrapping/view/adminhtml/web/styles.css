@@ -1,0 +1,35 @@
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+.field-gift_wrapping_price .control {
+    position: relative;
+}
+
+.field-gift_wrapping_price label.mage-error {
+    position: absolute;
+    left: 0;
+    top: 30px;
+}
+
+.field-gift_wrapping_price .addon {
+    direction: rtl;
+}
+
+.field-gift_wrapping_price .addon > * {
+    direction: ltr;
+}
+
+.field-gift_wrapping_price .addon .addafter {
+    border-width: 1px 0 1px 1px;
+}
+
+.field-gift_wrapping_price input[type="text"] {
+    border-width: 1px 1px 1px 0;
+}
+
+.field-gift_wrapping_price input ~ label.addafter strong {
+    margin-left: 2px;
+    margin-right: -2px;
+}

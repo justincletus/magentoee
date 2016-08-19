@@ -1,0 +1,112 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+
+<div class="add-by-sku-wrapper">
+    <div class="add-by-sku">
+        <div class="admin__field">
+            <div class="admin__field-control">
+                <table
+                    id="sku_table"
+                    class="admin__control-table">
+                    <thead>
+                    <tr class="headings">
+                        <th class="col-sku"><?php /* @escapeNotVerified */ echo __('SKU number') ?></th>
+                        <th class="col-qty"><?php /* @escapeNotVerified */ echo __('Qty') ?></th>
+                        <th class="col-actions last">&nbsp;</th>
+                    </tr>
+                    </thead>
+                    <tbody id="sku_container">
+                    <tr>
+                        <td class="col-sku">
+                            <input
+                                id="sku_0"
+                                class="admin__control-text"
+                                type="text"
+                                name="sku"
+                                value="">
+                        </td>
+                        <td class="col-qty">
+                            <div class="input-box">
+                                <input
+                                    id="sku_qty_0"
+                                    class="qty admin__control-text"
+                                    type="text"
+                                    name="qty"
+                                    value="" >
+                            </div>
+                        </td>
+                        <td class="col-actions last"><?php echo $block->getAddButtonHtml(); ?></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="admin__field add-sku-csv">
+        <label class="admin__field-label" for="sku_upload"><?php /* @escapeNotVerified */ echo __('Upload File') ?></label>
+        <div class="admin__field-control">
+            <div class="admin__field-note">
+                <span><?php /* @escapeNotVerified */ echo __('Your csv file must include "sku" and "qty" columns.') ?></span>
+            </div>
+            <input
+                id="sku_upload"
+                class="input-file"
+                type="file"
+                name="<?php /* @escapeNotVerified */ echo \Magento\AdvancedCheckout\Model\Import::FIELD_NAME_SOURCE_FILE ?>"
+                value=""  />
+            <button type="button"
+                    onclick="resetUploadField()"
+                    class="action-default action-reset">
+                <span><?php /* @escapeNotVerified */ echo __('Reset')?></span>
+            </button>
+        </div>
+        <script>
+            require(['prototype'], function(){
+                window.resetUploadField = function() {
+                    $('sku_upload').replace('<input type="file" id="sku_upload" name="<?php /* @escapeNotVerified */ echo \Magento\AdvancedCheckout\Model\Import::FIELD_NAME_SOURCE_FILE ?>" value=""/>')
+                }
+            });
+        </script>
+    </div>
+</div>
+
+<script>
+require([
+    "prototype",
+    "Magento_AdvancedCheckout/addbysku",
+    "Magento_Sales/order/create/form"
+], function(){
+
+    function initSku() {
+        addBySku = new AddBySku(<?php /* @escapeNotVerified */ echo $block->getJsOrderObject() ?>, <?php /* @escapeNotVerified */ echo $block->getAddBySkuDataJson() ?>);
+        AddBySku.prototype.add = function() {
+            var id = ++this.lastId;
+            $(this.dataContainerId).insert(
+                '<td class="col-sku"><input id="sku_' + id + '" type="text" value="" name="sku" class="admin__control-text"></td>'
+                    + '<td class="col-qty"><div class="input-box"><input id="sku_qty_' + id  +'" type="text" value="" name="qty" class="qty admin__control-text"></div></td><td class="col-actions last">'
+                    + this.deleteButtonHtml + '</td>'
+            );
+            var fields = $$(
+                '#' + this.dataContainerId + ' #sku_' + id,
+                '#' + this.dataContainerId + ' #sku_qty_' + id
+            );
+            for (var i = 0; i < fields.length; i++) {
+                Event.observe(fields[i], 'keypress', this.formKeyPress.bind(this));
+            }
+        };
+        <?php /* @escapeNotVerified */ echo $block->getAdditionalJavascript() ?>
+    }
+
+    window.initSku = initSku;
+
+    <?php /* @escapeNotVerified */ echo $block->getContextSpecificJs(); ?>
+
+});
+</script>

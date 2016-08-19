@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\AdvancedCatalog\Model\Indexer\Table\Strategy" shared="false" />
+    <preference for="Magento\Catalog\Model\ResourceModel\Product\Indexer\Eav\Source" type="Magento\AdvancedCatalog\Model\ResourceModel\Product\Indexer\Eav\Source" />
+    <type name="Magento\AdvancedCatalog\Model\ResourceModel\Product\Indexer\Eav\Source">
+        <arguments>
+            <argument name="tableStrategy" xsi:type="object">Magento\AdvancedCatalog\Model\Indexer\Table\Strategy</argument>
+            <argument name="connectionName" xsi:type="string">indexer</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Catalog\Model\ResourceModel\Product\Indexer\Price\DefaultPrice">
+        <arguments>
+            <argument name="tableStrategy" xsi:type="object">Magento\AdvancedCatalog\Model\Indexer\Table\Strategy</argument>
+            <argument name="connectionName" xsi:type="string">indexer</argument>
+        </arguments>
+    </type>
+    <preference for="Magento\GroupedProduct\Model\ResourceModel\Product\Indexer\Price\Grouped" type="Magento\AdvancedCatalog\Model\ResourceModel\Product\Indexer\Price\Grouped" />
+    <type name="Magento\AdvancedCatalog\Model\ResourceModel\Product\Indexer\Price\Grouped">
+        <arguments>
+            <argument name="tableStrategy" xsi:type="object">Magento\AdvancedCatalog\Model\Indexer\Table\Strategy</argument>
+            <argument name="connectionName" xsi:type="string">indexer</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Bundle\Model\ResourceModel\Indexer\Price">
+        <arguments>
+            <argument name="tableStrategy" xsi:type="object">Magento\AdvancedCatalog\Model\Indexer\Table\Strategy</argument>
+            <argument name="connectionName" xsi:type="string">indexer</argument>
+        </arguments>
+    </type>
+    <type name="Magento\ConfigurableProduct\Model\ResourceModel\Product\Indexer\Price\Configurable">
+        <arguments>
+            <argument name="tableStrategy" xsi:type="object">Magento\AdvancedCatalog\Model\Indexer\Table\Strategy</argument>
+            <argument name="connectionName" xsi:type="string">indexer</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Downloadable\Model\ResourceModel\Indexer\Price">
+        <arguments>
+            <argument name="tableStrategy" xsi:type="object">Magento\AdvancedCatalog\Model\Indexer\Table\Strategy</argument>
+            <argument name="connectionName" xsi:type="string">indexer</argument>
+        </arguments>
+    </type>
+    <type name="Magento\GiftCard\Model\ResourceModel\Indexer\Price">
+        <arguments>
+            <argument name="tableStrategy" xsi:type="object">Magento\AdvancedCatalog\Model\Indexer\Table\Strategy</argument>
+            <argument name="connectionName" xsi:type="string">indexer</argument>
+        </arguments>
+    </type>
+</config>

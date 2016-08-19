@@ -1,0 +1,41 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * Permissions tab template
+ *
+ * @see \Magento\CatalogPermissions\Block\Adminhtml\Catalog\Category\Tab\Permissions
+ */
+?>
+<div class="entry-edit form-inline permissions-custom-options" id="category_permissions_<?php /* @escapeNotVerified */ echo $block->getCategoryId(); ?>">
+    <fieldset class="fieldset fieldset-wide">
+        <legend class="legend">
+            <span><?php /* @escapeNotVerified */ echo __('Category Permissions') ?></span>
+        </legend>
+        <br />
+        <div class="messages">
+            <div class="message notice">
+                <div><?php /* @escapeNotVerified */ echo __('Permissions do not depend on store views.') ?></div>
+            </div>
+        </div>
+        <div class="box items"></div>
+        <div class="actions"><?php echo $block->getAddButtonHtml() ?></div>
+    </fieldset>
+</div>
+
+<script>
+require(['Magento_CatalogPermissions/category_edit'], function(){
+
+//<![CDATA[
+window.categoryPermissionsTab = new Enterprise.CatalogPermissions.CategoryTab('category_permissions_<?php /* @escapeNotVerified */ echo $block->getCategoryId(); ?>', <?php /* @escapeNotVerified */ echo $block->getConfigJson(); ?>);
+//]]>
+
+});
+</script>

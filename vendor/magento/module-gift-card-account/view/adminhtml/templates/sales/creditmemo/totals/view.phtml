@@ -1,0 +1,25 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+/**
+ * @var \Magento\GiftCardAccount\Block\Adminhtml\Sales\Order\Creditmemo\Controls $block
+ */
+
+$source  = $block->getSource();
+$block->setPriceDataObject($source);
+?>
+
+<?php if ((float) $source->getGiftCardsAmount()): ?>
+    <tr>
+        <td class="label">
+            <?php echo $block->escapeHtml(__('Gift Cards')); ?>
+        </td>
+        <td>
+            <?php /* @noEscape */ echo $block->displayPrices(-$source->getBaseGiftCardsAmount(), -$source->getGiftCardsAmount()); ?>
+        </td>
+    </tr>
+<?php endif; ?>

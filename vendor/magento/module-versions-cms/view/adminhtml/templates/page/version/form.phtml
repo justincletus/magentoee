@@ -1,0 +1,23 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<?php
+/* @var $block \Magento\Cms\Block\Adminhtml\Page\Edit\Form */
+?>
+
+<div class="form-inline">
+    <?php echo $block->getFormHtml() ?>
+</div>
+
+<div id="version_fieldset" class="fieldset-wrapper version-fieldset">
+    <div class="fieldset-wrapper-title">
+        <span class="title">
+            <?php /* @escapeNotVerified */ echo __('Version Revisions') ?>
+        </span>
+    </div>
+    <?php echo $block->getParentBlock()->getChildHtml('cms_page_version_edit_revisions_grid') ?>
+</div>

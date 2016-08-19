@@ -1,0 +1,49 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+
+<?php $_item = $block->getItem() ?>
+<tr class="giftwrapping-info">
+    <td class="col-name">
+        <span><?php /* @escapeNotVerified */ echo __('Gift Wrapping'); ?></span>
+    </td>
+    <td class="col-price" colspan="6">
+        <?php if ($this->helper('Magento\GiftWrapping\Helper\Data')->displayCartWrappingBothPrices($block->getStore()) || $this->helper('Magento\GiftWrapping\Helper\Data')->displayCartWrappingExcludeTaxPrice($block->getStore())): ?>
+            <?php if ($this->helper('Magento\GiftWrapping\Helper\Data')->displayCartWrappingBothPrices($block->getStore())): ?>
+                <span class="label"><?php /* @escapeNotVerified */ echo __('Excl. Tax'); ?>:</span>
+            <?php endif; ?>
+            <?php /* @escapeNotVerified */ echo $block->formatPrice($_item->getGwPrice());?>
+        <?php endif; ?>
+        <?php if ($this->helper('Magento\GiftWrapping\Helper\Data')->displayCartWrappingBothPrices($block->getStore()) || $this->helper('Magento\GiftWrapping\Helper\Data')->displayCartWrappingIncludeTaxPrice($block->getStore())): ?>
+            <?php if ($this->helper('Magento\GiftWrapping\Helper\Data')->displayCartWrappingBothPrices($block->getStore())): ?>
+                <br />
+                <span class="label"><?php /* @escapeNotVerified */ echo __('Incl. Tax'); ?>:</span>
+            <?php endif; ?>
+            <?php /* @escapeNotVerified */ echo $block->formatPrice($_item->getGwPrice() + $_item->getGwTaxAmount());?>
+        <?php endif; ?>
+
+        <?php $_isCustomPrice = $block->hasCustomPrice($_item) ?>
+        <div class="custom-price-block">
+            <input type="checkbox"
+                   class="admin__control-checkbox"
+                   id="item_use_custom_price_<?php /* @escapeNotVerified */ echo $_item->getId() ?>"
+                   <?php if ($_isCustomPrice): ?> checked="checked"<?php endif; ?>
+                   onclick="order.toggleCustomPrice(this, 'item_gw_custom_price_<?php /* @escapeNotVerified */ echo $_item->getId() ?>');"/>
+            <label class="normal admin__field-label"
+                   for="item_use_custom_price_<?php /* @escapeNotVerified */ echo $_item->getId() ?>">
+                <span><?php /* @escapeNotVerified */ echo __('Custom Price') ?>*</span></label>
+        </div>
+        <input id="item_gw_custom_price_<?php /* @escapeNotVerified */ echo $_item->getId() ?>"
+               name="item[<?php /* @escapeNotVerified */ echo $_item->getId() ?>][gw_custom_price]"
+               value="<?php /* @escapeNotVerified */ echo sprintf("%.2f", $block->getCustomPrice($_item))?>"<?php if (!$_isCustomPrice): ?>
+               style="display:none"
+               disabled="disabled"<?php endif; ?>
+               class="input-text admin__control-text item-price"/>
+    </td>
+</tr>

@@ -1,0 +1,31 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+?>
+
+<form action="<?php /* @escapeNotVerified */ echo $block->getUrl('*/*/editPost'); ?>"
+      method="post"
+      id="form-validate"
+      class="form form-giftregistry-edit validation"
+      data-hasrequired="<?php /* @escapeNotVerified */ echo __('* Required Fields') ?>"
+      data-mage-init='{"validation":{}}'>
+    <?php echo $block->getBlockHtml('formkey')?>
+    <?php echo $block->getChildHtml(); ?>
+
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" id="submit.save" title="<?php /* @escapeNotVerified */ echo __('Save') ?>" class="action primary save">
+                <span><?php /* @escapeNotVerified */ echo __('Save') ?></span>
+            </button>
+        </div>
+        <div class="secondary">
+            <a href="<?php echo $block->escapeUrl($block->getBackUrl()) ?>" class="action back">
+                <span><?php /* @escapeNotVerified */ echo __('Back') ?></span>
+            </a>
+        </div>
+    </div>
+</form>

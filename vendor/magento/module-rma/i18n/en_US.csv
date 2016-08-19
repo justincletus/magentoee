@@ -1,0 +1,333 @@
+None,None
+"Are you sure?","Are you sure?"
+Remove,Remove
+Close,Close
+Cancel,Cancel
+Back,Back
+"Add Products","Add Products"
+Product,Product
+Price,Price
+ID,ID
+SKU,SKU
+No,No
+Qty,Qty
+Action,Action
+Item,Item
+Customer,Customer
+Items,Items
+Add,Add
+Delete,Delete
+Save,Save
+Yes,Yes
+Status,Status
+Enabled,Enabled
+"Sort Order","Sort Order"
+"Save and Continue Edit","Save and Continue Edit"
+Title,Title
+Type,Type
+"Select All","Select All"
+Submit,Submit
+Order,Order
+"Please wait, loading...","Please wait, loading..."
+View,View
+OK,OK
+"Input Type","Input Type"
+"General Information","General Information"
+"Add New Attribute","Add New Attribute"
+"Save Attribute","Save Attribute"
+"Delete Attribute","Delete Attribute"
+"For internal use. Must be unique with no spaces. Maximum length of attribute code must be less than %1 symbols","For internal use. Must be unique with no spaces. Maximum length of attribute code must be less than %1 symbols"
+"Frontend Properties","Frontend Properties"
+"Attribute Information","Attribute Information"
+Properties,Properties
+"Close Window","Close Window"
+"Use config","Use config"
+Dropdown,Dropdown
+Closed,Closed
+"Product Name","Product Name"
+Country,Country
+State/Province,State/Province
+"Shipping Information","Shipping Information"
+"Shipping Method","Shipping Method"
+City,City
+"Email Address","Email Address"
+"Street Address","Street Address"
+"Shipping Address","Shipping Address"
+Condition,Condition
+Weight,Weight
+Select,Select
+Contents,Contents
+Package,Package
+Packages,Packages
+"Text Field","Text Field"
+"Text Area","Text Area"
+Date,Date
+"Image File","Image File"
+"Purchase Date","Purchase Date"
+"Bill-to Name","Bill-to Name"
+"Ship-to Name","Ship-to Name"
+"Purchase Point","Purchase Point"
+"Delete Image","Delete Image"
+"View Full Size","View Full Size"
+Notified,Notified
+"Notify Customer by Email","Notify Customer by Email"
+"Lines Count","Lines Count"
+"Valid range 2-20","Valid range 2-20"
+"Input Validation","Input Validation"
+"Minimum Text Length","Minimum Text Length"
+"Maximum Text Length","Maximum Text Length"
+"Maximum File Size (bytes)","Maximum File Size (bytes)"
+"File Extensions","File Extensions"
+"Comma separated","Comma separated"
+"Maximum Image Width (px)","Maximum Image Width (px)"
+"Maximum Image Height (px)","Maximum Image Height (px)"
+"Input/Output Filter","Input/Output Filter"
+"Show on Frontend","Show on Frontend"
+"Forms to Use In","Forms to Use In"
+"Manage Label / Options","Manage Label / Options"
+"Visible to Customer","Visible to Customer"
+"Attribute is no longer exists.","Attribute is no longer exists."
+"You cannot edit this attribute.","You cannot edit this attribute."
+"You cannot delete this attribute.","You cannot delete this attribute."
+Details,Details
+cm,cm
+Height,Height
+Width,Width
+Pending,Pending
+Requested,Requested
+Remaining,Remaining
+"Order ID","Order ID"
+"Grand Total (Base)","Grand Total (Base)"
+"Grand Total (Purchased)","Grand Total (Purchased)"
+"Customer Name","Customer Name"
+Approved,Approved
+Return,Return
+Returns,Returns
+"Create Returns","Create Returns"
+"Select Items","Select Items"
+"New Returns Request","New Returns Request"
+"Create New RMA for %1 in %2","Create New RMA for %1 in %2"
+"Create New RMA for %1","Create New RMA for %1"
+"Create New RMA","Create New RMA"
+"Please Select Order","Please Select Order"
+"Are you sure you want to close this returns request?","Are you sure you want to close this returns request?"
+Print,Print
+"Return #%1 - %2","Return #%1 - %2"
+"RMA Item Details","RMA Item Details"
+"Submit Comment","Submit Comment"
+"Custom Value","Custom Value"
+"Print Shipping Label","Print Shipping Label"
+"Show Packages","Show Packages"
+"Return Items","Return Items"
+Authorized,Authorized
+Returned,Returned
+"Return Reason","Return Reason"
+"Item Condition","Item Condition"
+Resolution,Resolution
+Split,Split
+"Return Information","Return Information"
+RMA,RMA
+"Requested Date","Requested Date"
+"Order Date","Order Date"
+"You have chosen to change status(es) of the selected RMA requests to Close. Are you sure you want to proceed?","You have chosen to change status(es) of the selected RMA requests to Close. Are you sure you want to proceed?"
+"Return Item Attribute","Return Item Attribute"
+"Edit Return Item Attribute ""%1""","Edit Return Item Attribute ""%1"""
+"New Return Item Attribute","New Return Item Attribute"
+"Submit Returns","Submit Returns"
+"Add Selected Product(s) to returns","Add Selected Product(s) to returns"
+"Remaining Qty","Remaining Qty"
+"Requested Qty","Requested Qty"
+"Reason to Return","Reason to Return"
+"Add Details","Add Details"
+"The wrong RMA was requested.","The wrong RMA was requested."
+"This is the wrong RMA order ID.","This is the wrong RMA order ID."
+"There are no applicable items for return in this order.","There are no applicable items for return in this order."
+"New Return","New Return"
+"We failed to save this RMA.","We failed to save this RMA."
+"You submitted the RMA request.","You submitted the RMA request."
+"You saved the RMA request.","You saved the RMA request."
+"We failed to save this RMA. No items have been specified.","We failed to save this RMA. No items have been specified."
+"%1 RMA(s) cannot be closed","%1 RMA(s) cannot be closed"
+"We cannot close the RMA request(s).","We cannot close the RMA request(s)."
+"%1 RMA (s) have been closed.","%1 RMA (s) have been closed."
+"Invalid RMA","Invalid RMA"
+"Please enter a valid message.","Please enter a valid message."
+"We cannot add the RMA history.","We cannot add the RMA history."
+"Invalid order","Invalid order"
+"Something went wrong retrieving the product list.","Something went wrong retrieving the product list."
+"The wrong RMA item was requested.","The wrong RMA item was requested."
+"We cannot display the item attributes.","We cannot display the item attributes."
+"No items for bundle product","No items for bundle product"
+"The wrong order ID or item ID was requested.","The wrong order ID or item ID was requested."
+"This is the wrong RMA ID.","This is the wrong RMA ID."
+"We cannot display the available shipping methods.","We cannot display the available shipping methods."
+"A quantity you're trying to add is higher than the number of products we shipped.","A quantity you're trying to add is higher than the number of products we shipped."
+"Products should be added to package(s)","Products should be added to package(s)"
+"You entered an invalid value.","You entered an invalid value."
+"You created a shipping label.","You created a shipping label."
+"Something went wrong creating a shipping label.","Something went wrong creating a shipping label."
+"We don't recognize or support the file extension in shipment %1.","We don't recognize or support the file extension in shipment %1."
+"Please specify a carrier.","Please specify a carrier."
+"You need to enter a tracking number.","You need to enter a tracking number."
+"We cannot initialize an RMA to add a tracking number.","We cannot initialize an RMA to add a tracking number."
+"We cannot add a message.","We cannot add a message."
+"We cannot initialize an RMA to delete a tracking number.","We cannot initialize an RMA to delete a tracking number."
+"We cannot delete the tracking number.","We cannot delete the tracking number."
+"We cannot load track with retrieving identifier.","We cannot load track with retrieving identifier."
+"Manage RMA Item Attributes","Manage RMA Item Attributes"
+"Returns Attributes","Returns Attributes"
+"New Return Attribute","New Return Attribute"
+"Edit Return Item Attribute","Edit Return Item Attribute"
+"An attribute with the same code already exists.","An attribute with the same code already exists."
+"You saved the RMA item attribute.","You saved the RMA item attribute."
+"Something went wrong saving the RMA item attribute.","Something went wrong saving the RMA item attribute."
+"You deleted the RMA attribute.","You deleted the RMA attribute."
+"Something went wrong deleting the RMA item attribute.","Something went wrong deleting the RMA item attribute."
+"Return #%1","Return #%1"
+"You submitted Return #%1.","You submitted Return #%1."
+"We cannot create a new return transaction. Please try again later.","We cannot create a new return transaction. Please try again later."
+"Create New Return","Create New Return"
+"We cannot create a return transaction for order #%1.","We cannot create a return transaction for order #%1."
+"Shipping Labels are not allowed.","Shipping Labels are not allowed."
+"Please select a valid carrier.","Please select a valid carrier."
+"Please enter a valid tracking number.","Please enter a valid tracking number."
+"We cannot add a label.","We cannot add a label."
+"The wrong RMA was selected.","The wrong RMA was selected."
+"We cannot delete the label.","We cannot delete the label."
+"My Returns","My Returns"
+"Cannot add message.","Cannot add message."
+"Tracking Information","Tracking Information"
+"This is not a valid order.","This is not a valid order."
+"Contact Email Address","Contact Email Address"
+"Only one RMA is available for printing","Only one RMA is available for printing"
+"Return # ","Return # "
+"Return Date: ","Return Date: "
+"Order # ","Order # "
+"Order Date: ","Order Date: "
+"Shipping Address:","Shipping Address:"
+"Return Address:","Return Address:"
+"There is an error in quantities for item %1.","There is an error in quantities for item %1."
+"Authorized Qty","Authorized Qty"
+"Returned Qty","Returned Qty"
+"Approved Qty","Approved Qty"
+"%1 for item %2 cannot be empty.","%1 for item %2 cannot be empty."
+"You cannot return %1.","You cannot return %1."
+"Quantity of %1 is greater than you can return.","Quantity of %1 is greater than you can return."
+"You entered an invalid type: ""%1"".","You entered an invalid type: ""%1""."
+"You entered an invalid email address: ""%1"".","You entered an invalid email address: ""%1""."
+"You entered an invalid hostname: ""%1""","You entered an invalid hostname: ""%1"""
+"""%1"" is longer than allowed.","""%1"" is longer than allowed."
+"Partially Authorized","Partially Authorized"
+"Return Received","Return Received"
+"Return Partially Received","Return Partially Received"
+"Partially Approved","Partially Approved"
+Rejected,Rejected
+"Partially Rejected","Partially Rejected"
+Denied,Denied
+"Processed and Closed","Processed and Closed"
+"This is the wrong RMA item status.","This is the wrong RMA item status."
+"We placed your Return request.","We placed your Return request."
+"We have authorized your Return request.","We have authorized your Return request."
+"We partially authorized your Return request.","We partially authorized your Return request."
+"We received your Return request.","We received your Return request."
+"We partially received your Return request.","We partially received your Return request."
+"We partially approved your Return request.","We partially approved your Return request."
+"We partially rejected your Return request.","We partially rejected your Return request."
+"We closed your Return request.","We closed your Return request."
+"We processed and closed your Return request.","We processed and closed your Return request."
+"Invalid carrier: %1","Invalid carrier: %1"
+"We need more information to create your shipping label(s). Please verify your store information and shipping settings.","We need more information to create your shipping label(s). Please verify your store information and shipping settings."
+"No detail for number ""%1""","No detail for number ""%1"""
+"All Items","All Items"
+"Individual Items","Individual Items"
+"Request Details","Request Details"
+#,#
+"RMA History","RMA History"
+"Comment Text","Comment Text"
+"Visible on Frontend","Visible on Frontend"
+"Customer Service","Customer Service"
+"Not Notified","Not Notified"
+"Return Address","Return Address"
+"Order Shipping Address","Order Shipping Address"
+"Delete Line","Delete Line"
+"Customs Value","Customs Value"
+"Qty Ordered","Qty Ordered"
+"Click to change shipping method.","Click to change shipping method."
+"Create Shipping Label","Create Shipping Label"
+"No authorized items or allowed shipping methods","No authorized items or allowed shipping methods"
+"Add Package","Add Package"
+"Create Packages","Create Packages"
+Size,Size
+Girth,Girth
+"Total Weight","Total Weight"
+Length,Length
+"Signature Confirmation","Signature Confirmation"
+in,in
+lb,lb
+kg,kg
+"Delete Package","Delete Package"
+Explanation,Explanation
+"Add Selected Product(s) to Package","Add Selected Product(s) to Package"
+"Please select products.","Please select products."
+Carrier,Carrier
+Number,Number
+"Enabled when authorized items require a new shipment.","Enabled when authorized items require a new shipment."
+"Items in the Package","Items in the Package"
+"Return Confirmation","Return Confirmation"
+"Email Returns Confirmation","Email Returns Confirmation"
+"RMA Items Requested for","RMA Items Requested for"
+"Please Select Products to Add","Please Select Products to Add"
+Sub-items,Sub-items
+"Quantity To Return","Quantity To Return"
+"Remaining quantity: ","Remaining quantity: "
+"New Return for Order %1","New Return for Order %1"
+"Return Items Information","Return Items Information"
+"Add Item To Return","Add Item To Return"
+Comments,Comments
+"Return #","Return #"
+"Ship From","Ship From"
+"Return Status","Return Status"
+"View Return","View Return"
+"You have placed no returns.","You have placed no returns."
+"Order #%1 - %2","Order #%1 - %2"
+"About This Order:","About This Order:"
+"Order Date: %1","Order Date: %1"
+"Are you sure you want to delete this tracking information?","Are you sure you want to delete this tracking information?"
+"Request Information","Request Information"
+"Date Requested","Date Requested"
+"Shipping and Tracking Information","Shipping and Tracking Information"
+"Track this shipment","Track this shipment"
+"Items Return Requested For","Items Return Requested For"
+"Request Qty","Request Qty"
+"Hide Details","Hide Details"
+"Show Details","Show Details"
+Questions,Questions
+Answers,Answers
+"Leave Comment","Leave Comment"
+"ZIP/Postal Code","ZIP/Postal Code"
+"RMA Settings","RMA Settings"
+"Enable RMA on Frontend","Enable RMA on Frontend"
+"Enable RMA on Product Level","Enable RMA on Product Level"
+"Use Store Address","Use Store Address"
+"Contact Name","Contact Name"
+"RMA Email Sender","RMA Email Sender"
+"RMA Email Template","RMA Email Template"
+"RMA Email Template for Guest","RMA Email Template for Guest"
+"Send RMA Email Copy To","Send RMA Email Copy To"
+Comma-separated,Comma-separated
+"Send RMA Email Copy Method","Send RMA Email Copy Method"
+"RMA Authorization","RMA Authorization"
+"RMA Authorization Email Sender","RMA Authorization Email Sender"
+"RMA Authorization Email Template","RMA Authorization Email Template"
+"RMA Authorization Email Template for Guest","RMA Authorization Email Template for Guest"
+"Send RMA Authorization Email Copy To","Send RMA Authorization Email Copy To"
+"Send RMA Authorization Email Copy Method","Send RMA Authorization Email Copy Method"
+"RMA Admin Comments","RMA Admin Comments"
+"RMA Comment Email Sender","RMA Comment Email Sender"
+"RMA Comment Email Template","RMA Comment Email Template"
+"RMA Comment Email Template for Guest","RMA Comment Email Template for Guest"
+"Send RMA Comment Email Copy To","Send RMA Comment Email Copy To"
+"RMA Customer Comments","RMA Customer Comments"
+"RMA Comment Email Recipient","RMA Comment Email Recipient"
+"Enabled for RMA","Enabled for RMA"
+"Click Details for more required fields.","Click Details for more required fields."

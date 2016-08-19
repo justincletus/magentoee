@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\ScheduledImportExport\Block\Adminhtml\Scheduled\Operation\Edit\Form\Export">
+        <arguments>
+            <argument name="emailIdentity" xsi:type="object">Magento\Config\Model\Config\Source\Email\Identity\Proxy</argument>
+        </arguments>
+    </type>
+    <type name="Magento\ScheduledImportExport\Block\Adminhtml\Scheduled\Operation\Edit\Form\Import">
+        <arguments>
+            <argument name="emailIdentity" xsi:type="object">Magento\Config\Model\Config\Source\Email\Identity\Proxy</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\Module\Setup\Migration">
+        <arguments>
+            <argument name="compositeModules" xsi:type="array">
+                <item name="magento_scheduledimportexport" xsi:type="string">Magento_ScheduledImportExport</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

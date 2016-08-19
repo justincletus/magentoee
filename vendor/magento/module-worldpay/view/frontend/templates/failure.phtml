@@ -1,0 +1,22 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+?>
+<html>
+<meta http-equiv="refresh" content="0; URL=<?php echo $block->escapeXssInUrl($block->getUrl('checkout/cart'))?>">
+<body>
+<div class="page-head">
+    <h3><?php echo $block->escapeHtml(__('Payment was canceled')) ?></h3>
+</div>
+<p>
+    <?php echo $block->escapeHtml(__('Please ')) ?>
+    <a href="<?php echo $block->escapeXssInUrl($block->getUrl('checkout/cart'))?>">
+        <?php echo $block->escapeHtml(__('continue shopping')) ?>
+    </a>
+</p>
+</body>
+</html>

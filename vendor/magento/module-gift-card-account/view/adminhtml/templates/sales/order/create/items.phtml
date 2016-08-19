@@ -1,0 +1,33 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+/**
+ * @var \Magento\GiftCardAccount\Block\Adminhtml\Sales\Order\Create\Payment $block
+ */
+
+?>
+<div class="admin__field field-add-gift-card">
+    <label class="admin__field-label">
+        <span><?php echo $block->escapeHtml(__('Gift Cards')); ?></span>
+    </label>
+    <div class="admin__field-control">
+        <input id="giftcardaccount_add_input" type="text" class="input-text admin__control-text" />
+        <button onclick="applyGiftCard()" type="button" value="" class="action-default">
+            <span><?php echo $block->escapeHtml(__('Add Gift Card')); ?></span>
+        </button>
+        <?php foreach ($block->getGiftCards() as $card): ?>
+            <p class="added-gift-card">
+                <span><?php echo $block->escapeHtml($card); ?></span>
+                <a href="#" onclick="removeGiftCard('<?php echo $block->escapeHtml($card); ?>'); return false;"
+                   title="<?php echo $block->escapeHtml(__('Remove')); ?>"
+                   class="action-remove">
+                    <span><?php echo $block->escapeHtml(__('Remove')); ?></span>\
+                </a>
+            </p>
+        <?php endforeach; ?>
+    </div>
+</div>

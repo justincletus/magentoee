@@ -1,0 +1,21 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * Cms Hierarchy Context Menu
+ *
+ * @see \Magento\VersionsCms\Block\Hierarchy\Menu
+ */
+?>
+<?php
+    $_tree = $block->getTree();
+    $_menu = $block->drawMenu($_tree);
+?>
+<?php if ($block->geMenuNodesQty() > 1): ?>
+    <?php /* @escapeNotVerified */ echo $_menu; ?>
+<?php endif; ?>

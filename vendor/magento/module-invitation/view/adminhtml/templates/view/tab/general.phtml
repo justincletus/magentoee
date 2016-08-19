@@ -1,0 +1,247 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * Invitaion view tab general block template
+ *
+ * @see \Magento\Invitation\Block\Adminhtml\Invitation\View\Tab\General
+ */
+?>
+    <div class="fieldset-wrapper invitation_information">
+         <div class="fieldset-wrapper-title">
+            <span class="title"><?php /* @escapeNotVerified */ echo __('Invitation Information') ?></span>
+        </div>
+        <fieldset class="fieldset">
+            <table class="data-table">
+            <tr>
+                <th><?php  /* @escapeNotVerified */ echo __('Send At'); ?></th>
+                <td><?php /* @escapeNotVerified */ echo $block->formatDate($block->getInvitation()->getInvitationDate(), \IntlDateFormatter::MEDIUM, true) ?></td>
+            </tr>
+            <tr>
+                <th>
+                    <?php if ($block->canEditMessage()): ?><label for="message"><?php endif; ?>
+                    <?php  /* @escapeNotVerified */ echo __('Invitation Message'); ?>
+                    <?php if ($block->canEditMessage()): ?></label><?php endif; ?>
+                </th>
+                <td>
+                    <?php if ($block->canEditMessage()): ?>
+                        <textarea name="message" rows="5" id="message"><?php echo $block->escapeHtml($block->getInvitation()->getMessage());?></textarea>
+                        <?php echo $block->getSaveMessageButtonHtml(); ?>
+                    <?php else: ?>
+                        <?php if ($block->getInvitation()->getMessage()): ?>
+                            <?php echo $block->escapeHtml($block->getInvitation()->getMessage());?>
+                        <?php else: ?>
+                            <?php /* @escapeNotVerified */ echo __('N/A'); ?>
+                        <?php endif; ?>
+                        <textarea style="height:1px; visibility: hidden"><?php echo $block->escapeHtml($block->getInvitation()->getMessage());?></textarea>
+                    <?php endif; ?>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <?php if ($block->canEditMessage()): ?><label for="email"><?php endif; ?>
+                        <?php /* @escapeNotVerified */ echo __('Email'); ?><?php if ($block->canEditMessage()): ?><span class="required">*</span><?php endif; ?>
+                    <?php if ($block->canEditMessage()): ?></label><?php endif; ?>
+                </th>
+                <td>
+                <?php if ($block->canEditMessage()): ?>
+                    <input type="text" id="email" class="required-entry input-text validate-email" name="email" value="<?php /* @escapeNotVerified */ echo $block->getInvitation()->getEmail() ?>" />
+                <?php else: ?>
+                    <?php echo $block->escapeHtml($block->getInvitation()->getEmail()) ?>
+                <?php endif; ?>
+                </td>
+            </tr>
+            <tr>
+                <th><?php  /* @escapeNotVerified */ echo __('Status'); ?></th>
+                <td><?php /* @escapeNotVerified */ echo $this->helper('Magento\Invitation\Helper\Data')->getInvitationStatusText($block->getInvitation()) ?></td>
+            </tr>
+            <tr>
+                <th><?php  /* @escapeNotVerified */ echo __('Website'); ?></th>
+                <td><?php /* @escapeNotVerified */ echo $block->getWebsiteName() ?></td>
+            </tr>
+            <tr>
+                <th><?php  /* @escapeNotVerified */ echo __('Store View'); ?></th>
+                <td><?php /* @escapeNotVerified */ echo $block->getStoreName() ?></td>
+            </tr>
+            <tr>
+                <th><?php  /* @escapeNotVerified */ echo __('Invitee Group'); ?></th>
+                <td><?php /* @escapeNotVerified */ echo $block->getCustomerGroupCode($block->getInvitation()->getGroupId(), true) ?></td>
+            </tr>
+            <tr>
+                <th><?php  /* @escapeNotVerified */ echo __('Signed Up At'); ?></th>
+                <td>
+                <?php if ($block->getInvitation()->getSignupDate()): ?>
+                    <?php /* @escapeNotVerified */ echo $block->formatDate($block->getInvitation()->getSignupDate(), \IntlDateFormatter::MEDIUM, true) ?>
+                <?php else: ?>
+                    <?php  /* @escapeNotVerified */ echo __('N/A'); ?>
+                <?php endif; ?>
+                </td>
+            </tr>
+            <tr>
+                <th><?php  /* @escapeNotVerified */ echo __('Invitation URL'); ?></th>
+                <td>
+                    <?php if ($url = $block->getInvitationUrl()): ?>
+                        <a href="<?php /* @escapeNotVerified */ echo $url ?>" target="_blank"><?php  /* @escapeNotVerified */ echo __('Link'); ?></a>
+                    <?php else: /* @escapeNotVerified */ echo __('N/A'); endif; ?>
+                </td>
+            </tr>
+            </table>
+        </fieldset>
+    </div>
+
+    <div class="invitee_information">
+        <div class="fieldset-wrapper">
+             <div class="fieldset-wrapper-title">
+                <span class="title"><?php /* @escapeNotVerified */ echo __('Invitee Information') ?></span>
+            </div>
+            <table class="data-table">
+            <tr>
+                <th><?php  /* @escapeNotVerified */ echo __('Customer ID'); ?></th>
+                <td>
+                <?php if ($block->getInvitation()->getReferralId()): ?>
+                    <?php if ($block->canShowReferralLink()) :?>
+                        <a target="_blank" href="<?php /* @escapeNotVerified */ echo $block->getUrl('customer/index/edit', ['id' => $block->getInvitation()->getReferralId()]);?>"><?php /* @escapeNotVerified */ echo $block->getInvitation()->getReferralId()?></a>
+                    <?php else : ?>
+                        <?php /* @escapeNotVerified */ echo $block->getInvitation()->getReferralId()?>
+                    <?php endif; ?>
+                <?php else:  ?>
+                    <?php /* @escapeNotVerified */ echo __('N/A'); ?>
+                <?php endif; ?>
+                </td>
+            </tr>
+            <tr>
+                <th><?php  /* @escapeNotVerified */ echo __('Customer Group'); ?></th>
+                <td>
+                <?php if ($block->getReferral()): ?>
+                    <?php /* @escapeNotVerified */ echo $block->getCustomerGroupCode($block->getReferral()->getGroupId())?>
+                <?php else:  ?>
+                    <?php /* @escapeNotVerified */ echo __('N/A'); ?>
+                <?php endif; ?>
+                </td>
+            </tr>
+            <tr>
+                <th><?php  /* @escapeNotVerified */ echo __('First Name'); ?></th>
+                <td>
+                <?php if ($block->getReferral()): ?>
+                    <?php echo $block->escapeHtml($block->getReferral()->getFirstname())?>
+                <?php else:  ?>
+                    <?php /* @escapeNotVerified */ echo __('N/A'); ?>
+                <?php endif; ?>
+                </td>
+            </tr>
+            <tr>
+                <th><?php  /* @escapeNotVerified */ echo __('Last Name'); ?></th>
+                <td>
+                <?php if ($block->getReferral()): ?>
+                    <?php echo $block->escapeHtml($block->getReferral()->getLastname())?>
+                <?php else:  ?>
+                    <?php /* @escapeNotVerified */ echo __('N/A'); ?>
+                <?php endif; ?>
+                </td>
+            </tr>
+            <tr>
+                <th><?php  /* @escapeNotVerified */ echo __('Email'); ?></th>
+                <td>
+                <?php if ($block->getReferral()): ?>
+                    <?php echo $block->escapeHtml($block->getReferral()->getEmail())?>
+                <?php else:  ?>
+                    <?php /* @escapeNotVerified */ echo __('N/A'); ?>
+                <?php endif; ?>
+                </td>
+            </tr>
+            <tr>
+                <th><?php  /* @escapeNotVerified */ echo __('Sign Up At'); ?></th>
+                <td>
+                <?php if ($block->getReferral()): ?>
+                    <?php /* @escapeNotVerified */ echo $block->formatDate($block->getReferral()->getCreatedAt(), \IntlDateFormatter::MEDIUM, true)?>
+                <?php else:  ?>
+                    <?php /* @escapeNotVerified */ echo __('N/A'); ?>
+                <?php endif; ?>
+                </td>
+            </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="inviter_information">
+        <div class="fieldset-wrapper">
+            <div class="fieldset-wrapper-title">
+                <span class="title"><?php /* @escapeNotVerified */ echo __('Inviter Information') ?></span>
+            </div>
+            <table class="data-table">
+            <?php if ($block->isInvitedByAdmin()): ?>
+            <tr>
+                <td><?php /* @escapeNotVerified */ echo __('Admin'); ?><td>
+            </tr>
+            <?php else: ?>
+            <tr>
+                <th><?php  /* @escapeNotVerified */ echo __('Customer ID'); ?></th>
+                <td>
+                <?php if ($block->getInvitation()->getCustomerId()): ?>
+                    <a target="_blank" href="<?php /* @escapeNotVerified */ echo $block->getUrl('customer/index/edit', ['id' => $block->getInvitation()->getCustomerId()]);?>"><?php /* @escapeNotVerified */ echo $block->getInvitation()->getCustomerId()?></a>
+                <?php else:  ?>
+                    <?php /* @escapeNotVerified */ echo __('N/A'); ?>
+                <?php endif; ?>
+                </td>
+            </tr>
+            <tr>
+                <th><?php  /* @escapeNotVerified */ echo __('Customer Group'); ?></th>
+                <td>
+                <?php if ($block->getCustomer()): ?>
+                    <?php /* @escapeNotVerified */ echo $block->getCustomerGroupCode($block->getCustomer()->getGroupId())?>
+                <?php else:  ?>
+                    <?php /* @escapeNotVerified */ echo __('N/A'); ?>
+                <?php endif; ?>
+                </td>
+            </tr>
+            <tr>
+                <th><?php  /* @escapeNotVerified */ echo __('First Name'); ?></th>
+                <td>
+                <?php if ($block->getCustomer()): ?>
+                    <?php echo $block->escapeHtml($block->getCustomer()->getFirstname())?>
+                <?php else:  ?>
+                    <?php /* @escapeNotVerified */ echo __('N/A'); ?>
+                <?php endif; ?>
+                </td>
+            </tr>
+            <tr>
+                <th><?php  /* @escapeNotVerified */ echo __('Last Name'); ?></th>
+                <td>
+                <?php if ($block->getCustomer()): ?>
+                    <?php echo $block->escapeHtml($block->getCustomer()->getLastname())?>
+                <?php else:  ?>
+                    <?php /* @escapeNotVerified */ echo __('N/A'); ?>
+                <?php endif; ?>
+                </td>
+            </tr>
+            <tr>
+                <th><?php  /* @escapeNotVerified */ echo __('Email'); ?></th>
+                <td>
+                <?php if ($block->getCustomer()): ?>
+                    <?php echo $block->escapeHtml($block->getCustomer()->getEmail())?>
+                <?php else:  ?>
+                    <?php /* @escapeNotVerified */ echo __('N/A'); ?>
+                <?php endif; ?>
+                </td>
+            </tr>
+            <tr>
+                <th><?php  /* @escapeNotVerified */ echo __('Sign Up At'); ?></th>
+                <td>
+                <?php if ($block->getCustomer()): ?>
+                    <?php /* @escapeNotVerified */ echo $block->formatDate($block->getCustomer()->getCreatedAt(), \IntlDateFormatter::MEDIUM, true)?>
+                <?php else:  ?>
+                    <?php /* @escapeNotVerified */ echo __('N/A'); ?>
+                <?php endif; ?>
+                </td>
+            </tr>
+            <?php endif; ?>
+            </table>
+        </div>
+    </div>

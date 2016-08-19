@@ -1,0 +1,107 @@
+{
+    "name": "magento/magento2-ee-base",
+    "description": "Magento 2 Base (Enterprise Edition)",
+    "type": "magento2-component",
+    "version": "2.0.7",
+    "require": {
+        "magento/magento-composer-installer": "*",
+        "php": "~5.5.0|~5.6.0|~7.0.0",
+        "zendframework/zend-stdlib": "~2.4.6",
+        "zendframework/zend-code": "~2.4.6",
+        "zendframework/zend-server": "~2.4.6",
+        "zendframework/zend-soap": "~2.4.6",
+        "zendframework/zend-uri": "~2.4.6",
+        "zendframework/zend-validator": "~2.4.6",
+        "zendframework/zend-crypt": "~2.4.6",
+        "zendframework/zend-console": "~2.4.6",
+        "zendframework/zend-modulemanager": "~2.4.6",
+        "zendframework/zend-mvc": "~2.4.6",
+        "zendframework/zend-text": "~2.4.6",
+        "zendframework/zend-i18n": "~2.4.6",
+        "zendframework/zend-eventmanager": "~2.4.6",
+        "zendframework/zend-view": "~2.4.6",
+        "zendframework/zend-servicemanager": "~2.4.6",
+        "zendframework/zend-json": "~2.4.6",
+        "zendframework/zend-config": "~2.4.6",
+        "zendframework/zend-form": "~2.4.6",
+        "zendframework/zend-di": "~2.4.6",
+        "zendframework/zend-serializer": "~2.4.6",
+        "zendframework/zend-log": "~2.4.6",
+        "zendframework/zend-http": "~2.4.6",
+        "magento/zendframework1": "1.12.16",
+        "composer/composer": "1.0.0-alpha10",
+        "monolog/monolog": "1.16.0",
+        "oyejorge/less.php": "1.7.0.3",
+        "pelago/emogrifier": "0.1.1",
+        "tubalmartin/cssmin": "2.4.8-p4",
+        "braintree/braintree_php": "2.39.0",
+        "symfony/console": "~2.3 <2.7",
+        "symfony/event-dispatcher": "~2.1",
+        "phpseclib/phpseclib": "~0.3",
+        "tedivm/jshrink": "~1.0.1",
+        "magento/composer": "~1.0.0",
+        "solarium/solarium": "3.3.0",
+        "videlalvaro/php-amqplib": "2.5.*",
+        "ext-intl": "*",
+        "ext-mbstring": "*"
+    },
+    "license": [
+        "proprietary"
+    ],
+    "extra": {
+        "map": [
+            [
+                "pub/errors",
+                "pub/errors"
+            ],
+            [
+                "LICENSE_EE.txt",
+                "LICENSE_EE.txt"
+            ],
+            [
+                "dev/tools",
+                "dev/tools"
+            ],
+            [
+                "dev/tests/integration/etc",
+                "dev/tests/integration/etc"
+            ],
+            [
+                "dev/tests/integration/framework",
+                "dev/tests/integration/framework"
+            ],
+            [
+                "dev/tests/integration/testsuite/Magento",
+                "dev/tests/integration/testsuite/Magento"
+            ],
+            [
+                "dev/tests/functional/tests",
+                "dev/tests/functional/tests"
+            ],
+            [
+                "dev/tests/functional/testsuites/Magento",
+                "dev/tests/functional/testsuites/Magento"
+            ],
+            [
+                "dev/tests/api-functional/testsuite/Magento",
+                "dev/tests/api-functional/testsuite/Magento"
+            ],
+            [
+                "dev/tests/static/testsuite/Magento",
+                "dev/tests/static/testsuite/Magento"
+            ],
+            [
+                "setup",
+                "setup"
+            ],
+            [
+                "app/design/adminhtml/Magento",
+                "app/design/adminhtml/Magento"
+            ],
+            [
+                "README_EE.md",
+                "README_EE.md"
+            ]
+        ]
+    }
+}

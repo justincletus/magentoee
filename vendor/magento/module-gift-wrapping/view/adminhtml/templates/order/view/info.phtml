@@ -1,0 +1,78 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var $block \Magento\GiftWrapping\Block\Adminhtml\Order\View\Info */
+?>
+<?php if ($block->canDisplayGiftWrapping()): ?>
+<div id="wrapping-order-container" class="order-gift-wrapping">
+    <div class="entry-edit">
+        <fieldset>
+            <legend class="legend"><span><?php /* @escapeNotVerified */ echo __('Gift Wrapping for the Entire Order'); ?></span></legend>
+            <br />
+
+            <?php if ($block->getOrderInfo()->getDesign()): ?>
+            <div class="gift-wrapping-form">
+                <?php /* @escapeNotVerified */ echo __('Gift Wrapping Design') ?>: <span><?php echo $block->escapeHtml($block->getOrderInfo()->getDesign()); ?></span>
+                <div class="gift-wrapping-design">
+                    <?php if ($block->getOrderInfo()->getPath()): ?>
+                        <img id="image-box" class="image-box" height="75" width="75" alt="" src="<?php /* @escapeNotVerified */ echo $block->getOrderInfo()->getPath(); ?>"/>
+                    <?php endif; ?>
+                    <div id="price-box">
+                        <?php if ($block->getDisplayWrappingBothPrices()): ?>
+                        <div>
+                            <span class="label"><?php /* @escapeNotVerified */ echo __('Price Excl. Tax') ?>:</span>
+                            <span class="price"><?php /* @escapeNotVerified */ echo $block->getOrderInfo()->getPriceExclTax(); ?></span>
+                        </div>
+                        <div>
+                            <span class="label"><?php /* @escapeNotVerified */ echo __('Price Incl. Tax') ?>:</span>
+                            <span class="price"><?php /* @escapeNotVerified */ echo $block->getOrderInfo()->getPriceInclTax(); ?></span>
+                        </div>
+                        <?php else: ?>
+                        <div>
+                            <span class="label"><?php /* @escapeNotVerified */ echo __('Price') ?>:</span>
+                            <span class="price"><?php /* @escapeNotVerified */ echo $block->getOrderInfo()->getPrice(); ?></span>
+                        </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+            <?php endif; ?>
+
+            <?php if ($block->getGiftReceipt()): ?>
+            <p>
+                <input type="checkbox" id="allow-gift-receipt" class="checkbox" disabled="disabled" <?php if ($block->getGiftReceipt()):?> checked="checked"<?php endif; ?> />
+                <label for="allow-gift-receipt"><?php /* @escapeNotVerified */ echo __('Send Gift Receipt') ?></label>
+            </p>
+            <?php endif; ?>
+            <?php if ($block->getPrintedCard()): ?>
+            <p>
+                <input type="checkbox" id="add-printed-card" class="checkbox" disabled="disabled" <?php if ($block->getPrintedCard()):?> checked="checked"<?php endif; ?> />
+                <label for="add-printed-card"><?php /* @escapeNotVerified */ echo __('Add Printed Card') ?></label>
+            </p>
+            <div id="price-card-box">
+            <?php if ($block->getDisplayCardBothPrices()): ?>
+                <div>
+                    <span class="label"><?php /* @escapeNotVerified */ echo __('Price Excl. Tax') ?>:</span>
+                    <span class="price"><?php /* @escapeNotVerified */ echo $block->getCardInfo()->getPriceExclTax(); ?></span>
+                </div>
+                <div>
+                    <span class="label"><?php /* @escapeNotVerified */ echo __('Price Incl. Tax') ?>:</span>
+                    <span class="price"><?php /* @escapeNotVerified */ echo $block->getCardInfo()->getPriceInclTax(); ?></span>
+                </div>
+            <?php else: ?>
+                <div>
+                    <span class="label"><?php /* @escapeNotVerified */ echo __('Price') ?>:</span>
+                    <span class="price"><?php /* @escapeNotVerified */ echo $block->getCardInfo()->getPrice(); ?></span>
+                </div>
+            <?php endif; ?>
+            </div>
+            <?php endif; ?>
+        </fieldset>
+    </div>
+</div>
+<?php endif; ?>

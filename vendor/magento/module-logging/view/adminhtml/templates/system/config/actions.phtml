@@ -1,0 +1,47 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+ ?>
+<?php
+/**
+ * @see \Magento\Logging\Block\Adminhtml\System\Config\Actions
+ */
+?>
+
+<input type="hidden" name="<?php /* @escapeNotVerified */ echo $block->getNamePrefix() ?>[__empty]" value="1" id="<?php echo $block->getHtmlId() ?>" />
+<ul class="checkboxes">
+<?php foreach ($block->getLabels() as $name => $label): ?>
+    <li>
+        <input type="checkbox" value="1" name="<?php /* @escapeNotVerified */ echo $block->getNamePrefix() ?>[<?php /* @escapeNotVerified */ echo $name ?>]" id="<?php /* @escapeNotVerified */ echo $block->getHtmlId() . '_' . $name ?>"<?php echo($block->getIsChecked($name) ? ' checked="checked"' : '') ?>/><label for="<?php /* @escapeNotVerified */ echo $block->getHtmlId() . '_' . $name ?>">
+            <?php /* @escapeNotVerified */ echo $label ?>
+        </label>
+    </li>
+<?php endforeach;?>
+</ul>
+
+<script>
+require(['prototype'], function(){
+
+//<![CDATA[
+    enterpriseLoggingActionsLabel = $('<?php echo $block->getHtmlId() ?>').up('table').select('td.label label');
+    if (enterpriseLoggingActionsLabel) {
+        enterpriseLoggingActions = $('<?php echo $block->getHtmlId() ?>').parentNode.select('ul.checkboxes input');
+        if (enterpriseLoggingActions) {
+            enterpriseLoggingShouldBeChecked = true;
+            Event.observe(enterpriseLoggingActionsLabel[0], 'click', function () {
+                for (var i = 0; i < enterpriseLoggingActions.length; i++) {
+                    enterpriseLoggingActions[i].checked = enterpriseLoggingShouldBeChecked;
+                }
+                enterpriseLoggingShouldBeChecked = !enterpriseLoggingShouldBeChecked;
+            });
+        }
+    }
+//]]>
+
+});
+</script>

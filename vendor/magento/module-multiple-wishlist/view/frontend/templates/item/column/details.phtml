@@ -1,0 +1,25 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var $block \Magento\Wishlist\Block\Customer\Wishlist\Item\Column */
+?>
+<?php
+    $product = $block->getItem()->getProduct();
+    $layout = $block->getLayout();
+?>
+<strong class="product name">
+    <a href="<?php /* @escapeNotVerified */ echo $block->getProductUrl($block->getItem()); ?>"><?php echo $block->escapeHtml($product->getName()) ?></a>
+</strong>
+<?php if ($product->getShortDescription()): ?>
+    <div class="description">
+        <?php echo $block->escapeHtml($block->stripTags($product->getShortDescription()));?>
+    </div>
+<?php endif; ?>
+<?php foreach ($block->getChildNames() as $childName):?>
+    <?php /* @escapeNotVerified */ echo $layout->renderElement($childName, false);?>
+<?php endforeach;?>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="listing">
+            <arguments>
+                <argument name="meta" xsi:type="array">
+                    <item name="fields" xsi:type="array">
+                        <item name="under_version_control" xsi:type="array">
+                            <item name="label" xsi:type="string" translate="true">Version Control</item>
+                            <item name="align" xsi:type="string">left</item>
+                            <item name="data_type" xsi:type="string">text</item>
+                            <item name="filter_type" xsi:type="string">filter_select</item>
+                            <item name="options" xsi:type="array">
+                                <item name="no" xsi:type="array">
+                                    <item name="value" xsi:type="string">0</item>
+                                    <item name="label" xsi:type="string" translate="true">No</item>
+                                </item>
+                                <item name="yes" xsi:type="array">
+                                    <item name="value" xsi:type="string">1</item>
+                                    <item name="label" xsi:type="string" translate="true">Yes</item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

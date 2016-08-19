@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\App\FrontController">
+        <plugin name="admin-session-on-frontend" type="Magento\VersionsCms\App\FrontController\AdminSessionPlugin"/>
+    </type>
+    <type name="Magento\VersionsCms\App\Preview">
+        <arguments>
+            <argument name="cookiePath" xsi:type="const">Magento\VersionsCms\Model\Page\Revision::PREVIEW_URI</argument>
+            <argument name="startupPage" xsi:type="string">/</argument>
+            <argument name="aclResourceName" xsi:type="string">Magento_Cms::page</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Backend\App\BackendAppList">
+        <arguments>
+            <argument name="backendApps" xsi:type="array">
+                <item name="cms_preview" xsi:type="object">Magento\VersionsCms\App\Preview</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

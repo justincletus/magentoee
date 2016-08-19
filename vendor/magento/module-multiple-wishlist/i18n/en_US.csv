@@ -1,0 +1,130 @@
+Remove,Remove
+Close,Close
+Cancel,Cancel
+Back,Back
+Product,Product
+Price,Price
+SKU,SKU
+Customers,Customers
+Qty,Qty
+Edit,Edit
+Item,Item
+"Unit Price","Unit Price"
+"Add to Cart","Add to Cart"
+Customer,Customer
+"First Name","First Name"
+"Last Name","Last Name"
+Refresh,Refresh
+Save,Save
+Name,Name
+Status,Status
+Search,Search
+"All Websites","All Websites"
+View,View
+Actions,Actions
+"1 item","1 item"
+"%1 items","%1 items"
+Comment,Comment
+Wishlist,Wishlist
+Reports,Reports
+"Wish List","Wish List"
+Template,Template
+Public,Public
+"Select Search Type","Select Search Type"
+"Please enter at least 2 letters of the first name.","Please enter at least 2 letters of the first name."
+"Please enter at least 2 letters of the last name.","Please enter at least 2 letters of the last name."
+Private,Private
+"All Forms","All Forms"
+Owner,Owner
+"Required Fields","Required Fields"
+"Search Options","Search Options"
+"Search Results","Search Results"
+"Your search returned no results.","Your search returned no results."
+Go,Go
+"Search By","Search By"
+"Please enter at least two letters.","Please enter at least two letters."
+"Customer's Wish List Report","Customer's Wish List Report"
+"My Wish Lists","My Wish Lists"
+"%1's Wish List","%1's Wish List"
+"%1's Wish List (%2)","%1's Wish List (%2)"
+"Wish List Search","Wish List Search"
+"Customer Wish List Report","Customer Wish List Report"
+"Wish List ""%1"" was saved.","Wish List ""%1"" was saved."
+"Something went wrong creating the wish list.","Something went wrong creating the wish list."
+"Log in to edit wish lists.","Log in to edit wish lists."
+"Provide wish list name","Provide wish list name"
+"The wish list is not assigned to your account and cannot be edited.","The wish list is not assigned to your account and cannot be edited."
+"Only %1 wish lists can be created.","Only %1 wish lists can be created."
+"The default wish list cannot be deleted.","The default wish list cannot be deleted."
+"Wish list ""%1"" has been deleted.","Wish list ""%1"" has been deleted."
+"Something went wrong deleting the wish list.","Something went wrong deleting the wish list."
+"""%1"" was copied to %2.","""%1"" was copied to %2."
+"The item was not found.","The item was not found."
+"""%1"" is already present in %2.","""%1"" is already present in %2."
+"We could not copy ""%1"".","We could not copy ""%1""."
+"We could not copy the wish list item.","We could not copy the wish list item."
+"%1 items were not found.","%1 items were not found."
+"We could not copy %1 items.","We could not copy %1 items."
+"%1 items are already present in %2: %3.","%1 items are already present in %2: %3."
+"%1 items were copied to %2: %3.","%1 items were copied to %2: %3."
+"""%1"" was moved to %2.","""%1"" was moved to %2."
+"An item with this ID doesn't exist.","An item with this ID doesn't exist."
+"We cannot move ""%1"".","We cannot move ""%1""."
+"We could not move the wish list item.","We could not move the wish list item."
+"%1 items cannot be moved: %2.","%1 items cannot be moved: %2."
+"We could not move %1 items.","We could not move %1 items."
+"%1 items were moved to %2: %3.","%1 items were moved to %2: %3."
+"Please specify correct search options.","Please specify correct search options."
+"We could not perform the search.","We could not perform the search."
+"%1 for ""%2""","%1 for ""%2"""
+"We could not add the item to shopping cart.","We could not add the item to shopping cart."
+"Cannot add the following product(s) to shopping cart: %1.","Cannot add the following product(s) to shopping cart: %1."
+"Product(s) %1 have required options. Each product can only be added individually.","Product(s) %1 have required options. Each product can only be added individually."
+"%1 product(s) have been added to shopping cart: %2.","%1 product(s) have been added to shopping cart: %2."
+"Wish List Owner Name Search","Wish List Owner Name Search"
+"Wish List Owner Email Search","Wish List Owner Email Search"
+"Please input a valid email address.","Please input a valid email address."
+"All Wish Lists","All Wish Lists"
+"Add To Order","Add To Order"
+"Configure and Add to Order","Configure and Add to Order"
+"No items","No items"
+"Delete Wish List","Delete Wish List"
+"Delete Wishlist","Delete Wishlist"
+"RSS Feed","RSS Feed"
+"Updated at","Updated at"
+"Wish List Items","Wish List Items"
+"You must select items to add to the cart.","You must select items to add to the cart."
+"Add to Wish List","Add to Wish List"
+"Add to:","Add to:"
+"Create New Wish List","Create New Wish List"
+"Move to Wish List","Move to Wish List"
+"Copy to Wish List","Copy to Wish List"
+"Owner Email","Owner Email"
+"Wish List Name","Wish List Name"
+"This wishlist is publicly visible.","This wishlist is publicly visible."
+"This wishlist is private. Only you can view this wishlist.","This wishlist is private. Only you can view this wishlist."
+"Edit Wish List","Edit Wish List"
+"Wish List:","Wish List:"
+Added,Added
+CSV,CSV
+"Excel XML","Excel XML"
+"Error happened while creating wishlist. Please try again later","Error happened while creating wishlist. Please try again later"
+"You must select items to move","You must select items to move"
+"You must select items to copy","You must select items to copy"
+"You are about to delete your wish list. This action cannot be undone. Are you sure you want to continue?","You are about to delete your wish list. This action cannot be undone. Are you sure you want to continue?"
+"Make This Wish List Public","Make This Wish List Public"
+"Quick Search Form Types","Quick Search Form Types"
+"Enable Multiple Wish Lists","Enable Multiple Wish Lists"
+"Number of Multiple Wish Lists","Number of Multiple Wish Lists"
+"Note: The number of multiple wishlists should be equal to or more than 2.","Note: The number of multiple wishlists should be equal to or more than 2."
+"My Wish Lists Link","My Wish Lists Link"
+"Display Wish Lists Summary","Display Wish Lists Summary"
+"Wishlist Search","Wishlist Search"
+"Wish List Search Description","Wish List Search Description"
+"Wish List Search Template","Wish List Search Template"
+"Wish List Quantity","Wish List Quantity"
+"Store Quantity","Store Quantity"
+"Surplus / Deficit","Surplus / Deficit"
+"Wish List Info","Wish List Info"
+"Product Info","Product Info"
+"Wanted Qty","Wanted Qty"

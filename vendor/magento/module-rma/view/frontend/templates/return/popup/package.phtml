@@ -1,0 +1,78 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php /** @var $block \Magento\Rma\Block\Returns\Tracking\Package */ ?>
+<?php  $_results = $block->getPackageInfo() ?>
+<div class="page-title-wrapper">
+    <h1 class="page-title"><span class="base"><?php /* @escapeNotVerified */ echo __('Packages'); ?></span></h1>
+    <div class="actions">
+        <button class="action print" type="button" title="<?php /* @escapeNotVerified */ echo __('Print') ?>" onclick="setLocation('<?php /* @escapeNotVerified */ echo $block->getPrintPackageUrl() ?>');return false;"><span><?php /* @escapeNotVerified */ echo __('Print') ?></span></button>
+        <button class="action close" type="button" title="<?php /* @escapeNotVerified */ echo __('Close Window') ?>" onclick="window.close(); window.opener.focus();"><span><?php /* @escapeNotVerified */ echo __('Close Window') ?></span></button>
+    </div>
+</div>
+<div class="packed content">
+<?php foreach ($block->getPackages() as $packageId => $package): ?>
+        <?php $package = new \Magento\Framework\DataObject($package) ?>
+        <?php $params = new \Magento\Framework\DataObject($package->getParams()) ?>
+        <div class="block package info">
+            <div class="title"><strong><?php /* @escapeNotVerified */ echo __('Package') . ' ' . $packageId ?></strong></div>
+            <div class="table-wrapper">
+                <table class="tracking popup data table">
+                    <caption class="table-caption"><?php /* @escapeNotVerified */ echo __('Package') . ' ' . $packageId ?></caption>
+                    <tbody>
+                    <tr>
+                        <th class="col type" scope="row"><?php /* @escapeNotVerified */ echo __('Type') ?></th>
+                        <td class="col type"><?php /* @escapeNotVerified */ echo $block->getContainerTypeByCode($params->getContainer()) ?></td>
+                        <th class="col length" scope="row"><?php /* @escapeNotVerified */ echo __('Length') ?></th>
+                        <td class="col length"><?php /* @escapeNotVerified */ echo $params->getLength() . ' ' . $this->helper('Magento\Shipping\Helper\Carrier')->getMeasureDimensionName($params->getDimensionUnits()) ?></td>
+                    </tr>
+                    <tr>
+                        <th class="col weight" scope="row"><?php /* @escapeNotVerified */ echo __('Total Weight') ?></th>
+                        <td class="col weight"><?php /* @escapeNotVerified */ echo $params->getWeight() . ' ' . $this->helper('Magento\Shipping\Helper\Carrier')->getMeasureWeightName($params->getWeightUnits()) ?></td>
+                        <th class="col width" scope="row"><?php /* @escapeNotVerified */ echo __('Width') ?></th>
+                        <td class="col width"><?php /* @escapeNotVerified */ echo $params->getWidth() . ' ' . $this->helper('Magento\Shipping\Helper\Carrier')->getMeasureDimensionName($params->getDimensionUnits()) ?></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&nbsp;</th>
+                        <td>&nbsp;</td>
+                        <th class="col height" scope="row"><?php /* @escapeNotVerified */ echo __('Height') ?></th>
+                        <td class="col height"><?php /* @escapeNotVerified */ echo $params->getHeight() . ' ' . $this->helper('Magento\Shipping\Helper\Carrier')->getMeasureDimensionName($params->getDimensionUnits()) ?></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="block package items">
+            <div class="title"><strong><?php /* @escapeNotVerified */ echo __('Items in the Package') ?></strong></div>
+            <div class="table-wrapper">
+                <table class="tracking popup data table">
+                    <caption class="table-caption"><?php /* @escapeNotVerified */ echo __('Items in the Package') ?></caption>
+                    <tr>
+                        <th class="col product" scope="col"><?php /* @escapeNotVerified */ echo __('Product') ?></th>
+                        <th class="col weight" scope="col"><?php /* @escapeNotVerified */ echo __('Weight') ?></th>
+                        <th class="col qty" scope="col"><?php /* @escapeNotVerified */ echo __('Qty') ?></th>
+                    </tr>
+                    <?php foreach ($package->getItems() as $itemId => $item) : ?>
+                        <?php $item = new \Magento\Framework\DataObject($item) ?>
+                        <tr title="#">
+                            <td data-th="<?php echo $block->escapeHtml(__('Product')); ?>" class="col product"> <?php /* @escapeNotVerified */ echo $item->getName(); ?></td>
+                            <td data-th="<?php echo $block->escapeHtml(__('Weight')); ?>" class="col weight"><?php /* @escapeNotVerified */ echo $item->getWeight(); ?></td>
+                            <td data-th="<?php echo $block->escapeHtml(__('Qty')); ?>" class="col qty"><?php /* @escapeNotVerified */ echo $item->getQty()*1; ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </table>
+            </div>
+        </div>
+    </div>
+<?php endforeach; ?>
+</div>
+<div class="actions">
+    <button class="action close" type="button" title="<?php /* @escapeNotVerified */ echo __('Close Window') ?>" onclick="window.close(); window.opener.focus();"><span><?php /* @escapeNotVerified */ echo __('Close Window') ?></span></button>
+    <button class="action print" type="button" title="<?php /* @escapeNotVerified */ echo __('Print') ?>" onclick="setLocation('<?php /* @escapeNotVerified */ echo $block->getPrintPackageUrl() ?>');return false;"><span><?php /* @escapeNotVerified */ echo __('Print') ?></span></button>
+</div>

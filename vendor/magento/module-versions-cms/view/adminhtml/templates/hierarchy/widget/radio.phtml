@@ -1,0 +1,200 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/** @var $block \Magento\VersionsCms\Block\Adminhtml\Cms\Hierarchy\Widget\Radio */
+$uniqueHash   = $block->getUniqHash();
+$uniqueId     = $block->getUniqId();
+$parameters = $block->getParameters();
+?>
+
+<div id="<?php /* @escapeNotVerified */ echo $uniqueHash; ?>_new" style="display:none;">
+    <div style="margin: 10px 0;">
+        <input type="radio" name="parameters[radio]" value="0" id="general_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>">
+        <label for="general_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>"><?php /* @escapeNotVerified */ echo __('Single Hierarchy for All Store Views'); ?></label>
+    </div>
+
+    <div style="margin: 10px 0;">
+        <input type="radio" name="parameters[radio]" value="1" id="individual_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>">
+        <label for="individual_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>"><?php /* @escapeNotVerified */ echo __('Specific Hierarchy for Each Store View'); ?></label>
+    </div>
+
+    <?php foreach ($block->getAllStoreViewsList() as $store): ?>
+        <fieldset id="<?php /* @escapeNotVerified */ echo $uniqueHash; ?>_<?php /* @escapeNotVerified */ echo $store['value']; ?>" class="fieldset">
+            <legend class="legend">
+                <span><?php /* @escapeNotVerified */ echo __('CMS Hierarchy for') . ' ' . $store['label'] ?></span>
+            </legend>
+
+            <div class="field">
+                <label class="label" for="options_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>_anchor_text_<?php /* @escapeNotVerified */ echo $store['value']; ?>"><?php /* @escapeNotVerified */ echo __('Anchor Custom Text'); ?></label>
+                <div class="control">
+                    <input type="text" class="widget-option input-text" value="<?php /* @escapeNotVerified */ echo $block->getParamValue('anchor_text_' . $store['value']); ?>" name="parameters[anchor_text_<?php /* @escapeNotVerified */ echo $store['value']; ?>]" id="options_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>_<?php /* @escapeNotVerified */ echo $store['value']; ?>anchor_text">
+                    <div id="note_options_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>_<?php /* @escapeNotVerified */ echo $store['value']; ?>anchor_text" class="note"><?php /* @escapeNotVerified */ echo __('If this value is empty, the node or page name will be used.'); ?></div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label" for="options_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>_<?php /* @escapeNotVerified */ echo $store['value']; ?>title"><?php /* @escapeNotVerified */ echo __('Anchor Custom Title'); ?></label>
+                <div class="control">
+                    <input type="text" class="widget-option input-text" value="<?php /* @escapeNotVerified */ echo $block->getParamValue('title_' . $store['value']); ?>" name="parameters[title_<?php /* @escapeNotVerified */ echo $store['value']; ?>]" id="options_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>_<?php /* @escapeNotVerified */ echo $store['value']; ?>title">
+                </div>
+            </div>
+
+            <div class="field required">
+                <label class="label"><span><?php /* @escapeNotVerified */ echo __('Node');?></span></label>
+                <div class="control">
+                    <input style="display:none;" type="text" class="widget-option required-entry" value="<?php /* @escapeNotVerified */ echo $block->getParamValue('node_id_' . $store['value']); ?>" name="parameters[node_id_<?php /* @escapeNotVerified */ echo $store['value']; ?>]" id="<?php /* @escapeNotVerified */ echo $uniqueId; ?>_<?php /* @escapeNotVerified */ echo $store['value']; ?>value" />
+                    <label id="<?php /* @escapeNotVerified */ echo $uniqueId; ?>_<?php /* @escapeNotVerified */ echo $store['value']; ?>label" class="widget-option-label"><?php /* @escapeNotVerified */ echo __('Not Selected'); ?></label>
+                    <div class="hidden" id="<?php /* @escapeNotVerified */ echo $uniqueId; ?>_<?php /* @escapeNotVerified */ echo $store['value']; ?>advice-container"></div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label"for="chooseroptions_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>_node_id_<?php /* @escapeNotVerified */ echo $store['value']; ?>"></label>
+                <div class="control">
+                    <span id="chooseroptions_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>_<?php /* @escapeNotVerified */ echo $store['value']; ?>node_id"></span>
+                    <button onclick="<?php /* @escapeNotVerified */ echo $uniqueId; ?>_<?php /* @escapeNotVerified */ echo $store['value']; ?>.choose()" class="scalable btn-chooser" type="button" id="<?php /* @escapeNotVerified */ echo $uniqueId; ?>_<?php /* @escapeNotVerified */ echo $store['value']; ?>control"><span><?php /* @escapeNotVerified */ echo __('Select a page or node.'); ?></span></button>
+                </div>
+            </div>
+        </fieldset>
+    <?php endforeach; ?>
+</div>
+
+
+<script>
+require(['prototype', 'mage/adminhtml/wysiwyg/widget'], function(){
+
+//<![CDATA[
+    <?php foreach ($block->getAllStoreViews() as $store): ?>
+        <?php /* @escapeNotVerified */ echo $uniqueId; ?>_<?php /* @escapeNotVerified */ echo $store['value']; ?> = new WysiwygWidget.chooser("<?php /* @escapeNotVerified */ echo $uniqueId; ?>_<?php /* @escapeNotVerified */ echo $store['value']; ?>", "<?php /* @escapeNotVerified */ echo $block->getUrl('*/cms_hierarchy_widget/chooser', ['uniq_id' => $uniqueId . '_' . $store['value'], 'scope_id' => $store['value'], 'scope' => ($store['value'] == 0) ? 'default' : 'store']);?>", {"buttons":{"open":"Select a page or node.","close":"Close"}});
+        if ($("<?php /* @escapeNotVerified */ echo $uniqueId; ?>_<?php /* @escapeNotVerified */ echo $store['value']; ?>value")) {
+            $("<?php /* @escapeNotVerified */ echo $uniqueId; ?>_<?php /* @escapeNotVerified */ echo $store['value']; ?>value").advaiceContainer = "<?php /* @escapeNotVerified */ echo $uniqueId; ?>_<?php /* @escapeNotVerified */ echo $store['value']; ?>advice-container";
+        }
+        $('<?php /* @escapeNotVerified */ echo $uniqueId; ?>_<?php /* @escapeNotVerified */ echo $store['value']; ?>label').update('<?php /* @escapeNotVerified */ echo $block->escapeHtml($block->getLabelByNodeId($block->getParamValue('node_id_' . $store['value'])))?>');
+    <?php endforeach; ?>
+    var storesArray = [<?php /* @escapeNotVerified */ echo implode($block->getAllStoreViewIds(), ',')?>];
+
+    var changeHierarchyArray = [];
+    function changeHierarchy()
+    {
+        var selector = $('page_store_id') ? 'page_store_id' : 'store_ids';
+        changeHierarchyArray = $(selector) && 'object' == typeof $F(selector) ? $F(selector) : storesArray;
+        showHierarchy();
+    }
+
+    function addClassEnable(storeId)
+    {
+        $('options_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>_'+storeId+'anchor_text').enable();
+        $('options_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>_'+storeId+'title').enable();
+        $('<?php /* @escapeNotVerified */ echo $uniqueId; ?>_'+storeId+'value').enable();
+
+        $('<?php /* @escapeNotVerified */ echo $uniqueId; ?>_'+storeId+'value').addClassName('required-entry');
+    }
+
+    function showHierarchy()
+    {
+        var a = $$('div [id^="<?php /* @escapeNotVerified */ echo $uniqueHash; ?>_"]');
+        a.each(function(div){
+            div.hide();
+        });
+        storesArray.each(function(valId){
+            $('options_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>_'+valId+'anchor_text').disable();
+            $('options_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>_'+valId+'title').disable()
+            $('<?php /* @escapeNotVerified */ echo $uniqueId; ?>_'+valId+'value').disable();
+
+            $('<?php /* @escapeNotVerified */ echo $uniqueId; ?>_'+valId+'value').removeClassName('required-entry');
+        });
+        if ($('general_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>').checked) {
+            $('<?php /* @escapeNotVerified */ echo $uniqueHash; ?>_0').show();
+            addClassEnable(0);
+        } else if ($('individual_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>').checked) {
+            var showAll = false;
+            changeHierarchyArray.each(function(id){
+                if (id == 0) {
+                    showAll = true;
+                    a.each(function(div){
+                        div.show();
+                    });
+                    storesArray.each(function(id){
+                        if (id != 0) {
+                            $('<?php /* @escapeNotVerified */ echo $uniqueHash; ?>_'+id).show();
+                            addClassEnable(id);
+                        }
+                    });
+                }
+            });
+
+            changeHierarchyArray.each(function(id){
+                if (id != 0) {
+                    $('<?php /* @escapeNotVerified */ echo $uniqueHash; ?>_'+id).show();
+                    addClassEnable(id);
+                }
+            });
+            $('<?php /* @escapeNotVerified */ echo $uniqueHash; ?>_0').hide();
+        }
+    }
+
+    function hideOldHierarchy()
+    {
+        // Copy cms hierarchy content out of generic widget content
+        $('html-body').insert({
+            top: new Element('div', {id: 'tempnew_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>_tempnew'}).update($('<?php /* @escapeNotVerified */ echo $uniqueHash; ?>_new').innerHTML)
+        });
+        // Remove generic widget content that is not relevant for cms hierarchy widget
+        var fieldsetElement = $('options_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>');
+        fieldsetElement.update("");
+        // Insert cms hierarchy specific content into fieldset
+        var tempNewElement = $('tempnew_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>_tempnew');
+        fieldsetElement.insert({
+            top: new Element('div', {id: 'real_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>_real'}).update(tempNewElement.innerHTML)
+        });
+        tempNewElement.remove();
+    }
+
+    var onLoadCallback = function() {
+        $('<?php /* @escapeNotVerified */ echo $uniqueHash; ?>_0').insert({after:$('individual_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>').up()});
+        hideOldHierarchy();
+
+        if ($('store_ids')) {
+            $('store_ids').observe('change', changeHierarchy);
+        }
+
+        <?php if (isset($parameters['radio']) && $parameters['radio']): ?>
+            $('individual_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>').checked = true;
+        <?php else: ?>
+            $('general_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>').checked = true;
+        <?php endif; ?>
+
+        changeHierarchy();
+
+        $('general_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>').observe('click', showHierarchy);
+        $('individual_<?php /* @escapeNotVerified */ echo $uniqueHash; ?>').observe('click', showHierarchy);
+        showHierarchy();
+    };
+
+    window.onLoadCallback = onLoadCallback;
+    window.hideOldHierarchy = hideOldHierarchy;
+    window.showHierarchy = showHierarchy;
+    window.addClassEnable = addClassEnable;
+    window.changeHierarchy = changeHierarchy;
+
+    window.changeHierarchyArray = changeHierarchyArray;
+    window.storesArray = storesArray;
+
+    if (document.loaded) {
+        onLoadCallback();
+    } else {
+        document.observe('dom:loaded', onLoadCallback);
+    }
+
+
+//]]>
+
+});
+</script>

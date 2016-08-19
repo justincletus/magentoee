@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="adminhtml_cms_page_edit_tab_main_prepare_form">
+        <observer name="magento_versionscms" instance="Magento\VersionsCms\Observer\Backend\PrepareFormObserver" />
+    </event>
+    <event name="cms_page_save_before">
+        <observer name="magento_versionscms" instance="Magento\VersionsCms\Observer\Backend\CmsPageSaveBeforeObserver" />
+    </event>
+    <event name="cms_page_save_after">
+        <observer name="magento_versionscms" instance="Magento\VersionsCms\Observer\Backend\CmsPageSaveAfterObserver" />
+    </event>
+    <event name="admin_user_delete_after">
+        <observer name="magento_versionscms" instance="Magento\VersionsCms\Observer\Backend\AdminUserDeleteAfterObserver" />
+    </event>
+    <event name="website_delete_after">
+        <observer name="magento_versionscms" instance="Magento\VersionsCms\Observer\Backend\DeleteWebsiteObserver" />
+    </event>
+    <event name="store_delete_after">
+        <observer name="magento_versionscms" instance="Magento\VersionsCms\Observer\Backend\DeleteStoreObserver" />
+    </event>
+    <event name="cms_page_delete_after">
+        <observer name="magento_versionscms" instance="Magento\VersionsCms\Observer\Backend\CmsPageDeleteAfterObserver" />
+    </event>
+</config>

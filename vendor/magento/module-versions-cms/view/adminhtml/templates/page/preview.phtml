@@ -1,0 +1,88 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<div id="cms-revision-preview" class="cms-revision-preview">
+    <div class="toolbar">
+        <?php echo $block->getChildHtml('tools') ?>
+    </div>
+<iframe name="preview_iframe" id="preview_iframe" frameborder="0" title="<?php /* @escapeNotVerified */ echo __('Preview') ?>" width="100%" ></iframe>
+<?php echo $block->getChildHtml('preview_form') ?>
+</div>
+<div id="loading-mask" style="display:none">
+    <p class="loader" id="loading_mask_loader"><img src="<?php /* @escapeNotVerified */ echo $block->getViewFileUrl('images/ajax-loader-tr.gif') ?>" alt="<?php /* @escapeNotVerified */ echo __('Loading...') ?>"/><br/><?php /* @escapeNotVerified */ echo __('Please wait...') ?></p>
+</div>
+<script>
+require(['jquery','prototype'], function(jQuery){
+
+//<![CDATA[
+    var previewForm = $('preview_form'),
+     loadingMask = $('loading-mask'),
+     previewIframe = $('preview_iframe'),
+     publishUrlTemplate = '<?php /* @escapeNotVerified */ echo $block->getUrl('*/*/publish', ['revision_id' => '{{value}}'])?>',
+     publishUrl = '';
+
+    preview = function () {
+        previewForm.writeAttribute('target', previewIframe.readAttribute('id'));
+        blockPreview();
+        previewForm.submit();
+    };
+
+    function blockPreview() {
+        var cumulativeOffset = $('cms-revision-preview').cumulativeOffset();
+
+        $('loading-mask').setStyle({
+            top: ( cumulativeOffset.top ) + 'px',
+            left: ( cumulativeOffset.left ) + 'px',
+            width: $('cms-revision-preview').getWidth() + 'px',
+            height: $('cms-revision-preview').getHeight() + 'px'
+        });
+
+        toggleSelectsUnderBlock($('loading-mask'), false);
+        Element.show('loading-mask');
+        setLoaderPosition();
+    }
+
+    function unBlockPreview() {
+        toggleSelectsUnderBlock(loadingMask, true);
+        Element.hide(loadingMask);
+    }
+
+    function togglePublish(state) {
+        var button = $('preview-buttons-publish');
+        if (button) {
+            if (state) {
+                button.show();
+                publishUrl = publishUrlTemplate.replace('{{value}}', state);
+            } else {
+                button.hide();
+            }
+        }
+    }
+
+    togglePublish(false);
+
+    function publish() {
+        setLocation(publishUrl);
+    }
+
+    function iframeSetHeight() {
+        var iFrameID = document.getElementById('preview_iframe');
+        if (iFrameID) {
+            iFrameID.height = "";
+            iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+        }
+    }
+
+    jQuery('#preview_iframe').on('load', iframeSetHeight)
+        .on('load', unBlockPreview);
+
+    jQuery(preview);
+
+});
+</script>

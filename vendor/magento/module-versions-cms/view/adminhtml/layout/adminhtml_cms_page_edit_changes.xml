@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <link src="Magento_VersionsCms::cms.js"/>
+    </head>
+    <body>
+        <referenceBlock name="cms_page_edit_tabs">
+            <action method="removeTab">
+                <argument name="name" xsi:type="string">content_section</argument>
+            </action>
+            <action method="removeTab">
+                <argument name="name" xsi:type="string">design_section</argument>
+            </action>
+            <action method="removeTab">
+                <argument name="name" xsi:type="string">meta_section</argument>
+            </action>
+            <block class="Magento\VersionsCms\Block\Adminhtml\Cms\Page\Edit\Tab\Versions" name="cms_page_edit_tab_versions"/>
+            <action method="addTab">
+                <argument name="name" xsi:type="string">versions</argument>
+                <argument name="block" xsi:type="string">cms_page_edit_tab_versions</argument>
+            </action>
+        </referenceBlock>
+    </body>
+</page>

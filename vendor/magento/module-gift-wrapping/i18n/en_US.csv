@@ -1,0 +1,70 @@
+Price,Price
+ID,ID
+Action,Action
+"Excl. Tax","Excl. Tax"
+"Incl. Tax","Incl. Tax"
+Edit,Edit
+[GLOBAL],[GLOBAL]
+[WEBSITE],[WEBSITE]
+"[STORE VIEW]","[STORE VIEW]"
+Delete,Delete
+Status,Status
+Disabled,Disabled
+Enabled,Enabled
+"Save and Continue Edit","Save and Continue Edit"
+"Please select items.","Please select items."
+"Use Default Value","Use Default Value"
+Websites,Websites
+"Change status","Change status"
+Image,Image
+Design,Design
+Preview,Preview
+%1,%1
+"Please select","Please select"
+"You deleted a total of %1 records.","You deleted a total of %1 records."
+"Gift Wrapping","Gift Wrapping"
+"Add Gift Wrapping","Add Gift Wrapping"
+"Are you sure you want to delete this gift wrapping?","Are you sure you want to delete this gift wrapping?"
+"Edit Gift Wrapping ""%1""","Edit Gift Wrapping ""%1"""
+"New Gift Wrapping","New Gift Wrapping"
+"Gift Wrapping Information","Gift Wrapping Information"
+"Gift Wrapping Design","Gift Wrapping Design"
+"Please request the correct gift wrapping.","Please request the correct gift wrapping."
+"You have not uploaded the image.","You have not uploaded the image."
+"You saved the gift wrapping.","You saved the gift wrapping."
+"We couldn't save the gift wrapping.","We couldn't save the gift wrapping."
+"You have not updated the image.","You have not updated the image."
+"You updated a total of %1 records.","You updated a total of %1 records."
+"Something went wrong while updating the wrapping(s) status.","Something went wrong while updating the wrapping(s) status."
+"You deleted the gift wrapping.","You deleted the gift wrapping."
+"Gift Wrapping for Order (Excl. Tax)","Gift Wrapping for Order (Excl. Tax)"
+"Gift Wrapping for Order (Incl. Tax)","Gift Wrapping for Order (Incl. Tax)"
+"Gift Wrapping for Order","Gift Wrapping for Order"
+"Gift Wrapping for Items (Incl. Tax)","Gift Wrapping for Items (Incl. Tax)"
+"Gift Wrapping for Items (Excl. Tax)","Gift Wrapping for Items (Excl. Tax)"
+"Gift Wrapping for Items","Gift Wrapping for Items"
+"Printed Card (Incl. Tax)","Printed Card (Incl. Tax)"
+"Printed Card (Excl. Tax)","Printed Card (Excl. Tax)"
+"Printed Card","Printed Card"
+"You can leave a box blank if you don't wish to add a gift wrap for whole order","You can leave a box blank if you don't wish to add a gift wrap for whole order"
+"Price Excl. Tax","Price Excl. Tax"
+"Price Incl. Tax","Price Incl. Tax"
+"Send Gift Receipt","Send Gift Receipt"
+"Add Printed Card","Add Printed Card"
+"Gift Wrapping for the Entire Order","Gift Wrapping for the Entire Order"
+"Other Gift Options","Other Gift Options"
+"Custom Price","Custom Price"
+"Allow Gift Wrapping on Order Level","Allow Gift Wrapping on Order Level"
+"Allow Gift Wrapping for Order Items","Allow Gift Wrapping for Order Items"
+"Allow Gift Receipt","Allow Gift Receipt"
+"Allow Printed Card","Allow Printed Card"
+"Default Price for Printed Card","Default Price for Printed Card"
+"Tax Class for Gift Options","Tax Class for Gift Options"
+"Display Gift Wrapping Prices","Display Gift Wrapping Prices"
+"Display Printed Card Prices","Display Printed Card Prices"
+"Are you sure you want to delete the selected gift wrappings?","Are you sure you want to delete the selected gift wrappings?"
+"Gift Wrap Design","Gift Wrap Design"
+"None","None"
+"Excluding Tax","Excluding Tax"
+"Including Tax","Including Tax"
+"Including and Excluding Tax","Including and Excluding Tax"

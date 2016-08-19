@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\Payment\Model\Cart\SalesModel\Order" type="Magento\CustomerBalance\Model\Cart\SalesModel\Order" />
+    <preference for="Magento\Payment\Model\Cart\SalesModel\Quote" type="Magento\CustomerBalance\Model\Cart\SalesModel\Quote" />
+    <preference for="Magento\CustomerBalance\Api\BalanceManagementInterface" type="Magento\CustomerBalance\Model\BalanceManagement" />
+    <type name="Magento\Framework\Module\Manager">
+        <arguments>
+            <argument name="outputConfigPaths" xsi:type="array">
+                <item name="Magento_CustomerBalance" xsi:type="const">Magento\CustomerBalance\Helper\Data::XML_PATH_ENABLED</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\Module\Setup\Migration">
+        <arguments>
+            <argument name="compositeModules" xsi:type="array">
+                <item name="magento_customerbalance" xsi:type="string">Magento_CustomerBalance</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Magento\Sales\Model\ResourceModel\Order\Grid">
+        <arguments>
+            <argument name="columns" xsi:type="array">
+                <item name="refunded_to_store_credit" xsi:type="string">sales_order.customer_bal_total_refunded</item>
+            </argument>
+        </arguments>
+    </virtualType>
+</config>

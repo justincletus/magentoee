@@ -1,0 +1,60 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php /** @var \Magento\VisualMerchandiser\Block\Adminhtml\Category\Tab\Merchandiser $block */ ?>
+<div id="merchandiser-app" class="merchandiser-app" data-role="merchandiser-app">
+    <?php echo $block->getChildHtml('smart_category') ?>
+    <div id="regular-category-settings" class="regular-category-settings">
+        <div class="actions">
+            <?php echo $block->getChildHtml('add_products_button') ?>
+        </div>
+        <div class="merchandiser-toolbar">
+            <?php echo $block->getChildHtml('sort_order') ?>
+            <?php echo $block->getChildHtml('sort_products_button') ?>
+        </div>
+    </div>
+    <div class="merchandiser-tabs" data-role="merchandiser-tabs">
+        <ul role="tablist" class="tabs">
+            <li role="tab">
+                <a href="#tab_grid" id="mode-grid" class="modes-mode mode-grid" data-role="mode-switcher" data-value="grid" title="<?php /* @escapeNotVerified */ echo __('Grid') ?>">
+                    <span><?php /* @escapeNotVerified */ echo __('Grid') ?></span>
+                </a>
+            </li>
+            <li role="tab">
+                <a href="#tab_tile" id="mode-tile" class="modes-mode mode-tile" data-role="mode-switcher" data-value="tile" title="<?php /* @escapeNotVerified */ echo __('Tile') ?>">
+                    <span><?php /* @escapeNotVerified */ echo __('Tile') ?></span>
+                </a>
+            </li>
+        </ul>
+
+        <div id="tab_grid" class="tabs-tab-grid merchandiser-tab" role="tabpanel">
+            <?php echo $block->getChildHtml('grid') ?>
+        </div>
+        <div id="tab_tile" class="tabs-tab-tile merchandiser-tab" role="tabpanel">
+            <?php echo $block->getChildHtml('tile') ?>
+        </div>
+        <div class="no-display">
+            <input type="hidden" name="vm_category_products" id="vm_category_products" value="<?php echo $block->escapeHtml($block->getPositionDataJson()) ?>" />
+        </div>
+    </div>
+</div>
+<script type="text/x-magento-init">
+    {
+        "[data-role=merchandiser-app]": {
+            "Magento_VisualMerchandiser/js/merchandiser": {
+                "addProductsUrl": "<?php /* @escapeNotVerified */ echo $block->getDialogUrl() ?>",
+                "savePositionsUrl": "<?php /* @escapeNotVerified */ echo $block->getSavePositionsUrl() ?>",
+                "getPositionsUrl": "<?php /* @escapeNotVerified */ echo $block->getProductsPositionsUrl() ?>",
+                "currentCategoryId": "<?php /* @escapeNotVerified */ echo $block->getCategoryId() ?>",
+                "positionCacheKey": "<?php /* @escapeNotVerified */ echo $block->getPositionCacheKey() ?>",
+                "positionCacheKeyName": "<?php /* @escapeNotVerified */ echo $block->getPositionCacheKeyName() ?>"
+            }
+        }
+    }
+</script>

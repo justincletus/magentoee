@@ -1,0 +1,43 @@
+ID,ID
+No,No
+Action,Action
+Edit,Edit
+Results,Results
+Uses,Uses
+Store,Store
+Yes,Yes
+"Add New Search Term","Add New Search Term"
+"Search Query","Search Query"
+"Redirect URL","Redirect URL"
+"This search no longer exists.","This search no longer exists."
+button_label,button_label
+"Related Search Terms","Related Search Terms"
+"We were unable to perform the search because a search engine misconfiguration.","We were unable to perform the search because a search engine misconfiguration."
+"MySql Fulltext","MySql Fulltext"
+Solr,Solr
+"Final commit","Final commit"
+"Partial commit","Partial commit"
+"Engine autocommit","Engine autocommit"
+"Search Weight","Search Weight"
+"Connection failed! Test again?","Connection failed! Test again?"
+"Successful! Test again?","Successful! Test again?"
+"Related search terms","Related search terms"
+"Did you mean","Did you mean"
+Synonym,Synonym
+"Search Engine","Search Engine"
+"Solr Server Hostname","Solr Server Hostname"
+"Solr Server Port","Solr Server Port"
+"Solr Server Username","Solr Server Username"
+"Solr Server Password","Solr Server Password"
+"Solr Server Timeout","Solr Server Timeout"
+"Solr Server Path","Solr Server Path"
+"Without starting and trailing slashes.","Without starting and trailing slashes."
+"Indexation Mode","Indexation Mode"
+"Note: Partial commit mode affects time of indexation, but allows indexed products to be visible on the frontend before indexation is completed.","Note: Partial commit mode affects time of indexation, but allows indexed products to be visible on the frontend before indexation is completed."
+"Test Connection","Test Connection"
+"Enable Search Suggestions","Enable Search Suggestions"
+"When you enable this option your site may slow down.","When you enable this option your site may slow down."
+"Search Suggestions Count","Search Suggestions Count"
+"Show Results Count for Each Suggestion","Show Results Count for Each Suggestion"
+"Enable Solr Engine for Catalog Navigation","Enable Solr Engine for Catalog Navigation"
+"Suggested Term","Suggested Term"

@@ -1,0 +1,133 @@
+Back,Back
+Apply,Apply
+Customers,Customers
+Action,Action
+Edit,Edit
+Email,Email
+Delete,Delete
+Save,Save
+"Custom Variables","Custom Variables"
+Export,Export
+"Cache Management","Cache Management"
+"Manage Stores","Manage Stores"
+"URL Rewrites","URL Rewrites"
+"IP Address","IP Address"
+"Access denied","Access denied"
+Time,Time
+View,View
+N/A,N/A
+label,label
+Import,Import
+"Catalog Price Rules","Catalog Price Rules"
+"Customer Groups","Customer Groups"
+"Catalog Search","Catalog Search"
+Login,Login
+"Checkout Terms and Conditions","Checkout Terms and Conditions"
+Daily,Daily
+Weekly,Weekly
+Monthly,Monthly
+"Manage Currency Rates","Manage Currency Rates"
+Date,Date
+Reports,Reports
+"Transactional Emails","Transactional Emails"
+New,New
+"Index Management","Index Management"
+Username,Username
+"Admin Actions Log Archive","Admin Actions Log Archive"
+"Log Entry #%1","Log Entry #%1"
+"Log Entry Details","Log Entry Details"
+"Source Data","Source Data"
+"Value Before Change","Value Before Change"
+"Value After Change","Value After Change"
+"No changes","No changes"
+"Item was deleted","Item was deleted"
+"All Users","All Users"
+"Admin Actions Log","Admin Actions Log"
+Report,Report
+"Admin Actions Archive","Admin Actions Archive"
+"actions' 'label","actions' 'label"
+"%1 & applied","%1 & applied"
+"Tax Rates Import","Tax Rates Import"
+"Attributes Updated","Attributes Updated"
+"Currency Rates Saved","Currency Rates Saved"
+"Cache types: %1 ","Cache types: %1 "
+"Tax Rates Export","Tax Rates Export"
+"User is locked","User is locked"
+Success,Success
+Failure,Failure
+"Admin User Data","Admin User Data"
+"Aggregated Information","Aggregated Information"
+"Admin User ID","Admin User ID"
+"Admin User Name","Admin User Name"
+IP-Address,IP-Address
+"X-Forwarded For","X-Forwarded For"
+"Error Message","Error Message"
+"Related Changes","Related Changes"
+"Newsletter Templates","Newsletter Templates"
+"Newsletter Queue","Newsletter Queue"
+"Newsletter Subscribers","Newsletter Subscribers"
+"PayPal Settlement Reports","PayPal Settlement Reports"
+"Recurring Billing Payments","Recurring Billing Payments"
+CSV,CSV
+"Excel XML","Excel XML"
+Print,Print
+Reorder,Reorder
+Fetch,Fetch
+"Cart Price Rules","Cart Price Rules"
+"XML Sitemap","XML Sitemap"
+"Tax Rules","Tax Rules"
+"CMS Pages","CMS Pages"
+Rollback,Rollback
+"Google Shopping","Google Shopping"
+"Admin Actions Log Archiving","Admin Actions Log Archiving"
+"Log Entry Lifetime, Days","Log Entry Lifetime, Days"
+"Log Archiving Frequency","Log Archiving Frequency"
+"Admin Actions Logging","Admin Actions Logging"
+"Enabled Actions","Enabled Actions"
+1,1
+"Mass Delete","Mass Delete"
+"Mass Update","Mass Update"
+Move,Move
+"Forgot Password","Forgot Password"
+"Global Search","Global Search"
+Run,Run
+"Reindex Process","Reindex Process"
+Clean,Clean
+Flush,Flush
+"Update Payment","Update Payment"
+"Update State","Update State"
+Send,Send
+Create,Create
+"Catalog Products","Catalog Products"
+"Catalog Categories","Catalog Categories"
+"Catalog Ratings","Catalog Ratings"
+"Catalog Reviews","Catalog Reviews"
+"Catalog Attributes","Catalog Attributes"
+"Catalog Product Templates","Catalog Product Templates"
+"Admin Sign In","Admin Sign In"
+"CMS Blocks","CMS Blocks"
+"System Configuration","System Configuration"
+"Admin My Account","Admin My Account"
+"Sales Orders","Sales Orders"
+"Sales Order Status","Sales Order Status"
+"Sales Invoices","Sales Invoices"
+"Sales Shipments","Sales Shipments"
+"Sales Credit Memos","Sales Credit Memos"
+"Admin Permission Roles","Admin Permission Roles"
+"Admin Permission Users","Admin Permission Users"
+"Manage Websites","Manage Websites"
+"Manage Store Views","Manage Store Views"
+"Manage Design","Manage Design"
+"System Backups","System Backups"
+"Customer Tax Classes","Customer Tax Classes"
+"Catalog Product Tax Classes","Catalog Product Tax Classes"
+"Tax Rates","Tax Rates"
+"Widget","Widget"
+"Archive File","Archive File"
+"Action Group","Action Group"
+Result,Result
+"Full Action Name","Full Action Name"
+"Short Details","Short Details"
+"Full Details","Full Details"
+"Action Log","Action Log"
+Archive,Archive

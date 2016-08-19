@@ -1,0 +1,40 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php /** @var $block \Magento\GiftRegistry\Block\Search\Advanced  */ ?>
+
+<?php foreach ($block->getAttributes() as $code => $attribute): ?>
+    <div class="field">
+        <label for="<?php /* @escapeNotVerified */ echo $block->getFieldIdPrefix() . $code ?>" class="label"><span><?php /* @escapeNotVerified */ echo $attribute['label'] ?></span></label>
+        <div class="control">
+            <?php /* @escapeNotVerified */ echo $block->renderField($code) ?>
+        </div>
+    </div>
+<?php endforeach; ?>
+
+<script type="text/x-magento-init">
+    {
+        <?php if ($block->getRegionJsVisible()): ?>
+        "#<?php /* @escapeNotVerified */ echo $block->getFieldIdPrefix() . $block->getElementCountry()?>": {
+            "regionUpdater": {
+                "optionalRegionAllowed": <?php /* @escapeNotVerified */ echo($block->getConfig('general/region/display_all') ? 'true' : 'false'); ?>,
+                "regionListId": "#<?php /* @escapeNotVerified */ echo $block->getFieldIdPrefix() . $block->getElementRegion()?>",
+                "regionInputId": "#<?php /* @escapeNotVerified */ echo $block->getFieldIdPrefix() . $block->getElementRegionText()?>",
+                "regionJson": <?php /* @escapeNotVerified */ echo $this->helper('Magento\Directory\Helper\Data')->getRegionJson(); ?>,
+                "isRegionRequired": false,
+                "isZipRequired": false,
+                "isCountryRequired": false
+            }
+        },
+        <?php endif; ?>
+        "#gr-type-specific-fieldset" : {
+            "Magento_GiftRegistry/toggle": <?php /* @escapeNotVerified */ echo($block->getAttributes() ? "true" : "false");?>
+        }
+    }
+</script>

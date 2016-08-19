@@ -1,0 +1,33 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+$logContent = $block->escapeHtml($block->getBackup()->getLog());
+if (!$logContent) {
+    $logContent = __('Empty log');
+}
+?>
+<div class="content-header">
+    <table cellspacing="0">
+        <tr>
+            <td style="<?php /* @escapeNotVerified */ echo $block->getHeaderWidth() ?>"><?php echo $block->getHeaderHtml() ?></td>
+            <td class="form-buttons"><?php echo $block->getButtonsHtml() ?></td>
+        </tr>
+    </table>
+</div>
+<div class="entry-edit">
+    <div class="entry-edit">
+        <div class="entry-edit-head">
+            <h4 class="icon-head head-edit-form fieldset-legend">
+                <?php /* @escapeNotVerified */ echo __('Backup ID: ') . $block->getBackup()->getId(); ?>
+            </h4>
+        </div>
+        <div id="log_details_fieldset" class="log-details">
+            <div><?php /* @escapeNotVerified */ echo nl2br($logContent); ?></div>
+        </div>
+    </div>
+</div>

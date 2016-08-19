@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="promo_quote_edit_tabs">
+            <block class="Magento\Banner\Block\Adminhtml\Promo\Salesrule\Edit\Tab\Banners" name="salesrule.related.banners">
+                <block class="Magento\Banner\Block\Adminhtml\Promo\Salesrule\Edit\Tab\Banners\Grid" name="related_salesrule_banners_grid"/>
+                <block class="Magento\Backend\Block\Widget\Grid\Serializer" name="banners_grid_serializer">
+                    <arguments>
+                        <argument name="grid_block" xsi:type="string">related_salesrule_banners_grid</argument>
+                        <argument name="callback" xsi:type="string">getRelatedBannersByRule</argument>
+                        <argument name="input_element_name" xsi:type="string">related_banners</argument>
+                        <argument name="reload_param_name" xsi:type="string">selected_salesrule_banners</argument>
+                    </arguments>
+                </block>
+            </block>
+            <action method="addTab">
+                <argument name="name" xsi:type="string">banners_section</argument>
+                <argument name="block" xsi:type="string">salesrule.related.banners</argument>
+            </action>
+            <block class="Magento\Banner\Block\Adminhtml\Permission\Monitor" name="bannner.permission.monitor"/>
+        </referenceBlock>
+    </body>
+</page>

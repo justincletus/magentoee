@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\Solr\Helper\ClientOptionsInterface" type="Magento\Solr\Helper\Data" />
+    <preference for="Magento\Solr\SearchAdapter\AccessPointMapperInterface" type="Magento\Solr\SearchAdapter\AccessPointMapper" />
+    <type name="Magento\CatalogSearch\Model\Indexer\IndexerHandlerFactory">
+        <arguments>
+            <argument name="handlers" xsi:type="array">
+                <item name="solr" xsi:type="string">Magento\Solr\Model\Indexer\IndexerHandler</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Solr\Model\Observer">
+        <arguments>
+            <argument name="searchData" xsi:type="object">Magento\Solr\Helper\Data\Proxy</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Solr\Model\ResourceModel\Engine">
+        <arguments>
+            <argument name="searchResourceIndex" xsi:type="object">Magento\Solr\Model\ResourceModel\Index\Proxy</argument>
+            <argument name="catalogProductVisibility" xsi:type="object">Magento\Catalog\Model\Product\Visibility\Proxy</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Solr\Model\Adapter\AbstractAdapter">
+        <arguments>
+            <argument name="customerSession" xsi:type="object">Magento\Customer\Model\Session\Proxy</argument>
+            <argument name="resourceIndex" xsi:type="object">Magento\Solr\Model\ResourceModel\Index\Proxy</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Customer\Model\ResourceModel\Group">
+        <plugin name="catalogsearchFulltextIndexerCustomerGroup" type="Magento\Solr\Model\Indexer\Fulltext\Plugin\CustomerGroup"/>
+    </type>
+    <type name="Magento\Framework\Search\Dynamic\IntervalFactory">
+        <arguments>
+            <argument name="intervals" xsi:type="array">
+                <item name="solr" xsi:type="string">Magento\Solr\SearchAdapter\Aggregation\Interval</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\Search\Dynamic\DataProviderFactory">
+        <arguments>
+            <argument name="dataProviders" xsi:type="array">
+                <item name="solr" xsi:type="string">Magento\Solr\SearchAdapter\Dynamic\DataProvider</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\AdvancedSearch\Block\Suggestions">
+        <arguments>
+            <argument name="searchDataProvider" xsi:type="object">Magento\Solr\Model\DataProvider\Suggestions</argument>
+        </arguments>
+    </type>
+    <preference for="Magento\Solr\Model\Client\FactoryInterface" type="Magento\Solr\Model\Client\SolariumFactory" />
+    <preference for="Magento\Solr\Model\AdapterFactoryInterface" type="Magento\Solr\Model\SolariumFactory" />
+    <type name="Magento\Solr\Model\Client\Solarium">
+        <arguments>
+            <argument name="solariumClient" xsi:type="object" shared="false">Solarium\Client</argument>
+        </arguments>
+    </type>
+    <preference for="Magento\Solr\SearchAdapter\FieldMapperInterface" type="Magento\Solr\Model\Adapter\FieldMapper" />
+    <type name="Magento\Search\Model\Adminhtml\System\Config\Source\Engine">
+        <arguments>
+            <argument name="engines" xsi:type="array">
+                <item name="solr" xsi:type="string">Solr</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\CatalogSearch\Model\ResourceModel\EngineProvider">
+        <arguments>
+            <argument name="engines" xsi:type="array">
+                <item name="solr" xsi:type="string">Magento\Solr\Model\ResourceModel\Engine</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Search\Model\AdapterFactory">
+        <arguments>
+            <argument name="adapters" xsi:type="array">
+                <item name="solr" xsi:type="string">Magento\Solr\SearchAdapter\Adapter</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Magento\Solr\SearchAdapter\ProductEntityMetadata" type="Magento\Framework\Search\EntityMetadata">
+        <arguments>
+            <argument name="entityId" xsi:type="string">id</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Solr\SearchAdapter\DocumentFactory">
+        <arguments>
+            <argument name="entityMetadata" xsi:type="object">Magento\Solr\SearchAdapter\ProductEntityMetadata</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Solr\SearchAdapter\Aggregation\Builder">
+        <arguments>
+            <argument name="dataProviderContainer" xsi:type="array">
+                <item name="catalogsearch_fulltext" xsi:type="object">Magento\Solr\SearchAdapter\Dynamic\DataProvider</item>
+            </argument>
+            <argument name="aggregationContainer" xsi:type="array">
+                <item name="termBucket" xsi:type="object">Magento\Solr\SearchAdapter\Aggregation\Builder\Term</item>
+                <item name="rangeBucket" xsi:type="object">Magento\Solr\SearchAdapter\Aggregation\Builder\Range</item>
+                <item name="dynamicBucket" xsi:type="object">Magento\Solr\SearchAdapter\Aggregation\Builder\Dynamic</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

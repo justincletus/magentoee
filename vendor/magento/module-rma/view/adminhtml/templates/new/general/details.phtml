@@ -1,0 +1,56 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * @see \Magento\Rma\Block\Adminhtml\Rma\NewRma\Tab\General\Details
+ */
+
+$customerLink = $block->getCustomerLink();
+?>
+<div class="admin__page-section-item">
+    <div class="admin__page-section-item-title">
+        <span class="title"><?php /* @escapeNotVerified */ echo __('Request Details') ?></span>
+    </div>
+    <div class="admin__page-section-item-content">
+        <table class="admin__table-secondary">
+            <tr>
+                <th><?php /* @escapeNotVerified */ echo __('Order ID') ?></th>
+                <td><a href="<?php /* @escapeNotVerified */ echo $block->getOrderLink() ?>"><?php /* @escapeNotVerified */ echo __('#') . $block->getOrderIncrementId() ?></a></td>
+            </tr>
+            <tr>
+                <th><?php /* @escapeNotVerified */ echo __('Customer Name') ?></th>
+                <td>
+                    <?php
+                    if ($customerLink) {
+                        echo '<a href="' . $customerLink . '">';
+                    }
+                    /* @escapeNotVerified */ echo $block->getCustomerName();
+                    if ($customerLink) {
+                        echo '</a>';
+                    }
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <th><?php /* @escapeNotVerified */ echo __('Email Address') ?></th>
+                <td><a href="mailto:<?php /* @escapeNotVerified */ echo $block->getCustomerEmail() ?>"><?php /* @escapeNotVerified */ echo $block->getCustomerEmail() ?></a></td>
+            </tr>
+            <tr>
+                <th><?php /* @escapeNotVerified */ echo __('Contact Email Address') ?></th>
+                <td>
+                    <input type="text"
+                           class="input-text admin__control-text validate-email"
+                           name="contact_email"
+                           id="contact_email"/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

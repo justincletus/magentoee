@@ -1,0 +1,71 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+?>
+<?php
+/**
+ * @see \Magento\AdvancedCheckout\Block\Adminhtml\Manage
+ */
+?>
+<?php
+/**
+ * @var $block \Magento\AdvancedCheckout\Block\Adminhtml\Manage
+ */
+?>
+
+<?php echo $block->getChildHtml('checkout.js') ?>
+<script>
+    require([
+        "Magento_AdvancedCheckout/shopping_cart"
+    ], function(){
+        checkoutObj = new AdminCheckout(<?php /* @escapeNotVerified */ echo $block->getOrderDataJson() ?>);
+        checkoutObj.setLoadBaseUrl('<?php /* @escapeNotVerified */ echo $block->getLoadBlockUrl() ?>');
+        checkoutObj.setCurrencySymbol('<?php /* @escapeNotVerified */ echo $block->getCurrencySymbol($block->getCurrentCurrencyCode()) ?>');
+    });
+</script>
+
+<?php echo $block->getChildHtml('checkout.store.switcher'); ?>
+
+<div id="checkout_message">
+    <?php echo $block->getChildHtml('checkout.message') ?>
+</div>
+
+<div class="admin__page-section shopping-cart-items">
+    <div class="admin__page-section-title">
+        <strong class="title"><?php /* @escapeNotVerified */ echo __('Shopping Cart Items') ?></strong>
+    </div>
+
+    <div id="checkout_items" class="admin__table-wrapper">
+        <?php echo $block->getChildHtml('checkout.items') ?>
+    </div>
+
+    <div class="order-discounts">
+        <?php echo $block->getChildHtml('checkout.form_coupon') ?>
+
+        <div class="actions">
+            <?php echo $block->getChildHtml('update_button') ?>
+            <?php echo $block->getChildHtml('empty_customer_cart_button'); ?>
+        </div>
+    </div>
+</div>
+
+
+<div id="checkout_errors" class="checkout-errors">
+    <?php echo $block->getChildHtml('errors') ?>
+</div>
+
+<div id="products_search" class="products-search order-search-items">
+    <div class="actions">
+        <?php echo $block->getChildHtml('addto_cart_button') ?>
+    </div>
+    <div id="products_search_accordion">
+        <?php echo $block->getChildHtml('checkout.accordion') ?>
+    </div>
+    <div class="actions">
+        <?php echo $block->getChildHtml('addto_cart_button') ?>
+    </div>
+</div>

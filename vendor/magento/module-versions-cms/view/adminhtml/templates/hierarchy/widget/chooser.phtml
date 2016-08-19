@@ -1,0 +1,78 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+/**
+ * @var \Magento\VersionsCms\Block\Adminhtml\Cms\Hierarchy\Widget\Chooser $block
+ */
+$chooserJsObject = $block->getId();
+?>
+<div id="tree<?php /* @escapeNotVerified */ echo $chooserJsObject; ?>" class="cms-tree tree x-tree"></div>
+<!--[if IE]>
+<script id="ie-deferred-loader" defer="defer" src=""></script>
+<![endif]-->
+<script>
+    require(["extjs/ext-tree-checkbox", "prototype"], function() {
+        window.clickNode = function(node) {
+            $("tree-container").insert({before: node.text});
+            $("<?php /* @escapeNotVerified */ echo $chooserJsObject; ?>").value = node.id;
+            treeRoot.collapse();
+        };
+
+        window.nodes = <?php /* @escapeNotVerified */ echo $block->getNodesJson(); ?>;
+
+        if (nodes.length > 0) {
+            window.tree<?php /* @escapeNotVerified */ echo $chooserJsObject; ?> = new Ext.tree
+                .TreePanel("tree<?php /* @escapeNotVerified */ echo $chooserJsObject; ?>", {
+                    animate: false,
+                    enableDD: false,
+                    containerScroll: true,
+                    rootVisible: false,
+                    lines: true
+            });
+
+            window.treeRoot<?php /* @escapeNotVerified */ echo $chooserJsObject; ?> = new Ext.tree.AsyncTreeNode({
+                text: "<?php /* @escapeNotVerified */ echo __("Root"); ?>",
+                id: "root",
+                allowDrop: true,
+                allowDrag: false,
+                expanded: true,
+                cls: "cms_node_root"
+            });
+
+            tree<?php /* @escapeNotVerified */ echo $chooserJsObject; ?>.setRootNode(treeRoot<?php /* @escapeNotVerified */ echo $chooserJsObject; ?>);
+
+            for (var i = 0; i < nodes.length; i++) {
+                window.cls = nodes[i].page_id ? "cms_page" : "cms_node";
+                window.node = new Ext.tree.TreeNode({
+                    id: nodes[i].node_id,
+                    text: nodes[i].label,
+                    cls: cls,
+                    expanded: nodes[i].page_exists,
+                    allowDrop: false,
+                    allowDrag: false,
+                    page_id: nodes[i].page_id
+                });
+                if (parentNode = tree<?php /* @escapeNotVerified */ echo $chooserJsObject; ?>.getNodeById(nodes[i].parent_node_id)) {
+                    parentNode.appendChild(node);
+                } else {
+                    treeRoot<?php /* @escapeNotVerified */ echo $chooserJsObject; ?>.appendChild(node);
+                }
+            }
+
+            tree<?php /* @escapeNotVerified */ echo $chooserJsObject; ?>.addListener("click", function (node, event) {
+                <?php /* @escapeNotVerified */ echo $chooserJsObject; ?>.setElementValue(node.id);
+                <?php /* @escapeNotVerified */ echo $chooserJsObject; ?>.setElementLabel(node.text);
+                <?php /* @escapeNotVerified */ echo $chooserJsObject; ?>.close();
+            });
+            tree<?php /* @escapeNotVerified */ echo $chooserJsObject; ?>.render();
+            treeRoot<?php /* @escapeNotVerified */ echo $chooserJsObject; ?>.expand();
+        }
+        else {
+            $("tree<?php /* @escapeNotVerified */ echo $chooserJsObject; ?>").innerHTML = "<?php /* @escapeNotVerified */ echo __('No nodes are available'); ?>";
+        }
+    });
+</script>
