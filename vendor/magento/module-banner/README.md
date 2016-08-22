@@ -1,1 +1,0 @@
-The Banner module allows creating and managing banners and widgets in Magento application.
